@@ -98,8 +98,8 @@ body {
   }
 
   .header {
-    height: 50px;
-    background-color: #007bff;
+    height: 60px;
+    background-color: var(--color-gray);
     color: white;
     display: flex;
     align-items: center;
@@ -115,7 +115,7 @@ body {
 
   .footer {
     height: 50px;
-    background-color: #007bff;
+    background-color: var(--color-gray);
     color: white;
     display: flex;
     align-items: center;
