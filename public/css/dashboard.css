@@ -53,7 +53,7 @@
 
 
 
-.calender-card, .dashboard-custom-card{
+.calender-card, .dashboard-custom-card,.locked-users-card{
     background-color: #FFFFFF;
     border-color: #EEEEEE;
     border-radius: 8px !important;
