@@ -4,7 +4,10 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    background-image: url('../wruth-demo/public/images/Login.png');
+    background-image: url('./public/images/Login.png');
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+    background-position: center;
     object-fit: cover;
 }
 .login-div {
