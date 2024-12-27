@@ -249,10 +249,123 @@ body {
     padding: 20px;
     overflow-y: auto;
 }
-.page-title{
+
+.page-title {
     color: var(--color-primary);
     font-family: var(--font-secondary);
     font-weight: 600;
     font-size: 20px;
     line-height: 20px;
+}
+
+.time-container {
+    display: flex;
+    gap: 5px;
+}
+
+.time-box {
+    width: 16px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-radius: 4px;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.separator {
+    font-size: 24px;
+    color: var(--color-primary);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.card-view {
+    background-color: var(--color-white);
+    box-shadow: 1px 1px 5px 0 #0000001A;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.card-box {
+    min-height: 100px;
+}
+
+.black-title {
+    color: var(--color-black);
+    font-family: var(--font-secondary);
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.card-link {
+    font-family: var(--font-secondary);
+    color: var(--color-primary);
+    font-size: 11px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.nav-pills button {
+    background-color: var(--color-light-pink) !important;
+    color: var(--color-primary);
+    border-radius: 0px !important;
+    font-size: 15px !important;
+    font-family: var(--font-secondary);
+    font-weight: 600;
+}
+
+.nav-pills button.active {
+    background-color: var(--color-primary) !important;
+    color: var(--color-white);
+}
+
+.nav-pills .nav-link {
+    padding: 8px 5px !important;
+}
+
+.history-icon {}
+
+.reminder-title {
+    font-family: var(--font-secondary);
+    font-size: 12px !important;
+    font-weight: 500;
+    color: var(--color-black);
+    line-height: 12px !important;
+}
+
+.reminder-desc {
+    font-family: var(--font-secondary);
+    font-size: 11px !important;
+    font-weight: 400;
+    color: var(--color-black);
+}
+
+.reminder-time {
+    font-family: var(--font-secondary);
+    font-size: 10px !important;
+    color: #00000066;
+    font-weight: 400;
+}
+
+.dashboard-table thead {
+    background-color: #F2F2F2;
+}
+
+.dashboard-table thead tr th {
+    font-family: var(--font-secondary);
+    font-size: 12px !important;
+    font-weight: 400;
+    color: var(--color-black);
+}
+
+.dashboard-table tbody tr td {
+    font-family: var(--font-secondary);
+    font-size: 12px !important;
+    font-weight: 400;
+    color: var(--color-black);
 }
