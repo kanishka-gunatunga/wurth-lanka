@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- <link rel="stylesheet" href="../wruth-demo/public/css/"> -->
+    <!-- <link rel="stylesheet" href="./public/css/login.css"> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,6 +23,9 @@ body {
     min-height: 100vh;
     margin: 0;
     background-image: url('./public/images/Login.png');
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+    background-position: center;
     object-fit: cover;
 }
 .login-div {
@@ -143,18 +146,23 @@ font-family: 'Inter', sans-serif;;
     color: #7C7C7C;
 }
 
+@media only screen and (max-width: 768px) {
+  .login-div{
+    width: 90%;
+  }
+}
 </style>
 <body>
     <div class="d-flex align-items-center justify-content-center login-div">
         <div class="card login-card d-flex align-items-center">
             <div class="card-body">
                 <div class="row">
-                    <div class="d-flex justify-content-center">
+                    <div class="d-flex justify-content-center mb-4">
                         <img src="public/images/wruth-logo.png" alt="Logo" class="logo">
                     </div>
                     <div>
                         <form>
-                            <p class="login-title text-center">LOGIN TO YOUR ACCOUNT</p>
+                            <p class="login-title text-center mb-5">LOGIN TO YOUR ACCOUNT</p>
                             <div class="my-4 input-div">
                                 <img src="public/images/Email.png" alt="" class="input-icon envelop">
                                 <input type="email" class="form-control login-input " id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
@@ -164,9 +172,9 @@ font-family: 'Inter', sans-serif;;
                                 <input type="password" class="form-control login-input" id="exampleInputPassword1" placeholder="Password">
                             </div>
                             <a href="forgot_password_screen_1.html" class="forgot-password-link"><p class="forgot-password-text my-4">Forgot Password?</p></a>
-                            <button type="submit" class="btn login-btn">Login</button>
+                            <button type="submit" class="btn login-btn mt-4">Login</button>
                            
-                            <p class="text-center my-5 register-text">Don’t have an account? <a href="register.html" class="register-text-link">Register</a></p>
+                            <p class="text-center mt-5 register-text">Don’t have an account? <a href="register.html" class="register-text-link">Register</a></p>
                           </form>
                     </div>
                     
