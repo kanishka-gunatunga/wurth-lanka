@@ -1,0 +1,21 @@
+:body{
+    --primary-red: #CC0000;
+}
+
+.main-wrapper{
+    background-color: #FFF5F6;
+    padding-top: 3rem;
+    padding-left: 1rem;
+}
+
+.header-title{
+    font-family: Poppins;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin-bottom: 3rem;
+    
+}

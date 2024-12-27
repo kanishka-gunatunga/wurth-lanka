@@ -1,0 +1,255 @@
+@extends('layouts.header')
+
+@push('styles')
+<link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
+@endpush
+@section('content')
+<div class="container-fluid">
+    <div class="main-wrapper">
+        <h1 class="header-title">Dashboard</h1>
+
+        <div class="dashboard-main-container">
+            <div class="row g-3">
+                <div class="col-12 col-lg-2 card-wrapper">
+                    <div class="card header-card">
+                        <div class="card-body">
+                            <h4 class="stat-card-title">Total Customers</h4>
+                            <h5 class="stat-card-amount">1530</h5>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-12 col-lg-2 card-wrapper">
+                    <div class="card header-card">
+                        <div class="card-body">
+                            <h4 class="stat-card-title">Total Users</h4>
+                            <h5 class="stat-card-amount">1280</h5>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-12 col-lg-2 card-wrapper">
+                    <div class="card header-card">
+                        <div class="card-body">
+                            <h4 class="stat-card-title">Sales Representatives</h4>
+                            <h5 class="stat-card-amount">180</h5>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-12 col-lg-3 card-wrapper">
+                    <div class="card header-card">
+                        <div class="card-body">
+                            <h4 class="stat-card-title">Finance Department Managers</h4>
+                            <h5 class="stat-card-amount">40</h5>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-12 col-lg-3 card-wrapper">
+                    <div class="card header-card">
+                        <div class="card-body">
+                            <h4 class="stat-card-title">Warehouse Managers</h4>
+                            <h5 class="stat-card-amount">42</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Second Row -->
+            <div class="row mt-3 g-3 justify-content-center">
+                <div class="col-12 col-lg-3 card-wrapper">
+                    <div class="card header-card">
+                        <div class="card-body">
+                            <h4 class="stat-card-title">Team Leaders</h4>
+                            <h5 class="stat-card-amount">42</h5>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-12 col-lg-3 card-wrapper">
+                    <div class="card header-card">
+                        <div class="card-body">
+                            <h4 class="stat-card-title">Area Sales Managers</h4>
+                            <h5 class="stat-card-amount">32</h5>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-12 col-lg-3 card-wrapper">
+                    <div class="card header-card">
+                        <div class="card-body">
+                            <h4 class="stat-card-title">Regional Sales Managers</h4>
+                            <h5 class="stat-card-amount">15</h5>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-12 col-lg-3 card-wrapper">
+                    <div class="card header-card">
+                        <div class="card-body">
+                            <h4 class="stat-card-title">Head of Division</h4>
+                            <h5 class="stat-card-amount">4</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                {{-- calender --}}
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-7 col-lg-7">
+                        <div class="card calender-card p-4">
+                            <div class="calendar">
+                                <div class="calendar-header">
+                                    <div>
+                                        <h2 id="month-year"></h2>
+                                    </div>
+                                    <div>
+                                        <button id="prev-month"><svg width="13" height="21" viewBox="0 0 13 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.640496 10.4903C0.640496 10.689 0.674877 10.8724 0.743638 11.0404C0.82004 11.2085 0.934642 11.369 1.08745 11.5218L10.015 20.2545C10.2747 20.5142 10.588 20.6441 10.9547 20.6441C11.2068 20.6441 11.4322 20.583 11.6309 20.4608C11.8372 20.3462 12.0014 20.1857 12.1237 19.9794C12.2459 19.7808 12.307 19.5592 12.307 19.3147C12.307 18.948 12.1657 18.6233 11.883 18.3406L3.83791 10.4903L11.883 2.64008C12.1657 2.35739 12.307 2.03651 12.307 1.67742C12.307 1.42529 12.2459 1.19991 12.1237 1.00126C12.0014 0.802619 11.8372 0.645996 11.6309 0.531393C11.4322 0.409151 11.2068 0.348029 10.9547 0.348029C10.588 0.348029 10.2747 0.474092 10.015 0.726217L1.08745 9.45893C0.934642 9.61173 0.82004 9.77217 0.743638 9.94026C0.674877 10.1083 0.640496 10.2917 0.640496 10.4903Z" fill="#CC0000"/>
+                                            </svg>
+                                            </button>
+                                        <button id="next-month"><svg width="12" height="21" viewBox="0 0 12 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.6665 10.4903C11.6665 10.2917 11.6283 10.1083 11.5519 9.94026C11.4755 9.77217 11.3609 9.61173 11.2081 9.45893L2.28059 0.726217C2.02846 0.474092 1.71522 0.348029 1.34085 0.348029C1.09636 0.348029 0.870979 0.409151 0.664694 0.531393C0.45841 0.645996 0.294146 0.802619 0.171904 1.00126C0.0573013 1.19991 8.56817e-08 1.42529 8.56817e-08 1.67742C8.56817e-08 2.03651 0.137523 2.35739 0.412569 2.64008L8.45766 10.4903L0.412569 18.3406C0.137523 18.6233 8.56817e-08 18.948 8.56817e-08 19.3147C8.56817e-08 19.5592 0.0573013 19.7808 0.171904 19.9794C0.294146 20.1857 0.45841 20.3462 0.664694 20.4608C0.870979 20.583 1.09636 20.6441 1.34085 20.6441C1.71522 20.6441 2.02846 20.5142 2.28059 20.2545L11.2081 11.5218C11.3609 11.369 11.4755 11.2085 11.5519 11.0404C11.6283 10.8724 11.6665 10.689 11.6665 10.4903Z" fill="#CC0000"/>
+                                            </svg>
+                                            </button>
+                                    </div>
+                                    
+                                </div>
+                                <div class="calendar-body">
+                                    <div class="calendar-days">
+                                        <div>Sun</div>
+                                        <div>Mon</div>
+                                        <div>Tue</div>
+                                        <div>Wed</div>
+                                        <div>Thu</div>
+                                        <div>Fri</div>
+                                        <div>Sat</div>
+                                    </div>
+                                    <div id="calendar-dates" class="calendar-dates"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-5 col-lg-5 ">
+                        <div class="card dashboard-custom-card">
+                            <div id="txt" class="digital-clock card-body">
+                                <div class="row d-flex justify-content-start">
+                                    <div class="col-3 hours">
+                                        <span class="clock-digit">1</span>
+                                        <span class="clock-digit">2</span>
+                                    </div>
+                                    <div class="col-1 dot">
+                                        <span class="clock-digit-colan">:</span>
+                                    </div>
+                                    <div class="col-3 mins">
+                                        <span class="clock-digit">2</span>
+                                        <span class="clock-digit">5</span>
+                                    </div>
+                                    <div class="col-1 dot">
+                                        <span class="clock-digit-colan">:</span>
+                                    </div>
+                                    <div class="col-3 seconds">
+                                        <span class="clock-digit">4</span>
+                                        <span class="clock-digit">5</span>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+
+                        <di class="card dashboard-custom-card">
+                            <div class="card-body">
+                                <h3 class="activity-task-title mb-3">Recent Activities</h3>
+                                <p class="activity-task-description">User level Finance Manager change access controls</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const calendarDates = document.getElementById("calendar-dates");
+    const monthYear = document.getElementById("month-year");
+    const prevMonth = document.getElementById("prev-month");
+    const nextMonth = document.getElementById("next-month");
+
+    let currentDate = new Date();
+
+    function renderCalendar(date) {
+        const year = date.getFullYear();
+        const month = date.getMonth();
+        const firstDay = new Date(year, month, 1).getDay();
+        const lastDate = new Date(year, month + 1, 0).getDate();
+
+        monthYear.textContent = `${date.toLocaleString("default", {
+            month: "long",
+        })} ${year}`;
+
+        calendarDates.innerHTML = "";
+
+        // Add blank spaces for days before the first of the month
+        for (let i = 0; i < firstDay; i++) {
+            const emptyDiv = document.createElement("div");
+            calendarDates.appendChild(emptyDiv);
+        }
+
+        // Add the days of the month
+        for (let day = 1; day <= lastDate; day++) {
+            const dateDiv = document.createElement("div");
+            dateDiv.textContent = day;
+
+            const today = new Date();
+            if (
+                year === today.getFullYear() &&
+                month === today.getMonth() &&
+                day === today.getDate()
+            ) {
+                dateDiv.classList.add("today");
+            }
+
+            calendarDates.appendChild(dateDiv);
+        }
+    }
+
+    prevMonth.addEventListener("click", () => {
+        currentDate.setMonth(currentDate.getMonth() - 1);
+        renderCalendar(currentDate);
+    });
+
+    nextMonth.addEventListener("click", () => {
+        currentDate.setMonth(currentDate.getMonth() + 1);
+        renderCalendar(currentDate);
+    });
+
+    renderCalendar(currentDate);
+
+
+
+
+    // digital clock
+    // function startTime() {
+    //     const today = new Date();
+    //     let h = today.getHours();
+    //     let m = today.getMinutes();
+    //     let s = today.getSeconds();
+    //     m = checkTime(m);
+    //     s = checkTime(s);
+    //     document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+    //     setTimeout(startTime, 1000);
+    // }
+
+    // function checkTime(i) {
+    //     if (i < 10) {i = "0" + i}; 
+    //     return i;
+    // }
+
+    // startTime();
+
+</script>
+@endsection
