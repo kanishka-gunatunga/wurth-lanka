@@ -58,7 +58,7 @@ a:focus {
     border-radius: 13px;
 }
 
-#sidebar.active {
+#sidebar >.active {
     margin-left: -240px;
 }
 
