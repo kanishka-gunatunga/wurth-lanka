@@ -573,7 +573,7 @@ body {
     display: block;
 }
 
-.search-item {
+.search-item , .search-item-temp{
     padding: 5px 0px;
     cursor: pointer;
     color: var(--color-black);
@@ -582,7 +582,7 @@ body {
     font-size: 13px;
 }
 
-.search-item:hover {
+.search-item:hover, .search-item-temp:hover {
     background-color: #f8f9fa;
 }
 
