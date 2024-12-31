@@ -78,16 +78,19 @@
                                     </div>
                                 </div>
                             </div>
-                            <table class="table dashboard-table">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Customer ID</th>
-                                        <th scope="col">Customer Name</th>
-                                        <th scope="col">Mobile Number</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="tableBodyInvoices"></tbody>
-                            </table>
+                            <div class="table-container">
+                                <table class="table dashboard-table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Customer ID</th>
+                                            <th scope="col">Customer Name</th>
+                                            <th scope="col">Mobile Number</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tableBodyInvoices"></tbody>
+                                </table>
+                            </div>
+
                             <nav>
                                 <ul class="pagination mt-2" id="paginationInvoices"></ul>
                             </nav>
@@ -116,16 +119,19 @@
                                     </div>
                                 </div>
                             </div>
-                            <table class="table dashboard-table">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Customer ID</th>
-                                        <th scope="col">Customer Name</th>
-                                        <th scope="col">Mobile Number</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="tableBodyTempCustomers"></tbody>
-                            </table>
+                            <div class="table-container">
+                                <table class="table dashboard-table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Customer ID</th>
+                                            <th scope="col">Customer Name</th>
+                                            <th scope="col">Mobile Number</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tableBodyTempCustomers"></tbody>
+                                </table>
+                            </div>
+
                             <nav>
                                 <ul class="pagination mt-2" id="paginationTempCustomers"></ul>
                             </nav>
@@ -453,80 +459,82 @@
 
     <script>
         const invoiceData = [
-            { invoice: "54235625", customer: "H.K Perera", date: "13.12.2024" },
-            { invoice: "54235626", customer: "A.B Silva", date: "14.12.2024" },
-            { invoice: "54235627", customer: "C.D Fernando", date: "15.12.2024" },
-            { invoice: "54235625", customer: "H.K Perera", date: "13.12.2024" },
-            { invoice: "54235626", customer: "A.B Silva", date: "14.12.2024" },
-            { invoice: "54235627", customer: "C.D Fernando", date: "15.12.2024" },
-            { invoice: "54235628", customer: "E.F Gamage", date: "16.12.2024" },
-            { invoice: "54235629", customer: "G.H Jayasuriya", date: "17.12.2024" },
-            { invoice: "54235630", customer: "I.J Pathirana", date: "18.12.2024" },
-            { invoice: "54235631", customer: "K.L Wickramasinghe", date: "19.12.2024" },
-            { invoice: "54235632", customer: "M.N Gunasekara", date: "20.12.2024" },
-            { invoice: "54235633", customer: "O.P Abeysekera", date: "21.12.2024" },
-            { invoice: "54235634", customer: "Q.R Hettiarachchi", date: "22.12.2024" },
-            { invoice: "54235630", customer: "I.J Pathirana", date: "18.12.2024" },
-            { invoice: "54235631", customer: "K.L Wickramasinghe", date: "19.12.2024" },
-            { invoice: "54235632", customer: "M.N Gunasekara", date: "20.12.2024" },
-            { invoice: "54235633", customer: "O.P Abeysekera", date: "21.12.2024" },
-            { invoice: "54235634", customer: "Q.R Hettiarachchi", date: "22.12.2024" },
-            { invoice: "54235630", customer: "I.J Pathirana", date: "18.12.2024" },
-            { invoice: "54235631", customer: "K.L Wickramasinghe", date: "19.12.2024" },
-            { invoice: "54235632", customer: "M.N Gunasekara", date: "20.12.2024" },
-            { invoice: "54235633", customer: "O.P Abeysekera", date: "21.12.2024" },
-            { invoice: "54235634", customer: "Q.R Hettiarachchi", date: "22.12.2024" },
-            { invoice: "54235630", customer: "I.J Pathirana", date: "18.12.2024" },
-            { invoice: "54235631", customer: "K.L Wickramasinghe", date: "19.12.2024" },
-            { invoice: "54235632", customer: "M.N Gunasekara", date: "20.12.2024" },
-            { invoice: "54235633", customer: "O.P Abeysekera", date: "21.12.2024" },
-            { invoice: "54235634", customer: "Q.R Hettiarachchi", date: "22.12.2024" },
-            { invoice: "54235631", customer: "K.L Wickramasinghe", date: "19.12.2024" },
-            { invoice: "54235632", customer: "M.N Gunasekara", date: "20.12.2024" },
-            { invoice: "54235633", customer: "O.P Abeysekera", date: "21.12.2024" },
-            { invoice: "54235634", customer: "Q.R Hettiarachchi", date: "22.12.2024" },
-            { invoice: "54235630", customer: "I.J Pathirana", date: "18.12.2024" },
-            { invoice: "54235631", customer: "K.L Wickramasinghe", date: "19.12.2024" },
-            { invoice: "54235632", customer: "M.N Gunasekara", date: "20.12.2024" },
-            { invoice: "54235633", customer: "O.P Abeysekera", date: "21.12.2024" },
-            { invoice: "54235634", customer: "Q.R Hettiarachchi", date: "22.12.2024" },
-            { invoice: "54235631", customer: "K.L Wickramasinghe", date: "19.12.2024" },
-            { invoice: "54235632", customer: "M.N Gunasekara", date: "20.12.2024" },
-            { invoice: "54235633", customer: "O.P Abeysekera", date: "21.12.2024" },
-            { invoice: "54235634", customer: "Q.R Hettiarachchi", date: "22.12.2024" },
-            { invoice: "54235630", customer: "I.J Pathirana", date: "18.12.2024" },
-            { invoice: "54235631", customer: "K.L Wickramasinghe", date: "19.12.2024" },
-            { invoice: "54235632", customer: "M.N Gunasekara", date: "20.12.2024" },
-            { invoice: "54235633", customer: "O.P Abeysekera", date: "21.12.2024" },
-            { invoice: "54235634", customer: "Q.R Hettiarachchi", date: "22.12.2024" },
+            { invoice: "54235625", customer: "H.K Perera", date: "075 4556585" },
+            { invoice: "54235626", customer: "A.B Silva", date: "075 4556585" },
+            { invoice: "54235627", customer: "C.D Fernando", date: "075 4556585" },
+            { invoice: "54235625", customer: "H.K Perera", date: "075 4556585" },
+            { invoice: "54235626", customer: "A.B Silva", date: "075 4556585" },
+            { invoice: "54235627", customer: "C.D Fernando", date: "075 4556585" },
+            { invoice: "54235628", customer: "E.F Gamage", date: "075 4556585" },
+            { invoice: "54235629", customer: "G.H Jayasuriya", date: "075 4556585" },
+            { invoice: "54235630", customer: "I.J Pathirana", date: "075 4556585" },
+            { invoice: "54235631", customer: "K.L Wickramasinghe", date: "075 4556585" },
+            { invoice: "54235632", customer: "M.N Gunasekara", date: "075 4556585" },
+            { invoice: "54235633", customer: "O.P Abeysekera", date: "075 4556585" },
+            { invoice: "54235634", customer: "Q.R Hettiarachchi", date: "075 4556585" },
+            { invoice: "54235630", customer: "I.J Pathirana", date: "075 4556585" },
+            { invoice: "54235625", customer: "H.K Perera", date: "075 4556585" },
+            { invoice: "54235626", customer: "A.B Silva", date: "075 4556585" },
+            { invoice: "54235627", customer: "C.D Fernando", date: "075 4556585" },
+            { invoice: "54235625", customer: "H.K Perera", date: "075 4556585" },
+            { invoice: "54235626", customer: "A.B Silva", date: "075 4556585" },
+            { invoice: "54235627", customer: "C.D Fernando", date: "075 4556585" },
+            { invoice: "54235628", customer: "E.F Gamage", date: "075 4556585" },
+            { invoice: "54235629", customer: "G.H Jayasuriya", date: "075 4556585" },
+            { invoice: "54235630", customer: "I.J Pathirana", date: "075 4556585" },
+            { invoice: "54235631", customer: "K.L Wickramasinghe", date: "075 4556585" },
+            { invoice: "54235632", customer: "M.N Gunasekara", date: "075 4556585" },
+            { invoice: "54235633", customer: "O.P Abeysekera", date: "075 4556585" },
+            { invoice: "54235634", customer: "Q.R Hettiarachchi", date: "075 4556585" },
+            { invoice: "54235630", customer: "I.J Pathirana", date: "075 4556585" },
+            { invoice: "54235625", customer: "H.K Perera", date: "075 4556585" },
+            { invoice: "54235626", customer: "A.B Silva", date: "075 4556585" },
+            { invoice: "54235627", customer: "C.D Fernando", date: "075 4556585" },
+            { invoice: "54235625", customer: "H.K Perera", date: "075 4556585" },
+            { invoice: "54235626", customer: "A.B Silva", date: "075 4556585" },
+            { invoice: "54235627", customer: "C.D Fernando", date: "075 4556585" },
+            { invoice: "54235628", customer: "E.F Gamage", date: "075 4556585" },
+            { invoice: "54235629", customer: "G.H Jayasuriya", date: "075 4556585" },
+            { invoice: "54235630", customer: "I.J Pathirana", date: "075 4556585" },
+            { invoice: "54235631", customer: "K.L Wickramasinghe", date: "075 4556585" },
+            { invoice: "54235632", customer: "M.N Gunasekara", date: "075 4556585" },
+            { invoice: "54235633", customer: "O.P Abeysekera", date: "075 4556585" },
+            { invoice: "54235634", customer: "Q.R Hettiarachchi", date: "075 4556585" },
+            { invoice: "54235630", customer: "I.J Pathirana", date: "075 4556585" },
         ];
 
         const tempCustomerData = [
-        { invoice: "54235631", customer: "K.L Wickramasinghe", date: "19.12.2024" },
-            { invoice: "54235632", customer: "M.N Gunasekara", date: "20.12.2024" },
-            { invoice: "54235633", customer: "O.P Abeysekera", date: "21.12.2024" },
-            { invoice: "54235634", customer: "Q.R Hettiarachchi", date: "22.12.2024" },
-            { invoice: "54235631", customer: "K.L Wickramasinghe", date: "19.12.2024" },
-            { invoice: "54235632", customer: "M.N Gunasekara", date: "20.12.2024" },
-            { invoice: "54235633", customer: "O.P Abeysekera", date: "21.12.2024" },
-            { invoice: "54235634", customer: "Q.R Hettiarachchi", date: "22.12.2024" },
-            { invoice: "54235630", customer: "I.J Pathirana", date: "18.12.2024" },
-            { invoice: "54235631", customer: "K.L Wickramasinghe", date: "19.12.2024" },
-            { invoice: "54235632", customer: "M.N Gunasekara", date: "20.12.2024" },
-            { invoice: "54235633", customer: "O.P Abeysekera", date: "21.12.2024" },
-            { invoice: "54235634", customer: "Q.R Hettiarachchi", date: "22.12.2024" },
-            { invoice: "54235631", customer: "K.L Wickramasinghe", date: "19.12.2024" },
-            { invoice: "54235632", customer: "M.N Gunasekara", date: "20.12.2024" },
-            { invoice: "54235633", customer: "O.P Abeysekera", date: "21.12.2024" },
-            { invoice: "54235634", customer: "Q.R Hettiarachchi", date: "22.12.2024" },
-            { invoice: "54235630", customer: "I.J Pathirana", date: "18.12.2024" },
-            { invoice: "54235631", customer: "K.L Wickramasinghe", date: "19.12.2024" },
-            { invoice: "54235632", customer: "M.N Gunasekara", date: "20.12.2024" },
-            { invoice: "54235633", customer: "O.P Abeysekera", date: "21.12.2024" },
-            { invoice: "54235634", customer: "Q.R Hettiarachchi", date: "22.12.2024" },
+            { invoice: "54235625", customer: "H.K Perera", date: "075 4556585" },
+            { invoice: "54235626", customer: "A.B Silva", date: "075 4556585" },
+            { invoice: "54235627", customer: "C.D Fernando", date: "075 4556585" },
+            { invoice: "54235625", customer: "H.K Perera", date: "075 4556585" },
+            { invoice: "54235626", customer: "A.B Silva", date: "075 4556585" },
+            { invoice: "54235627", customer: "C.D Fernando", date: "075 4556585" },
+            { invoice: "54235628", customer: "E.F Gamage", date: "075 4556585" },
+            { invoice: "54235629", customer: "G.H Jayasuriya", date: "075 4556585" },
+            { invoice: "54235630", customer: "I.J Pathirana", date: "075 4556585" },
+            { invoice: "54235631", customer: "K.L Wickramasinghe", date: "075 4556585" },
+            { invoice: "54235632", customer: "M.N Gunasekara", date: "075 4556585" },
+            { invoice: "54235633", customer: "O.P Abeysekera", date: "075 4556585" },
+            { invoice: "54235634", customer: "Q.R Hettiarachchi", date: "075 4556585" },
+            { invoice: "54235630", customer: "I.J Pathirana", date: "075 4556585" },
+            { invoice: "54235625", customer: "H.K Perera", date: "075 4556585" },
+            { invoice: "54235626", customer: "A.B Silva", date: "075 4556585" },
+            { invoice: "54235627", customer: "C.D Fernando", date: "075 4556585" },
+            { invoice: "54235625", customer: "H.K Perera", date: "075 4556585" },
+            { invoice: "54235626", customer: "A.B Silva", date: "075 4556585" },
+            { invoice: "54235627", customer: "C.D Fernando", date: "075 4556585" },
+            { invoice: "54235628", customer: "E.F Gamage", date: "075 4556585" },
+            { invoice: "54235629", customer: "G.H Jayasuriya", date: "075 4556585" },
+            { invoice: "54235630", customer: "I.J Pathirana", date: "075 4556585" },
+            { invoice: "54235631", customer: "K.L Wickramasinghe", date: "075 4556585" },
+            { invoice: "54235632", customer: "M.N Gunasekara", date: "075 4556585" },
+            { invoice: "54235633", customer: "O.P Abeysekera", date: "075 4556585" },
+            { invoice: "54235634", customer: "Q.R Hettiarachchi", date: "075 4556585" },
+            { invoice: "54235630", customer: "I.J Pathirana", date: "075 4556585" },
         ];
 
-        const rowsPerPage = 5;
+        const rowsPerPage = 10;
 
         function renderTable(data, tableBodyId, page) {
             const tableBody = document.getElementById(tableBodyId);
