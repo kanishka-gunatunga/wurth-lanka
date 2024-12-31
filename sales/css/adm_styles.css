@@ -779,3 +779,28 @@ body {
     font-weight: 400;
     font-size: 13px !important;
 }
+
+.collapse-wrapper button{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border: none;
+    box-shadow: none;
+    color: #000;
+    font-family: var(--font-secondary);
+    font-weight: 500;
+    font-size: 16px !important;
+}
+.collapse-wrapper button i{
+    background-color: var(--color-primary);
+    color: #fff; border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    padding: 5px;
+}
