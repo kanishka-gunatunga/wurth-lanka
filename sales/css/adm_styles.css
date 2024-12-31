@@ -38,6 +38,17 @@
     color: var(--color-white);
 }
 
+.styled-button-normal {
+    background-color: var(--color-primary);
+    border-radius: 8px;
+    min-height: 45px;
+    width: max-content !important;
+    border: none;
+    font-family: var(--font-secondary);
+    font-size: 18px;
+    color: var(--color-white);
+}
+
 .para-text-style {
     font-family: var(--font-primary);
     font-size: 14px;
@@ -212,7 +223,7 @@ body {
     border: solid 1px var(--color-primary);
 }
 
-.offcanvas-body a {
+.small-button {
     text-decoration: none;
     background-color: var(--color-primary);
     color: var(--color-white);
@@ -237,6 +248,21 @@ body {
     font-family: var(--font-secondary);
     font-weight: 500;
     font-size: 11px;
+}
+
+.red-title-22 {
+    color: var(--color-primary);
+    font-family: var(--font-secondary);
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 22px;
+}
+
+.gray-text-13 {
+    color: var(--color-dark-gray-text);
+    font-family: var(--font-secondary);
+    font-weight: 500;
+    font-size: 13px;
 }
 
 
@@ -368,4 +394,88 @@ body {
     font-size: 12px !important;
     font-weight: 400;
     color: var(--color-black);
+}
+
+
+.input-group-profile label {
+    font-family: var(--font-secondary) !important;
+    color: var(--color-black) !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    margin-bottom: 0px !important;
+}
+
+.input-group-profile input {
+    outline: none !important;
+    box-shadow: none !important;
+    color: #707070 !important;
+    font-size: 12px !important;
+    font-weight: 400 !important;
+    font-family: var(--font-secondary) !important;
+    border: solid 0.5px #544C4C24 !important;
+    border-radius: 5px;
+}
+
+.input-group-profile input::placeholder {
+    font-size: 12px;
+    font-weight: 400;
+    font-family: var(--font-primary);
+}
+
+
+.profile-pic-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+  }
+  
+  .profile-pic-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%; 
+    border: 2px solid var(--color-primary);
+  }
+  
+  .upload-button {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    padding: 8px;
+    cursor: pointer;
+  }
+  
+  .upload-button i {
+    font-size: 16px;
+  }
+  
+  
+ 
+
+  .fixed-header {
+    flex-shrink: 0;
+    background: #fff; 
+    z-index: 10;
+}
+#profileForm {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+#profileForm > .d-flex {
+    flex-shrink: 0;
+}
+.scrollable-section {
+    flex: 1;
+    overflow-y: auto;
+    width: 100%;
+}
+
+@media (max-height: 768px) {
+    .scrollable-section {
+        height: calc(100vh - 254px); 
+    }
 }
