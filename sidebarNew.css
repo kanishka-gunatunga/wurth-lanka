@@ -1,0 +1,48 @@
+.sidebar {
+    background-color: #BFBFBF4D;
+    color: #000000;
+    padding: 15px;
+    width: 288px;
+    height: 814px;
+    border-radius: 13px;
+    border: 1px;
+    transition: width 0.3s
+
+}
+
+
+
+.sidebar.collapsed {
+    width: 0; /* Collapsed width */
+    overflow: hidden;
+}
+
+
+.sidebar-list li.active svg path {
+    stroke: red; /* Make the icon red for active class */
+}
+
+.sidebar-title {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #5E6F87;
+}
+
+.sidebar ul li a {
+    text-decoration: none !important;
+    color: #000000;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 60px;
+}
+
+
+.sidebar ul li {
+    list-style-type: none;
+}
+
+.sidebar ul li:active {
+    color: red !important;
+}

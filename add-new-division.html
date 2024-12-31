@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="public/css/common.css">
+    <link rel="stylesheet" href="public/css/dashboard.css">
+    <link rel="stylesheet" href="public/css/sidebar.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<style>
+    .custom-input,
+    .custom-input option {
+        /* width: 530px; */
+        height: 50px;
+        padding: 14px;
+        border-radius: 4px;
+        border: 1px solid;
+        border-color: #9D9D9D;
+        background-color: #FFFFFF;
+        color: #AAB6C1;
+        font-family: "Poppins", sans-serif;
+        font-size: 13px;
+        font-weight: 400;
+    }
+
+    .custom-input::placeholder,
+    .division-description::placeholder {
+        color: #9D9D9D;
+    }
+
+    .custom-input-label {
+        font-family: "Poppins", sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    .division-action-btn .submit,
+    .division-action-btn .cancel {
+        width: 262px;
+        height: 52px;
+        padding: 15.62px;
+        border-radius: 5.47px;
+        color: #FFFFFF;
+        font-family: "Inter" , sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .division-action-btn .submit{
+        background-color: #CC0000;
+    }
+
+    .division-action-btn .cancel{
+        background-color: #000000;
+    }
+
+    .division-action-btn{
+        margin-top: 150px;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/"><img src="public/images/wruth-logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+
+                    
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="wrapper">
+
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <ul>
+                <div class="d-flex justify-content-between">
+                    <p>Admin Dashboard</p>
+                    <button type="button" id="sidebarCollapse" class="btn ">
+                        <i class="fas fa-align-left"></i>
+                        <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-list" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                            </svg></span>
+
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+                </div>
+
+                <li class="active"> <a href="{{url('dashboard')}}">Dashboard</a></li>
+                <li class="active"> <a href="user-management.html">User Management</a></li>
+                <li class="active"> <a href="">Access Control</a></li>
+                <li class="active"> <a href="customers.html">Customers</a></li>
+                <li class="active"> <a href="admin-division-management.html">Division Management</a></li>
+                <li class="active"> <a href="">All Collections</a></li>
+                <li class="active"> <a href="">Return Cheques</a></li>
+                <li class="active"> <a href="">Reminders</a></li>
+
+
+            </ul>
+
+        </nav>
+
+        <div class="container-fluid">
+            <div class="main-wrapper">
+                <div class="p-4 pt-0">
+                    <div class="col-lg-6 col-12">
+                        <h1 class="header-title">Division Management</h1>
+                    </div>
+
+                    <form>
+                        <div class="pe-5">
+                            <div class="d-flex flex-row justify-content-between">
+                                <div class="mb-3 col-6">
+                                    <label for="division-input" class="form-label custom-input-label">Division
+                                        Name</label>
+                                    <input type="text" class="form-control custom-input" id="division-input"
+                                        placeholder="Division Name">
+                                </div>
+
+
+                                <div class="btn-group col-6 d-flex justify-content-end">
+                                    <div class="mb-3 ">
+                                        <label for="head-of-division-select" class="form-label custom-input-label">Head
+                                            of
+                                            Division
+                                        </label>
+                                        <select class="form-select custom-input" aria-label="Default select example"
+                                            id="head-of-division-select">
+                                            <option class=".custom-input-option" selected>Open this select menu</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3 col-12">
+                                <label for="head-of-division-select" class="form-label custom-input-label">Division Description
+                                </label>
+                                <textarea class="form-control division-description" placeholder="Division Description"
+                                    style="height: 152px"></textarea>
+
+                            </div>
+
+                            <div class="col-12 d-flex justify-content-end division-action-btn gap-3">
+                                <button class="btn btn-dark cancel">Cancel</button>
+                                <button class="btn btn-danger submit">Submit</button>
+                            </div>
+
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const toggleButton = document.getElementById('sidebarCollapse');
+        const sidebar = document.getElementById('sidebar');
+
+        toggleButton.addEventListener('click', function () {
+            sidebar.classList.toggle('active');
+        });
+    });
+</script>
