@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="public/css/common.css">
-    <link rel="stylesheet" href="public/css/dashboard.css">
+    <!-- <link rel="stylesheet" href="public/css/common.css"> -->
+    <!-- <link rel="stylesheet" href="public/css/dashboard.css"> -->
     <link rel="stylesheet" href="public/css/sidebar.css">
+    <link rel="stylesheet" href="commonNew.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link
@@ -17,153 +18,7 @@
 </head>
 
 <style>
-    .styled-tab-main {
-        /* border-color: #CC0000; */
-        border-top: 2px solid red;
-    }
-
-    .styled-tab-main .nav-link {
-        font-family: 'Poppins', sans-serif;
-        font-size: 14px;
-        font-weight: 500;
-
-    }
-
-    .styled-tab-main .nav-link.active {
-        border-top: 2px solid red;
-        color: #EE2128;
-    }
-
-    .add-new-division-btn {
-        background-color: #CC0000;
-        border-radius: 5px;
-        height: 50px;
-        border: none;
-        color: #FFFFFF;
-        padding-inline: 20px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        font-family: 'Inter', sans-serif;
-    }
-
-    .header-btn {
-        height: 50px;
-        width: 50px;
-        border: none;
-        background-color: #FFF5F6;
-    }
-
-    .header-btn .fa-solid {
-        color: #000000;
-        height: 30px;
-        width: 30px;
-    }
-
-    .action-btn {
-        width: 82px;
-        height: 28px;
-        border-radius: 8px;
-        background-color: #000000;
-        color: #FFFFFF;
-        font-family: 'Poppins', sans-serif;
-        font-size: 12px;
-        border: none;
-    }
-
-    .division-table .table {
-        font-family: Poppins;
-        font-size: 18px;
-    }
-
-    .division-table .table thead tr {
-        font-weight: 500;
-    }
-
-    .division-table .table tbody tr {
-        font-weight: 400;
-
-    }
-
-    .offcanvas-filter {
-        border-top-left-radius: 50px;
-        border-bottom-left-radius: 50px;
-        top: 86px !important;
-        width: 35% !important;
-        background-color: #FFFFFF;
-        box-shadow: -3px 4px 8px 0px #0000001A !important;
-        border: none !important;
-        padding: 30px;
-    }
-
-    .offcanvas-title,
-    .title-rest {
-        font-family: 'Inter', sans-serif;
-        font-size: 24.94px;
-    }
-
-    .offcanvas-title {
-        font-weight: 700;
-    }
-
-    .title-rest {
-        font-weight: 400 !important;
-    }
-
-    .filter-tag {
-        width: fit-content;
-        height: 33px;
-        padding: 5px 15px 5px 15px;
-        border-radius: 8px;
-        box-shadow: 0px 4px 4px 0px #0000001A;
-        color: #EE2128;
-        font-weight: 500;
-        font-family: 'Poppins', sans-serif;
-        margin: 10px;
-        background-color: #FFF5F6;
-    }
-
-
-    .filter-tag button {
-        background: none;
-        border: none;
-        cursor: pointer;
-        color: #EE2128;
-        margin-left: 20px;
-    }
-
-    .filter-title {
-        font-family: 'Inter', sans-serif;
-        font-size: 20px;
-        font-weight: 500;
-    }
-
-    .radio-selection .form-check-input:checked, .radio-selection .form-check-input:focus{
-        border-color: #cc0000 !important;
-        outline: 0 !important;
-        box-shadow: 0 0 0 2px #dc3545 !important;
-    }
-
-   .filter-categories .form-check-input:focus {
-    border-color: #dc3545 !important;
-    outline: 0 !important;
-    box-shadow: 0 0 0 2.1px #dc354533 !important;
-    }
-
-    .filter-categories .form-check-input:checked {
-    background-color: #dc3545 !important;
-    border-color: #dc3545 !important;
-    }
-
-
-    @media only screen and (max-width: 768px) {
-    .offcanvas-filter{
-        width: 80%;
-    }
-
-    .offcanvas-filter{
-        width: 95% !important;
-    }
-}
+    
 </style>
 
 <body>
@@ -208,12 +63,15 @@
 
                 <li class="active"> <a href="{{url('dashboard')}}">Dashboard</a></li>
                 <li class="active"> <a href="user-management.html">User Management</a></li>
-                <li class="active"> <a href="">Access Control</a></li>
+                <li class="active"> <a href="access-control.html">Access Control</a></li>
                 <li class="active"> <a href="customers.html">Customers</a></li>
                 <li class="active"> <a href="admin-division-management.html">Division Management</a></li>
                 <li class="active"> <a href="">All Collections</a></li>
                 <li class="active"> <a href="">Return Cheques</a></li>
                 <li class="active"> <a href="">Reminders</a></li>
+                <li class="active"> <a href="backup.html">backup</a></li>
+                <li class="active"> <a href="activity-log.html">activity log</a></li>
+                <li class="active"> <a href="import.html">import</a></li>
 
 
             </ul>
@@ -253,7 +111,7 @@
                     </ul>
                     <div class="col-12 d-flex justify-content-end pe-5 mb-3">
                         <a href="add-new-division.html">
-                            <button class="add-new-division-btn">+ Add New Devision</button>
+                            <button class="add-new-division-btn">+ Add New Division</button>
                         </a>
                     </div>
 
