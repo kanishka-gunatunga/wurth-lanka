@@ -550,6 +550,16 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/time-script.js"></script>
     <script src="js/calander.js"></script>
+    <script>
+        document.querySelectorAll('[data-bs-toggle="collapse"]').forEach(button => {
+            button.addEventListener('click', function () {
+                const icon = this.querySelector('.collapse-icon');
+                icon.classList.toggle('bi-chevron-down');
+                icon.classList.toggle('bi-chevron-up');
+            });
+        });
+    </script>
+
 </body>
 
 </html>

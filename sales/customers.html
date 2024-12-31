@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wurth Lanka | Collections</title>
+    <title>Wurth Lanka | Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -40,56 +40,104 @@
 
         <!-- body content -->
         <div class="content px-0">
-            <div class="d-flex flex-row px-4 justify-content-between align-items-center w-100 text-start  mb-3">
-                <h3 class="page-title">Collections</h3>
-                <a href="" class="my-3 small-button">
-                    Bulk Payment
-                </a>
-            </div>
-            <div class="d-flex flex-row px-4 justify-content-center align-items-center w-100 text-start mb-3"
-                style="border: solid 1px #9D9D9D;">
-                <div class="col-6 d-flex flex-column py-2 text-center">
-                    <p class="gray-small-title mb-1">Total Invoices</p>
-                    <p class="black-large-text mb-1">18</p>
-                </div>
-                <div class="col-6 d-flex flex-column py-2 text-center" style="border-left: solid 1px #9D9D9D;">
-                    <p class="gray-small-title mb-1">Total Outstanding Amount</p>
-                    <p class="black-large-text mb-1">Rs. 325,000</p>
-                </div>
-            </div>
-            <div class="d-flex flex-column">
-                <div class="mb-3 ">
-                    <div class="container">
-                        <div class="search-container">
-                            <div class="input-group">
-                                <span class="input-group-text bg-white border-end-0">
-                                    <i class="bi bi-search"></i>
-                                </span>
-                                <input type="text" class="form-control border-start-0" id="searchInput"
-                                    placeholder="Search here...">
+            <div class="px-0 mb-3">
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" style="width: 50vw;" id="pills-payment-tab"
+                            data-bs-toggle="pill" data-bs-target="#pills-payment" type="button" role="tab"
+                            aria-controls="pills-payment" aria-selected="true">Customers</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" style="width: 50vw;" id="pills-system-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-system" type="button" role="tab" aria-controls="pills-system"
+                            aria-selected="false">Temp.Customers</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-payment" role="tabpanel"
+                        aria-labelledby="pills-payment-tab">
+                        <div class="d-flex flex-row px-4 justify-content-center align-items-center w-100 text-start mb-3"
+                            style="border: solid 1px #9D9D9D;">
+                            <div class="col-12 d-flex flex-column py-2 text-center">
+                                <p class="gray-small-title mb-1">Total Customers</p>
+                                <p class="black-large-text mb-1">56</p>
                             </div>
-                            <div class="search-dropdown" id="searchDropdown">
+                        </div>
+                        <div class="d-flex flex-column">
+                            <div class="mb-3 ">
+                                <div class="container">
+                                    <div class="search-container">
+                                        <div class="input-group">
+                                            <span class="input-group-text bg-white border-end-0">
+                                                <i class="bi bi-search"></i>
+                                            </span>
+                                            <input type="text" class="form-control border-start-0 search-input"
+                                                id="searchInput1" placeholder="Search ...">
+                                        </div>
+                                        <div class="search-dropdown" id="searchDropdown1"></div>
+                                    </div>
+                                </div>
                             </div>
+                            <div class="table-container">
+                                <table class="table dashboard-table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Customer ID</th>
+                                            <th scope="col">Customer Name</th>
+                                            <th scope="col">Mobile Number</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tableBodyInvoices"></tbody>
+                                </table>
+                            </div>
+
+                            <nav>
+                                <ul class="pagination mt-2" id="paginationInvoices"></ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-system" role="tabpanel" aria-labelledby="pills-system-tab">
+                        <div class="d-flex flex-row px-4 justify-content-center align-items-center w-100 text-start mb-3"
+                            style="border: solid 1px #9D9D9D;">
+                            <div class="col-12 d-flex flex-column py-2 text-center">
+                                <p class="gray-small-title mb-1">Total Temp. Customers</p>
+                                <p class="black-large-text mb-1">18</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <div class="mb-3">
+                                <div class="container">
+                                    <div class="search-container mt-3">
+                                        <div class="input-group">
+                                            <span class="input-group-text bg-white border-end-0">
+                                                <i class="bi bi-search"></i>
+                                            </span>
+                                            <input type="text" class="form-control border-start-0 search-input"
+                                                id="searchInput2" placeholder="Search ...">
+                                        </div>
+                                        <div class="search-dropdown" id="searchDropdown2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-container">
+                                <table class="table dashboard-table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Customer ID</th>
+                                            <th scope="col">Customer Name</th>
+                                            <th scope="col">Mobile Number</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tableBodyTempCustomers"></tbody>
+                                </table>
+                            </div>
+
+                            <nav>
+                                <ul class="pagination mt-2" id="paginationTempCustomers"></ul>
+                            </nav>
                         </div>
                     </div>
                 </div>
-                <div class="table-container">
-                    <table class="table dashboard-table">
-                        <thead>
-                            <tr>
-                                <th scope="col">Invoice Number</th>
-                                <th scope="col">Customer Name</th>
-                                <th scope="col">Invoice Date</th>
-                            </tr>
-                        </thead>
-                        <tbody id="tableBody">
-                        </tbody>
-                    </table>
-                </div>
-                <nav>
-                    <ul class="pagination mt-2" id="pagination">
-                    </ul>
-                </nav>
             </div>
         </div>
 
@@ -287,7 +335,7 @@
                     </a>
                 </div>
                 <div class="col p-2 d-flex justify-content-center align-items-center">
-                    <a href="https://loops-it.github.io/wurth-lanka/sales/collections.html" class="active">
+                    <a href="https://loops-it.github.io/wurth-lanka/sales/collections.html">
                         <div class="d-flex flex-column justify-content-center align-items-center text-center">
                             <div class="svg-wrapper">
                                 <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
@@ -319,7 +367,7 @@
                     </a>
                 </div>
                 <div class="col p-2 d-flex justify-content-center align-items-center">
-                    <a href="https://loops-it.github.io/wurth-lanka/sales/reminders.html">
+                    <a href="https://loops-it.github.io/wurth-lanka/sales/reminders.html" class="active">
                         <div class="d-flex flex-column justify-content-center align-items-center text-center">
                             <div class="svg-wrapper">
                                 <svg width="21" height="22" viewBox="0 0 21 22" fill="none"
@@ -359,212 +407,215 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/iconify/2.0.0/iconify.min.js"
         integrity="sha512-lYMiwcB608+RcqJmP93CMe7b4i9G9QK1RbixsNu4PzMRJMsqr/bUrkXUuFzCNsRUo3IXNUr5hz98lINURv5CNA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/time-script.js"></script>
+    <script src="js/calander.js"></script>
+
     <script>
-        const searchInput = document.getElementById('searchInput');
-        const searchDropdown = document.getElementById('searchDropdown');
+        function initializeSearch(inputId, dropdownId, items) {
+            const searchInput = document.getElementById(inputId);
+            const searchDropdown = document.getElementById(dropdownId);
 
-        const items = ['Apple', 'Banana', 'Cherry', 'Date', 'Grape', 'Mango', 'Orange', 'Pineapple', 'Strawberry'];
+            searchInput.addEventListener('input', function () {
+                const query = this.value.toLowerCase();
+                searchDropdown.innerHTML = '';
 
-        searchInput.addEventListener('input', function () {
-            const query = this.value.toLowerCase();
-            searchDropdown.innerHTML = '';
-
-            if (query) {
-                const filteredItems = items.filter(item => item.toLowerCase().includes(query));
-                if (filteredItems.length > 0) {
-                    filteredItems.forEach(item => {
-                        const div = document.createElement('div');
-                        div.className = 'search-item';
-                        div.textContent = item;
-                        div.addEventListener('click', function () {
-                            searchInput.value = item;
-                            searchDropdown.classList.remove('show');
+                if (query) {
+                    const filteredItems = items.filter(item => item.toLowerCase().includes(query));
+                    if (filteredItems.length > 0) {
+                        filteredItems.forEach(item => {
+                            const div = document.createElement('div');
+                            div.className = 'search-item';
+                            div.textContent = item;
+                            div.addEventListener('click', function () {
+                                searchInput.value = item;
+                                searchDropdown.classList.remove('show');
+                            });
+                            searchDropdown.appendChild(div);
                         });
-                        searchDropdown.appendChild(div);
-                    });
-                    searchDropdown.classList.add('show');
+                        searchDropdown.classList.add('show');
+                    } else {
+                        searchDropdown.classList.remove('show');
+                    }
                 } else {
                     searchDropdown.classList.remove('show');
                 }
-            } else {
-                searchDropdown.classList.remove('show');
-            }
-        });
+            });
 
-        document.addEventListener('click', function (e) {
-            if (!searchDropdown.contains(e.target) && e.target !== searchInput) {
-                searchDropdown.classList.remove('show');
-            }
-        });
+            document.addEventListener('click', function (e) {
+                if (!searchDropdown.contains(e.target) && e.target !== searchInput) {
+                    searchDropdown.classList.remove('show');
+                }
+            });
+        }
+
+        initializeSearch('searchInput1', 'searchDropdown1', [
+            'Apple', 'Banana', 'Cherry', 'Date', 'Grape', 'Mango', 'Orange', 'Pineapple', 'Strawberry'
+        ]);
+
+        initializeSearch('searchInput2', 'searchDropdown2', [
+            'Carrot', 'Broccoli', 'Spinach', 'Potato', 'Tomato', 'Cucumber', 'Peas', 'Onion', 'Lettuce'
+        ]);
     </script>
 
     <script>
-        const tableData = [
-            { invoice: "54235625", customer: "H.K Perera", date: "13.12.2024" },
-            { invoice: "54235626", customer: "A.B Silva", date: "14.12.2024" },
-            { invoice: "54235627", customer: "C.D Fernando", date: "15.12.2024" },
-            { invoice: "54235628", customer: "E.F Gamage", date: "16.12.2024" },
-            { invoice: "54235629", customer: "G.H Jayasuriya", date: "17.12.2024" },
-            { invoice: "54235630", customer: "I.J Pathirana", date: "18.12.2024" },
-            { invoice: "54235631", customer: "K.L Wickramasinghe", date: "19.12.2024" },
-            { invoice: "54235632", customer: "M.N Gunasekara", date: "20.12.2024" },
-            { invoice: "54235633", customer: "O.P Abeysekera", date: "21.12.2024" },
-            { invoice: "54235634", customer: "Q.R Hettiarachchi", date: "22.12.2024" },
-            { invoice: "54235630", customer: "I.J Pathirana", date: "18.12.2024" },
-            { invoice: "54235631", customer: "K.L Wickramasinghe", date: "19.12.2024" },
-            { invoice: "54235632", customer: "M.N Gunasekara", date: "20.12.2024" },
-            { invoice: "54235633", customer: "O.P Abeysekera", date: "21.12.2024" },
-            { invoice: "54235634", customer: "Q.R Hettiarachchi", date: "22.12.2024" },
-            { invoice: "54235630", customer: "I.J Pathirana", date: "18.12.2024" },
-            { invoice: "54235631", customer: "K.L Wickramasinghe", date: "19.12.2024" },
-            { invoice: "54235632", customer: "M.N Gunasekara", date: "20.12.2024" },
-            { invoice: "54235633", customer: "O.P Abeysekera", date: "21.12.2024" },
-            { invoice: "54235634", customer: "Q.R Hettiarachchi", date: "22.12.2024" },
-            { invoice: "54235630", customer: "I.J Pathirana", date: "18.12.2024" },
-            { invoice: "54235631", customer: "K.L Wickramasinghe", date: "19.12.2024" },
-            { invoice: "54235632", customer: "M.N Gunasekara", date: "20.12.2024" },
-            { invoice: "54235633", customer: "O.P Abeysekera", date: "21.12.2024" },
-            { invoice: "54235634", customer: "Q.R Hettiarachchi", date: "22.12.2024" },
-            { invoice: "54235631", customer: "K.L Wickramasinghe", date: "19.12.2024" },
-            { invoice: "54235632", customer: "M.N Gunasekara", date: "20.12.2024" },
-            { invoice: "54235633", customer: "O.P Abeysekera", date: "21.12.2024" },
-            { invoice: "54235634", customer: "Q.R Hettiarachchi", date: "22.12.2024" },
-            { invoice: "54235630", customer: "I.J Pathirana", date: "18.12.2024" },
-            { invoice: "54235631", customer: "K.L Wickramasinghe", date: "19.12.2024" },
-            { invoice: "54235632", customer: "M.N Gunasekara", date: "20.12.2024" },
-            { invoice: "54235633", customer: "O.P Abeysekera", date: "21.12.2024" },
-            { invoice: "54235634", customer: "Q.R Hettiarachchi", date: "22.12.2024" },
-            { invoice: "54235631", customer: "K.L Wickramasinghe", date: "19.12.2024" },
-            { invoice: "54235632", customer: "M.N Gunasekara", date: "20.12.2024" },
-            { invoice: "54235633", customer: "O.P Abeysekera", date: "21.12.2024" },
-            { invoice: "54235634", customer: "Q.R Hettiarachchi", date: "22.12.2024" },
-            { invoice: "54235630", customer: "I.J Pathirana", date: "18.12.2024" },
-            { invoice: "54235631", customer: "K.L Wickramasinghe", date: "19.12.2024" },
-            { invoice: "54235632", customer: "M.N Gunasekara", date: "20.12.2024" },
-            { invoice: "54235633", customer: "O.P Abeysekera", date: "21.12.2024" },
-            { invoice: "54235634", customer: "Q.R Hettiarachchi", date: "22.12.2024" },
+        const invoiceData = [
+            { invoice: "54235625", customer: "H.K Perera", date: "075 4556585" },
+            { invoice: "54235626", customer: "A.B Silva", date: "075 4556585" },
+            { invoice: "54235627", customer: "C.D Fernando", date: "075 4556585" },
+            { invoice: "54235625", customer: "H.K Perera", date: "075 4556585" },
+            { invoice: "54235626", customer: "A.B Silva", date: "075 4556585" },
+            { invoice: "54235627", customer: "C.D Fernando", date: "075 4556585" },
+            { invoice: "54235628", customer: "E.F Gamage", date: "075 4556585" },
+            { invoice: "54235629", customer: "G.H Jayasuriya", date: "075 4556585" },
+            { invoice: "54235630", customer: "I.J Pathirana", date: "075 4556585" },
+            { invoice: "54235631", customer: "K.L Wickramasinghe", date: "075 4556585" },
+            { invoice: "54235632", customer: "M.N Gunasekara", date: "075 4556585" },
+            { invoice: "54235633", customer: "O.P Abeysekera", date: "075 4556585" },
+            { invoice: "54235634", customer: "Q.R Hettiarachchi", date: "075 4556585" },
+            { invoice: "54235630", customer: "I.J Pathirana", date: "075 4556585" },
+            { invoice: "54235625", customer: "H.K Perera", date: "075 4556585" },
+            { invoice: "54235626", customer: "A.B Silva", date: "075 4556585" },
+            { invoice: "54235627", customer: "C.D Fernando", date: "075 4556585" },
+            { invoice: "54235625", customer: "H.K Perera", date: "075 4556585" },
+            { invoice: "54235626", customer: "A.B Silva", date: "075 4556585" },
+            { invoice: "54235627", customer: "C.D Fernando", date: "075 4556585" },
+            { invoice: "54235628", customer: "E.F Gamage", date: "075 4556585" },
+            { invoice: "54235629", customer: "G.H Jayasuriya", date: "075 4556585" },
+            { invoice: "54235630", customer: "I.J Pathirana", date: "075 4556585" },
+            { invoice: "54235631", customer: "K.L Wickramasinghe", date: "075 4556585" },
+            { invoice: "54235632", customer: "M.N Gunasekara", date: "075 4556585" },
+            { invoice: "54235633", customer: "O.P Abeysekera", date: "075 4556585" },
+            { invoice: "54235634", customer: "Q.R Hettiarachchi", date: "075 4556585" },
+            { invoice: "54235630", customer: "I.J Pathirana", date: "075 4556585" },
+            { invoice: "54235625", customer: "H.K Perera", date: "075 4556585" },
+            { invoice: "54235626", customer: "A.B Silva", date: "075 4556585" },
+            { invoice: "54235627", customer: "C.D Fernando", date: "075 4556585" },
+            { invoice: "54235625", customer: "H.K Perera", date: "075 4556585" },
+            { invoice: "54235626", customer: "A.B Silva", date: "075 4556585" },
+            { invoice: "54235627", customer: "C.D Fernando", date: "075 4556585" },
+            { invoice: "54235628", customer: "E.F Gamage", date: "075 4556585" },
+            { invoice: "54235629", customer: "G.H Jayasuriya", date: "075 4556585" },
+            { invoice: "54235630", customer: "I.J Pathirana", date: "075 4556585" },
+            { invoice: "54235631", customer: "K.L Wickramasinghe", date: "075 4556585" },
+            { invoice: "54235632", customer: "M.N Gunasekara", date: "075 4556585" },
+            { invoice: "54235633", customer: "O.P Abeysekera", date: "075 4556585" },
+            { invoice: "54235634", customer: "Q.R Hettiarachchi", date: "075 4556585" },
+            { invoice: "54235630", customer: "I.J Pathirana", date: "075 4556585" },
+        ];
+
+        const tempCustomerData = [
+            { invoice: "54235625", customer: "H.K Perera", date: "075 4556585" },
+            { invoice: "54235626", customer: "A.B Silva", date: "075 4556585" },
+            { invoice: "54235627", customer: "C.D Fernando", date: "075 4556585" },
+            { invoice: "54235625", customer: "H.K Perera", date: "075 4556585" },
+            { invoice: "54235626", customer: "A.B Silva", date: "075 4556585" },
+            { invoice: "54235627", customer: "C.D Fernando", date: "075 4556585" },
+            { invoice: "54235628", customer: "E.F Gamage", date: "075 4556585" },
+            { invoice: "54235629", customer: "G.H Jayasuriya", date: "075 4556585" },
+            { invoice: "54235630", customer: "I.J Pathirana", date: "075 4556585" },
+            { invoice: "54235631", customer: "K.L Wickramasinghe", date: "075 4556585" },
+            { invoice: "54235632", customer: "M.N Gunasekara", date: "075 4556585" },
+            { invoice: "54235633", customer: "O.P Abeysekera", date: "075 4556585" },
+            { invoice: "54235634", customer: "Q.R Hettiarachchi", date: "075 4556585" },
+            { invoice: "54235630", customer: "I.J Pathirana", date: "075 4556585" },
+            { invoice: "54235625", customer: "H.K Perera", date: "075 4556585" },
+            { invoice: "54235626", customer: "A.B Silva", date: "075 4556585" },
+            { invoice: "54235627", customer: "C.D Fernando", date: "075 4556585" },
+            { invoice: "54235625", customer: "H.K Perera", date: "075 4556585" },
+            { invoice: "54235626", customer: "A.B Silva", date: "075 4556585" },
+            { invoice: "54235627", customer: "C.D Fernando", date: "075 4556585" },
+            { invoice: "54235628", customer: "E.F Gamage", date: "075 4556585" },
+            { invoice: "54235629", customer: "G.H Jayasuriya", date: "075 4556585" },
+            { invoice: "54235630", customer: "I.J Pathirana", date: "075 4556585" },
+            { invoice: "54235631", customer: "K.L Wickramasinghe", date: "075 4556585" },
+            { invoice: "54235632", customer: "M.N Gunasekara", date: "075 4556585" },
+            { invoice: "54235633", customer: "O.P Abeysekera", date: "075 4556585" },
+            { invoice: "54235634", customer: "Q.R Hettiarachchi", date: "075 4556585" },
+            { invoice: "54235630", customer: "I.J Pathirana", date: "075 4556585" },
         ];
 
         const rowsPerPage = 10;
-        let currentPage = 1;
 
-        function renderTable(page) {
-            const tableBody = document.getElementById('tableBody');
-            tableBody.innerHTML = '';
+        function renderTable(data, tableBodyId, page) {
+            const tableBody = document.getElementById(tableBodyId);
+            tableBody.innerHTML = "";
 
             const startIndex = (page - 1) * rowsPerPage;
-            const endIndex = Math.min(startIndex + rowsPerPage, tableData.length);
+            const endIndex = Math.min(startIndex + rowsPerPage, data.length);
 
             for (let i = startIndex; i < endIndex; i++) {
                 const row = `
                 <tr>
-                    <td>${tableData[i].invoice}</td>
-                    <td>${tableData[i].customer}</td>
-                    <td>${tableData[i].date}</td>
+                    ${Object.values(data[i])
+                        .map((value) => `<td>${value}</td>`)
+                        .join("")}
                 </tr>
             `;
                 tableBody.innerHTML += row;
             }
         }
 
-        function renderPagination() {
-            const pagination = document.getElementById('pagination');
-            pagination.innerHTML = '';
+        function renderPagination(data, paginationId, currentPage, changePageCallback) {
+            const pagination = document.getElementById(paginationId);
+            pagination.innerHTML = "";
 
-            const totalPages = Math.ceil(tableData.length / rowsPerPage);
+            const totalPages = Math.ceil(data.length / rowsPerPage);
 
             pagination.innerHTML += `
-            <li class="page-item ${currentPage === 1 ? 'disabled' : ''}">
-                <a class="page-link" href="#" onclick="changePage(${currentPage - 1})">Prev</a>
+            <li class="page-item ${currentPage === 1 ? "disabled" : ""}">
+                <a class="page-link" href="#" onclick="${changePageCallback}(${currentPage - 1})">Prev</a>
             </li>
         `;
 
-            if (totalPages <= 4) {
-                for (let i = 1; i <= totalPages; i++) {
+            for (let i = 1; i <= totalPages; i++) {
+                if (i === 1 || i === totalPages || Math.abs(i - currentPage) <= 1) {
                     pagination.innerHTML += `
-                    <li class="page-item ${i === currentPage ? 'active' : ''}">
-                        <a class="page-link" href="#" onclick="changePage(${i})">${i}</a>
+                    <li class="page-item ${i === currentPage ? "active" : ""}">
+                        <a class="page-link" href="#" onclick="${changePageCallback}(${i})">${i}</a>
                     </li>
                 `;
-                }
-            } else {
-                if (currentPage <= 3) {
-                    for (let i = 1; i <= 3; i++) {
-                        pagination.innerHTML += `
-                        <li class="page-item ${i === currentPage ? 'active' : ''}">
-                            <a class="page-link" href="#" onclick="changePage(${i})">${i}</a>
-                        </li>
-                    `;
-                    }
+                } else if (Math.abs(i - currentPage) === 2) {
                     pagination.innerHTML += `
-                    <li class="page-item">
-                        <span class="page-link">...</span>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link" href="#" onclick="changePage(${totalPages})">${totalPages}</a>
-                    </li>
-                `;
-                } else if (currentPage > 3 && currentPage < totalPages - 2) {
-                    pagination.innerHTML += `
-                    <li class="page-item">
-                        <a class="page-link" href="#" onclick="changePage(1)">1</a>
-                    </li>
-                    <li class="page-item">
+                    <li class="page-item disabled">
                         <span class="page-link">...</span>
                     </li>
                 `;
-                    for (let i = currentPage - 1; i <= currentPage + 1; i++) {
-                        pagination.innerHTML += `
-                        <li class="page-item ${i === currentPage ? 'active' : ''}">
-                            <a class="page-link" href="#" onclick="changePage(${i})">${i}</a>
-                        </li>
-                    `;
-                    }
-                    pagination.innerHTML += `
-                    <li class="page-item">
-                        <span class="page-link">...</span>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link" href="#" onclick="changePage(${totalPages})">${totalPages}</a>
-                    </li>
-                `;
-                } else {
-                    pagination.innerHTML += `
-                    <li class="page-item">
-                        <a class="page-link" href="#" onclick="changePage(1)">1</a>
-                    </li>
-                    <li class="page-item">
-                        <span class="page-link">...</span>
-                    </li>
-                `;
-                    for (let i = totalPages - 2; i <= totalPages; i++) {
-                        pagination.innerHTML += `
-                        <li class="page-item ${i === currentPage ? 'active' : ''}">
-                            <a class="page-link" href="#" onclick="changePage(${i})">${i}</a>
-                        </li>
-                    `;
-                    }
                 }
             }
 
             pagination.innerHTML += `
-            <li class="page-item ${currentPage === totalPages ? 'disabled' : ''}">
-                <a class="page-link" href="#" onclick="changePage(${currentPage + 1})">Next</a>
+            <li class="page-item ${currentPage === totalPages ? "disabled" : ""}">
+                <a class="page-link" href="#" onclick="${changePageCallback}(${currentPage + 1})">Next</a>
             </li>
         `;
         }
 
-        function changePage(page) {
-            const totalPages = Math.ceil(tableData.length / rowsPerPage);
+        let currentInvoicePage = 1;
+        let currentTempCustomerPage = 1;
+
+        function changeInvoicePage(page) {
+            const totalPages = Math.ceil(invoiceData.length / rowsPerPage);
             if (page < 1 || page > totalPages) return;
-            currentPage = page;
-            renderTable(currentPage);
-            renderPagination();
+            currentInvoicePage = page;
+            renderTable(invoiceData, "tableBodyInvoices", currentInvoicePage);
+            renderPagination(invoiceData, "paginationInvoices", currentInvoicePage, "changeInvoicePage");
         }
 
-        renderTable(currentPage);
-        renderPagination();
+        function changeTempCustomerPage(page) {
+            const totalPages = Math.ceil(tempCustomerData.length / rowsPerPage);
+            if (page < 1 || page > totalPages) return;
+            currentTempCustomerPage = page;
+            renderTable(tempCustomerData, "tableBodyTempCustomers", currentTempCustomerPage);
+            renderPagination(tempCustomerData, "paginationTempCustomers", currentTempCustomerPage, "changeTempCustomerPage");
+        }
+
+        renderTable(invoiceData, "tableBodyInvoices", currentInvoicePage);
+        renderPagination(invoiceData, "paginationInvoices", currentInvoicePage, "changeInvoicePage");
+
+        renderTable(tempCustomerData, "tableBodyTempCustomers", currentTempCustomerPage);
+        renderPagination(tempCustomerData, "paginationTempCustomers", currentTempCustomerPage, "changeTempCustomerPage");
     </script>
+
     <script>
         document.querySelectorAll('[data-bs-toggle="collapse"]').forEach(button => {
             button.addEventListener('click', function () {
