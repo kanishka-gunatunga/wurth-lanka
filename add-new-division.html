@@ -84,7 +84,7 @@
 
                     <form>
                         <div class="pe-5">
-                            <div class="d-flex flex-row justify-content-between">
+                            <!-- <div class="d-flex flex-row justify-content-between">
                                 <div class="mb-3 col-6">
                                     <label for="division-input" class="form-label custom-input-label">Division
                                         Name</label>
@@ -117,8 +117,35 @@
                                 <textarea class="form-control division-description" placeholder="Division Description"
                                     style="height: 152px"></textarea>
 
+                            </div> -->
+                            <div class="row d-flex justify-content-between">
+                                <div class="mb-4 col-12 col-lg-6">
+                                    <label for="division-input" class="form-label custom-input-label">
+                                        Division Name</label>
+                                    <input type="text" class="form-control custom-input" id="division-input" placeholder="Division Name">
+                                </div>
+        
+        
+        
+                                <div class="mb-4 col-12 col-lg-6">
+                                    <label for="head-of-division-select" class="form-label custom-input-label">Head of Division
+                                    </label>
+                                    <select class="form-select custom-input" aria-label="Default select example"
+                                        id="head-of-division-select">
+                                        <option class=".custom-input-option" selected>Open this select menu</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+    
+                                <div class="mb-4 col-12">
+                                    <label for="head-of-division-select" class="form-label custom-input-label">Division Description
+                                    </label>
+                                    <textarea class="form-control division-description" placeholder="Division Description"
+                                        style="height: 152px"></textarea>
+                                </div>
                             </div>
-
                             <div class="col-12 d-flex justify-content-end division-action-btn gap-3">
                                 <button class="btn btn-dark cancel">Cancel</button>
                                 <button class="btn btn-danger submit">Submit</button>

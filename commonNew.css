@@ -222,6 +222,7 @@ border-color: #dc3545 !important;
 .custom-input::placeholder,
 .division-description::placeholder {
     color: #9D9D9D !important;
+    font-size: 13px !important;
 }
 
 .custom-input-label {
@@ -237,9 +238,9 @@ border-color: #dc3545 !important;
     padding: 15.62px;
     border-radius: 5.47px;
     color: #FFFFFF !important;
-    font-family: "Inter" , sans-serif;
-    font-size: 18px;
-    font-weight: 600;
+    font-family: "Inter" , sans-serif !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
 
     display: flex;
     align-items: center;
