@@ -58,7 +58,7 @@
                 </div>
             </div>
             <div class="d-flex flex-column">
-                <div class="d-flex w-100 flex-column px-4 mb-3 mt-3">
+                <div class="d-flex w-100 flex-column px-3 mb-3 mt-3">
                     <div class="card-view px-0 ">
                         <div class="d-flex flex-row justify-content-between align-items-center px-3 mb-2">
                             <h4 class="black-title mb-0">Payment Details </h4>
@@ -111,9 +111,10 @@
                             </label>
                         </div>
 
-                        <div class="d-flex flex-column collapse-wrapper w-100 px-2 mt-4">
-                            <div class="d-flex flex-column w-100">
-                                <p>
+                        <div class="d-flex flex-column collapse-wrapper w-100 px-3 mt-4">
+
+                            <div class="d-flex flex-column w-100 shadow-border mb-3 " style="border-radius: 8px;">
+                                <p class="mb-0 py-2">
                                     <button class="collapse-toggle" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#cash_payment1" aria-expanded="false"
                                         aria-controls="cash_payment1">
@@ -121,14 +122,50 @@
                                         <i class="bi bi-chevron-down"></i>
                                     </button>
                                 </p>
-                                <div class="collapse" id="cash_payment1">
-                                    <div class="card card-body">
-                                        Placeholder content for Payment Method 1.
+                                <div class="collapse" id="cash_payment1"
+                                    style="border-top: 1px solid #dee2e6 !important;">
+                                    <div class="card card-body border-0">
+                                        <form id="CashPaymentForm" class="content needs-validation p-0 border-0 px-1"
+                                            novalidate>
+                                            <div class="input-group-collection-inner d-flex flex-column mb-3">
+                                                <label for="amount">Amount</label>
+                                                <input type="number" class="form-control" placeholder="Enter Amount"
+                                                    name="amount" required />
+                                                <div class="invalid-feedback">
+                                                    Amount is required
+                                                </div>
+                                            </div>
+                                            <div class="input-group-collection-inner d-flex flex-column mb-3">
+                                                <label for="discount">Discount <span
+                                                        style="font-size: 12px !important; color:#868686">Max Discounts:
+                                                        5% (7 Days), 3% (30 Days)</span></label>
+                                                <input type="number" class="form-control" placeholder="3%"
+                                                    name="discount" id="discount" required />
+                                                <div class="invalid-feedback">
+                                                    Discount is required
+                                                </div>
+                                            </div>
+                                            <div class="d-flex flex-row px-4 justify-content-center align-items-center w-100 text-start mb-3 shadow-border"
+                                                style=" border-radius: 8px;">
+                                                <div class="col-12 d-flex flex-column py-4 text-center">
+                                                    <p class="gray-small-title mb-1"
+                                                        style="color: #595959; font-weight: 500;">Total Amount</p>
+                                                    <p class="black-large-text mb-1" style="color:#CC0000">Rs.
+                                                        124,000.00</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex w-100 justify-content-end align-items-center">
+                                                <button class="styled-button-red px-5"
+                                                    style="font-size: 15px; min-height: 42px"
+                                                    type="submit">Save</button>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
-                            <div class="d-flex flex-column w-100">
-                                <p>
+
+                            <div class="d-flex flex-column w-100 shadow-border mb-3 " style="border-radius: 8px;">
+                                <p class="mb-0 py-2">
                                     <button class="collapse-toggle" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#cash_payment2" aria-expanded="false"
                                         aria-controls="cash_payment2">
@@ -136,14 +173,111 @@
                                         <i class="bi bi-chevron-down"></i>
                                     </button>
                                 </p>
-                                <div class="collapse" id="cash_payment2">
-                                    <div class="card card-body">
-                                        Placeholder content for Payment Method 2.
+                                <div class="collapse" id="cash_payment2"
+                                    style="border-top: 1px solid #dee2e6 !important;">
+                                    <div class="card card-body border-0">
+                                        <form id="FundTransferForm" class="content needs-validation p-0 border-0 px-1"
+                                            novalidate>
+                                            <div class="input-group-collection-inner d-flex flex-column mb-3">
+                                                <label for="amount">Amount</label>
+                                                <input type="number" class="form-control" placeholder="Enter Amount"
+                                                    name="amount" required />
+                                                <div class="invalid-feedback">
+                                                    Amount is required
+                                                </div>
+                                            </div>
+                                            <div class="input-group-collection-inner d-flex flex-column mb-3">
+                                                <label for="transfer_date">Transfer Date</label>
+                                                <input type="date" class="form-control" id="transfer_date"
+                                                    placeholder="dd/mm/yyyy" name="transfer_date" required />
+                                                <div class="invalid-feedback">
+                                                    Transfer Date is required
+                                                </div>
+                                            </div>
+                                            <div class="input-group-collection-inner d-flex flex-column mb-3">
+                                                <label for="transfer_reference_number">Transfer Reference Number</label>
+                                                <input type="number" class="form-control" id="transfer_reference_number"
+                                                    placeholder="Enter Transfer Reference Number"
+                                                    name="transfer_reference_number" required />
+                                                <div class="invalid-feedback">
+                                                    Transfer Reference Number is required
+                                                </div>
+                                            </div>
+                                            <div class="input-group-collection-inner d-flex flex-column mb-3">
+                                                <label for="discount">Discount <span
+                                                        style="font-size: 12px !important; color:#868686">Max Discounts:
+                                                        5% (7 Days), 3% (30 Days)</span></label>
+                                                <input type="number" class="form-control" placeholder="3%"
+                                                    name="discount" id="discount" required />
+                                                <div class="invalid-feedback">
+                                                    Discount is required
+                                                </div>
+                                            </div>
+
+                                            <div class="input-group-collection-inner d-flex flex-column mb-3">
+                                                <label for="screenshot" class="mb-1">Upload Transfer Screenshot</label>
+                                                <div class="d-flex flex-row px-4 justify-content-center align-items-center w-100 text-start mb-3 shadow-border"
+                                                    style="border-radius: 8px;">
+                                                    <div
+                                                        class="col-12 d-flex flex-column pt-4 pb-3 text-center position-relative justify-content-center align-items-center">
+                                                        <div
+                                                            class="d-flex flex-column justify-content-center align-items-center">
+                                                            <svg width="47" height="46" viewBox="0 0 47 46" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <rect x="3.5" y="3" width="40" height="40" rx="20"
+                                                                    fill="#F2F4F7" />
+                                                                <rect x="3.5" y="3" width="40" height="40" rx="20"
+                                                                    stroke="#F9FAFB" stroke-width="6" />
+                                                                <g clip-path="url(#clip0_798_4571)">
+                                                                    <path
+                                                                        d="M26.8335 26.3332L23.5002 22.9999M23.5002 22.9999L20.1669 26.3332M23.5002 22.9999V30.4999M30.4919 28.3249C31.3047 27.8818 31.9467 27.1806 32.3168 26.3321C32.6868 25.4835 32.7637 24.5359 32.5354 23.6388C32.307 22.7417 31.7865 21.9462 31.0558 21.3778C30.3251 20.8094 29.4259 20.5005 28.5002 20.4999H27.4502C27.198 19.5243 26.7278 18.6185 26.0752 17.8507C25.4225 17.0829 24.6042 16.4731 23.682 16.0671C22.7597 15.661 21.7573 15.4694 20.7503 15.5065C19.7433 15.5436 18.7578 15.8085 17.8679 16.2813C16.9779 16.7541 16.2068 17.4225 15.6124 18.2362C15.018 19.05 14.6158 19.9879 14.436 20.9794C14.2563 21.9709 14.3036 22.9903 14.5746 23.961C14.8455 24.9316 15.3329 25.8281 16.0002 26.5832"
+                                                                        stroke="#475467" stroke-width="1.66667"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </g>
+                                                                <defs>
+                                                                    <clipPath id="clip0_798_4571">
+                                                                        <rect width="20" height="20" fill="white"
+                                                                            transform="translate(13.5 13)" />
+                                                                    </clipPath>
+                                                                </defs>
+                                                            </svg>
+                                                            <label for="screenshot">Click to upload</label>
+                                                        </div>
+                                                        <input type="file" id="screenshot"
+                                                            class="form-control position-absolute screenshot-input"
+                                                            name="screenshot" multiple style="opacity: 0;" />
+                                                        <div class="invalid-feedback">Upload Transfer Screenshot is
+                                                            required</div>
+                                                        <ul id="file-preview"
+                                                            class="mt-1 d-flex flex-column text-start ps-0 mb-0"></ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+                                            <div class="d-flex flex-row px-4 justify-content-center align-items-center w-100 text-start mb-3 shadow-border"
+                                                style=" border-radius: 8px;">
+                                                <div class="col-12 d-flex flex-column py-4 text-center">
+                                                    <p class="gray-small-title mb-1"
+                                                        style="color: #595959;  font-weight: 500">Total Amount</p>
+                                                    <p class="black-large-text mb-1" style="color:#CC0000">Rs.
+                                                        124,000.00</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex w-100 justify-content-end align-items-center">
+                                                <button class="styled-button-red px-5"
+                                                    style="font-size: 15px; min-height: 42px"
+                                                    type="submit">Save</button>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
-                            <div class="d-flex flex-column w-100">
-                                <p>
+
+                            <div class="d-flex flex-column w-100 shadow-border mb-3 " style="border-radius: 8px;">
+                                <p class="mb-0 py-2">
                                     <button class="collapse-toggle" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#cash_payment3" aria-expanded="false"
                                         aria-controls="cash_payment3">
@@ -151,31 +285,273 @@
                                         <i class="bi bi-chevron-down"></i>
                                     </button>
                                 </p>
-                                <div class="collapse" id="cash_payment3">
-                                    <div class="card card-body">
-                                        Placeholder content for Payment Method 3.
+                                <div class="collapse" id="cash_payment3"
+                                    style="border-top: 1px solid #dee2e6 !important;">
+                                    <div class="card card-body border-0">
+                                        <form id="ChequePaymentForm" class="content needs-validation p-0 border-0 px-1"
+                                            novalidate>
+                                            <div class="input-group-collection-inner d-flex flex-column mb-3">
+                                                <label for="cheque_number">Cheque Number</label>
+                                                <input type="number" class="form-control" id="cheque_number"
+                                                    placeholder="Enter Cheque Number" name="cheque_number" required />
+                                                <div class="invalid-feedback">
+                                                    Cheque Number is required
+                                                </div>
+                                            </div>
+                                            <div class="input-group-collection-inner d-flex flex-column mb-3">
+                                                <label for="cheque_date">Cheque Date</label>
+                                                <input type="date" class="form-control" id="cheque_date"
+                                                    placeholder="dd/mm/yyyy" name="cheque_date" required />
+                                                <div class="invalid-feedback">
+                                                    Cheque Date is required
+                                                </div>
+                                            </div>
+                                            <div class="input-group-collection-inner d-flex flex-column mb-3">
+                                                <label for="cheque_amount">Cheque Amount</label>
+                                                <input type="number" class="form-control" id="cheque_amount"
+                                                    placeholder="Enter Cheque Amount" name="cheque_amount" required />
+                                                <div class="invalid-feedback">
+                                                    Cheque Amount is required
+                                                </div>
+                                            </div>
+                                            <div class="input-group-collection-inner d-flex flex-column mb-3">
+                                                <label for="bank_name">Bank Name</label>
+                                                <select class="form-select form-control"
+                                                    aria-label="Default select example" id="bank_name" name="bank_name">
+                                                    <option selected value="0">Bank Of Ceylon</option>
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                </select>
+                                                <div class="invalid-feedback">
+                                                    Bank Name is required
+                                                </div>
+                                            </div>
+                                            <div class="input-group-collection-inner d-flex flex-column mb-3">
+                                                <label for="branch_name">Branch Name</label>
+                                                <input type="number" class="form-control" id="branch_name"
+                                                    placeholder="Enter Branch Name" name="branch_name" required />
+                                                <div class="invalid-feedback">
+                                                    Branch Name is required
+                                                </div>
+                                            </div>
+                                            <div class="input-group-collection-inner d-flex flex-column mb-3">
+                                                <label for="discount">Discount <span
+                                                        style="font-size: 12px !important; color:#868686">Max Discounts:
+                                                        5% (7 Days), 3% (30 Days)</span></label>
+                                                <input type="number" class="form-control" placeholder="3%"
+                                                    name="discount" id="discount" required />
+                                                <div class="invalid-feedback">
+                                                    Discount is required
+                                                </div>
+                                            </div>
+
+                                            <div class="input-group-collection-inner d-flex flex-column mb-3">
+                                                <div class="form-check d-flex flex-row align-items-center">
+                                                    <input class="form-check-input m-0 me-2 ms-0" type="checkbox"
+                                                        value="" id="date_cheque_tick"
+                                                        style="margin-left: 0px !important;">
+                                                    <label class="form-check-label" for="date_cheque_tick">
+                                                        Post - Dated Cheque
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="input-group-collection-inner d-flex flex-column mb-3">
+                                                <label for="cheque_image" class="mb-1">Upload Cheque image </label>
+                                                <div class="d-flex flex-row px-4 justify-content-center align-items-center w-100 text-start mb-3 shadow-border"
+                                                    style="border-radius: 8px;">
+                                                    <div
+                                                        class="col-12 d-flex flex-column pt-4 pb-3 text-center position-relative justify-content-center align-items-center">
+                                                        <div
+                                                            class="d-flex flex-column justify-content-center align-items-center">
+                                                            <svg width="47" height="46" viewBox="0 0 47 46" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <rect x="3.5" y="3" width="40" height="40" rx="20"
+                                                                    fill="#F2F4F7" />
+                                                                <rect x="3.5" y="3" width="40" height="40" rx="20"
+                                                                    stroke="#F9FAFB" stroke-width="6" />
+                                                                <g clip-path="url(#clip0_798_4571)">
+                                                                    <path
+                                                                        d="M26.8335 26.3332L23.5002 22.9999M23.5002 22.9999L20.1669 26.3332M23.5002 22.9999V30.4999M30.4919 28.3249C31.3047 27.8818 31.9467 27.1806 32.3168 26.3321C32.6868 25.4835 32.7637 24.5359 32.5354 23.6388C32.307 22.7417 31.7865 21.9462 31.0558 21.3778C30.3251 20.8094 29.4259 20.5005 28.5002 20.4999H27.4502C27.198 19.5243 26.7278 18.6185 26.0752 17.8507C25.4225 17.0829 24.6042 16.4731 23.682 16.0671C22.7597 15.661 21.7573 15.4694 20.7503 15.5065C19.7433 15.5436 18.7578 15.8085 17.8679 16.2813C16.9779 16.7541 16.2068 17.4225 15.6124 18.2362C15.018 19.05 14.6158 19.9879 14.436 20.9794C14.2563 21.9709 14.3036 22.9903 14.5746 23.961C14.8455 24.9316 15.3329 25.8281 16.0002 26.5832"
+                                                                        stroke="#475467" stroke-width="1.66667"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </g>
+                                                                <defs>
+                                                                    <clipPath id="clip0_798_4571">
+                                                                        <rect width="20" height="20" fill="white"
+                                                                            transform="translate(13.5 13)" />
+                                                                    </clipPath>
+                                                                </defs>
+                                                            </svg>
+                                                            <label for="screenshot">Click to upload</label>
+                                                        </div>
+                                                        <input type="file" id="cheque_image"
+                                                            class="form-control position-absolute screenshot-input"
+                                                            name="cheque_image" multiple style="opacity: 0;" />
+                                                        <div class="invalid-feedback">Upload Transfer Screenshot is
+                                                            required</div>
+                                                        <ul id="file-preview-cheque"
+                                                            class="mt-1 d-flex flex-column text-start ps-0 mb-0"></ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+                                            <div class="d-flex flex-row px-4 justify-content-center align-items-center w-100 text-start mb-3 shadow-border"
+                                                style=" border-radius: 8px;">
+                                                <div class="col-12 d-flex flex-column py-4 text-center">
+                                                    <p class="gray-small-title mb-1"
+                                                        style="color: #595959;  font-weight: 500">Total Amount</p>
+                                                    <p class="black-large-text mb-1" style="color:#CC0000">Rs.
+                                                        124,000.00</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex w-100 justify-content-end align-items-center">
+                                                <button class="styled-button-red px-5"
+                                                    style="font-size: 15px; min-height: 42px"
+                                                    type="submit">Save</button>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
-                            <div class="d-flex flex-column w-100">
-                                <p>
+
+                            <div class="d-flex flex-column w-100 shadow-border mb-3 " style="border-radius: 8px;">
+                                <p class="mb-0 py-2">
                                     <button class="collapse-toggle" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#cash_payment4" aria-expanded="false"
                                         aria-controls="cash_payment4">
-                                        Customer Direct Deposit
+                                        Card Payment
                                         <i class="bi bi-chevron-down"></i>
                                     </button>
                                 </p>
-                                <div class="collapse" id="cash_payment4">
-                                    <div class="card card-body">
-                                        Placeholder content for Payment Method 4.
+                                <div class="collapse" id="cash_payment4"
+                                    style="border-top: 1px solid #dee2e6 !important;">
+                                    <div class="card card-body border-0">
+                                        <form id="CardPaymentForm" class="content needs-validation p-0 border-0 px-1"
+                                            novalidate>
+                                            <div class="input-group-collection-inner d-flex flex-column mb-3">
+                                                <label for="card_amount">Amount</label>
+                                                <input type="number" class="form-control" id="card_amount"
+                                                    placeholder="Enter Amount" name="card_amount" required />
+                                                <div class="invalid-feedback">
+                                                    Amount is required
+                                                </div>
+                                            </div>
+                                            <div class="input-group-collection-inner d-flex flex-column mb-3">
+                                                <label for="card_transfer_date">Transfer Date</label>
+                                                <input type="date" class="form-control" id="card_transfer_date"
+                                                    placeholder="dd/mm/yyyy" name="card_transfer_date" required />
+                                                <div class="invalid-feedback">
+                                                    Transfer Date is required
+                                                </div>
+                                            </div>
+                                            <div class="input-group-collection-inner d-flex flex-column mb-3">
+                                                <label for="transfer_reference_number">Transfer Reference Number</label>
+                                                <input type="number" class="form-control" id="transfer_reference_number"
+                                                    placeholder="Enter Transfer Reference Number"
+                                                    name="transfer_reference_number" required />
+                                                <div class="invalid-feedback">
+                                                    Transfer Reference Number is required
+                                                </div>
+                                            </div>
+                                            <div class="input-group-collection-inner d-flex flex-column mb-3">
+                                                <label for="card_discount">Discount <span
+                                                        style="font-size: 12px !important; color:#868686">Max Discounts:
+                                                        5% (7 Days), 3% (30 Days)</span></label>
+                                                <input type="number" class="form-control" placeholder="3%"
+                                                    name="card_discount" id="card_discount" required />
+                                                <div class="invalid-feedback">
+                                                    Discount is required
+                                                </div>
+                                            </div>
+
+                                            <div class="input-group-collection-inner d-flex flex-column mb-3">
+                                                <label for="card_screenshot" class="mb-1">Upload Transfer
+                                                    Screenshot</label>
+                                                <div class="d-flex flex-row px-4 justify-content-center align-items-center w-100 text-start mb-3 shadow-border"
+                                                    style="border-radius: 8px;">
+                                                    <div
+                                                        class="col-12 d-flex flex-column pt-4 pb-3 text-center position-relative justify-content-center align-items-center">
+                                                        <div
+                                                            class="d-flex flex-column justify-content-center align-items-center">
+                                                            <svg width="47" height="46" viewBox="0 0 47 46" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <rect x="3.5" y="3" width="40" height="40" rx="20"
+                                                                    fill="#F2F4F7" />
+                                                                <rect x="3.5" y="3" width="40" height="40" rx="20"
+                                                                    stroke="#F9FAFB" stroke-width="6" />
+                                                                <g clip-path="url(#clip0_798_4571)">
+                                                                    <path
+                                                                        d="M26.8335 26.3332L23.5002 22.9999M23.5002 22.9999L20.1669 26.3332M23.5002 22.9999V30.4999M30.4919 28.3249C31.3047 27.8818 31.9467 27.1806 32.3168 26.3321C32.6868 25.4835 32.7637 24.5359 32.5354 23.6388C32.307 22.7417 31.7865 21.9462 31.0558 21.3778C30.3251 20.8094 29.4259 20.5005 28.5002 20.4999H27.4502C27.198 19.5243 26.7278 18.6185 26.0752 17.8507C25.4225 17.0829 24.6042 16.4731 23.682 16.0671C22.7597 15.661 21.7573 15.4694 20.7503 15.5065C19.7433 15.5436 18.7578 15.8085 17.8679 16.2813C16.9779 16.7541 16.2068 17.4225 15.6124 18.2362C15.018 19.05 14.6158 19.9879 14.436 20.9794C14.2563 21.9709 14.3036 22.9903 14.5746 23.961C14.8455 24.9316 15.3329 25.8281 16.0002 26.5832"
+                                                                        stroke="#475467" stroke-width="1.66667"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </g>
+                                                                <defs>
+                                                                    <clipPath id="clip0_798_4571">
+                                                                        <rect width="20" height="20" fill="white"
+                                                                            transform="translate(13.5 13)" />
+                                                                    </clipPath>
+                                                                </defs>
+                                                            </svg>
+                                                            <label for="card_screenshot">Click to upload</label>
+                                                        </div>
+                                                        <input type="file" id="card_screenshot"
+                                                            class="form-control position-absolute screenshot-input"
+                                                            name="card_screenshot" multiple style="opacity: 0;" />
+                                                        <div class="invalid-feedback">Upload Transfer Screenshot is
+                                                            required</div>
+                                                        <ul id="file-preview-card-payment"
+                                                            class="mt-1 d-flex flex-column text-start ps-0 mb-0"></ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+                                            <div class="d-flex flex-row px-4 justify-content-center align-items-center w-100 text-start mb-3 shadow-border"
+                                                style=" border-radius: 8px;">
+                                                <div class="col-12 d-flex flex-column py-4 text-center">
+                                                    <p class="gray-small-title mb-1"
+                                                        style="color: #595959;  font-weight: 500">Total Amount</p>
+                                                    <p class="black-large-text mb-1" style="color:#CC0000">Rs.
+                                                        124,000.00</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex w-100 justify-content-end align-items-center">
+                                                <button class="styled-button-red px-5"
+                                                    style="font-size: 15px; min-height: 42px"
+                                                    type="submit">Save</button>
+                                            </div>
+                                        </form>
                                     </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="d-flex flex-column w-100 shadow-border mb-3 py-3 px-3 " style="border-radius: 8px;">
+                            <label class="form-check-label d-flex flex-column">
+                                <div class="d-flex flex-row mb-1">
+                                    <span class="label-name">Customer’s Mobile No. :</span>
+                                    <span class="label-value"> 0754265235</span>
+                                </div>
+                            </label>
+                            <div class="d-flex flex-row px-4 justify-content-center align-items-center w-100 text-start mb-3 shadow-border"
+                                style=" border-radius: 8px;">
+                                <div class="col-12 d-flex flex-column py-4 text-center">
+                                    <p class="gray-small-title mb-1" style="color: #595959; font-weight: 500;">Payment
+                                        Amount</p>
+                                    <p class="black-large-text mb-1" style="color:#CC0000">Rs. 500,000.00</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
 
@@ -465,6 +841,96 @@
             });
         });
 
+
+        // CashPaymentForm validation
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('CashPaymentForm');
+            form.addEventListener('submit', (event) => {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            });
+        });
+
+        // FundTransferForm validation
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('FundTransferForm');
+            form.addEventListener('submit', (event) => {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            });
+        });
+
+        // ChequePaymentForm validation
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('ChequePaymentForm');
+            form.addEventListener('submit', (event) => {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            });
+        });
+
+        // CardPaymentForm validation
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('CardPaymentForm');
+            form.addEventListener('submit', (event) => {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            });
+        });
+
+        document.getElementById('screenshot').addEventListener('change', function (event) {
+            const fileInput = event.target;
+            const fileList = fileInput.files;
+            const previewList = document.getElementById('file-preview');
+
+            previewList.innerHTML = '';
+
+            Array.from(fileList).forEach(file => {
+                const listItem = document.createElement('li');
+                listItem.textContent = file.name;
+                previewList.appendChild(listItem);
+            });
+        });
+
+        document.getElementById('cheque_image').addEventListener('change', function (event) {
+            const fileInput = event.target;
+            const fileList = fileInput.files;
+            const previewList = document.getElementById('file-preview-cheque');
+
+            previewList.innerHTML = '';
+
+            Array.from(fileList).forEach(file => {
+                const listItem = document.createElement('li');
+                listItem.textContent = file.name;
+                previewList.appendChild(listItem);
+            });
+        });
+
+        document.getElementById('card_screenshot').addEventListener('change', function (event) {
+            const fileInput = event.target;
+            const fileList = fileInput.files;
+            const previewList = document.getElementById('file-preview-card-payment');
+
+            previewList.innerHTML = '';
+
+            Array.from(fileList).forEach(file => {
+                const listItem = document.createElement('li');
+                listItem.textContent = file.name;
+                previewList.appendChild(listItem);
+            });
+        });
     </script>
 
 </body>

@@ -804,3 +804,53 @@ body {
     font-size: 14px;
     padding: 5px;
 }
+
+.shadow-border{
+    box-shadow: 0 0 2.83px 0 #00000026;
+}
+
+.styled-button-red {
+    text-decoration: none !important;
+    background-color: var(--color-primary) !important;
+    color: var(--color-white) !important;
+    font-family: var(--font-secondary) !important;
+    font-size: 11px !important;
+    font-weight: 400 !important;
+    padding: 10px 15px !important;
+    border-radius: 8px !important;
+    line-height: 10px !important;
+    width: max-content  !important;
+}
+
+.input-group-collection-inner label {
+    font-family: var(--font-secondary) !important;
+    color: var(--color-black) !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    margin-bottom: 0px !important;
+}
+
+.input-group-collection-inner input , .input-group-collection-inner select {
+    outline: none !important;
+    box-shadow: none !important;
+    color: #707070 !important;
+    font-size: 13px !important;
+    font-weight: 400 !important;
+    font-family: var(--font-secondary) !important;
+    border: solid 0.5px #D0D5DD !important;
+    border-radius: 5px;
+}
+
+.input-group-collection-inner input::placeholder {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: var(--font-primary);
+    color: #D0D5DD !important;
+}
+
+#file-preview li, #file-preview-cheque li, #file-preview-card-payment li{
+    font-family: var(--font-secondary) !important;
+    color: 707070 !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+}
