@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/adm_styles.css">
     <link rel="stylesheet" href="css/calander.css">
+    <link rel="stylesheet" href="css/signature_pad.css">
 </head>
 
 <body>
@@ -106,66 +107,66 @@
                                 </div>
                                 <div class="d-flex flex-row mb-1">
                                     <span class="label-name">Final Payable Amount : </span>
-                                    <span class="label-value">Rs. 110,500.00</span>
+                                    <span class="label-value" style="font-weight: 700;">Rs. 110,500.00</span>
                                 </div>
                             </label>
                         </div>
+                    </div>
+                    <div class="d-flex flex-column collapse-wrapper w-100 px-0 mt-4">
 
-                        <div class="d-flex flex-column collapse-wrapper w-100 px-3 mt-4">
-
-                            <div class="d-flex flex-column w-100 shadow-border mb-3 " style="border-radius: 8px;">
-                                <p class="mb-0 py-2">
-                                    <button class="collapse-toggle" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#cash_payment1" aria-expanded="false"
-                                        aria-controls="cash_payment1">
-                                        Cash Payment
-                                        <i class="bi bi-chevron-down"></i>
-                                    </button>
-                                </p>
-                                <div class="collapse" id="cash_payment1"
-                                    style="border-top: 1px solid #dee2e6 !important;">
-                                    <div class="card card-body border-0">
-                                        <form id="CashPaymentForm" class="content needs-validation p-0 border-0 px-1"
-                                            novalidate>
-                                            <div class="input-group-collection-inner d-flex flex-column mb-3">
-                                                <label for="amount">Amount</label>
-                                                <input type="number" class="form-control" placeholder="Enter Amount"
-                                                    name="amount" required />
-                                                <div class="invalid-feedback">
-                                                    Amount is required
-                                                </div>
+                        <!-- cash collapse -->
+                        <div class="d-flex flex-column w-100 shadow-border mb-3 " style="border-radius: 8px;">
+                            <p class="mb-0 py-3">
+                                <button class="collapse-toggle" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#cash_payment1" aria-expanded="false" aria-controls="cash_payment1">
+                                    Cash Payment
+                                    <i class="bi bi-chevron-down"></i>
+                                </button>
+                            </p>
+                            <div class="collapse" id="cash_payment1" style="border-top: 1px solid #dee2e6 !important;">
+                                <div class="card card-body border-0">
+                                    <form id="CashPaymentForm" class="content needs-validation p-0 border-0 px-1"
+                                        novalidate>
+                                        <div class="input-group-collection-inner d-flex flex-column mb-3">
+                                            <label for="amount">Amount</label>
+                                            <input type="number" class="form-control" placeholder="Enter Amount"
+                                                name="amount" required />
+                                            <div class="invalid-feedback">
+                                                Amount is required
                                             </div>
-                                            <div class="input-group-collection-inner d-flex flex-column mb-3">
-                                                <label for="discount">Discount <span
-                                                        style="font-size: 12px !important; color:#868686">Max Discounts:
-                                                        5% (7 Days), 3% (30 Days)</span></label>
-                                                <input type="number" class="form-control" placeholder="3%"
-                                                    name="discount" id="discount" required />
-                                                <div class="invalid-feedback">
-                                                    Discount is required
-                                                </div>
+                                        </div>
+                                        <div class="input-group-collection-inner d-flex flex-column mb-3">
+                                            <label for="discount">Discount <span
+                                                    style="font-size: 12px !important; color:#868686">Max Discounts:
+                                                    5% (7 Days), 3% (30 Days)</span></label>
+                                            <input type="number" class="form-control" placeholder="3%" name="discount"
+                                                id="discount" required />
+                                            <div class="invalid-feedback">
+                                                Discount is required
                                             </div>
-                                            <div class="d-flex flex-row px-4 justify-content-center align-items-center w-100 text-start mb-3 shadow-border"
-                                                style=" border-radius: 8px;">
-                                                <div class="col-12 d-flex flex-column py-4 text-center">
-                                                    <p class="gray-small-title mb-1"
-                                                        style="color: #595959; font-weight: 500;">Total Amount</p>
-                                                    <p class="black-large-text mb-1" style="color:#CC0000">Rs.
-                                                        124,000.00</p>
-                                                </div>
+                                        </div>
+                                        <div class="d-flex flex-row px-4 justify-content-center align-items-center w-100 text-start mb-3 shadow-border"
+                                            style=" border-radius: 8px;">
+                                            <div class="col-12 d-flex flex-column py-4 text-center">
+                                                <p class="gray-small-title mb-1"
+                                                    style="color: #595959; font-weight: 500;">Total Amount</p>
+                                                <p class="black-large-text mb-1" style="color:#CC0000">Rs.
+                                                    124,000.00</p>
                                             </div>
-                                            <div class="d-flex w-100 justify-content-end align-items-center">
-                                                <button class="styled-button-red px-5"
-                                                    style="font-size: 15px; min-height: 42px"
-                                                    type="submit">Save</button>
-                                            </div>
-                                        </form>
-                                    </div>
+                                        </div>
+                                        <div class="d-flex w-100 justify-content-end align-items-center">
+                                            <button class="styled-button-red px-5"
+                                                style="font-size: 15px; min-height: 42px" type="submit">Save</button>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
-
-                            <div class="d-flex flex-column w-100 shadow-border mb-3 " style="border-radius: 8px;">
-                                <p class="mb-0 py-2">
+                        </div>
+                        <!-- fund transfer collapse -->
+                        <div class="d-flex w-100 flex-column">
+                            <div class="d-flex flex-column w-100 shadow-border fundTransferSection mb-3"
+                                id="fundTransferSection" style="border-radius: 8px;">
+                                <p class="mb-0 py-3">
                                     <button class="collapse-toggle" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#cash_payment2" aria-expanded="false"
                                         aria-controls="cash_payment2">
@@ -195,7 +196,8 @@
                                                 </div>
                                             </div>
                                             <div class="input-group-collection-inner d-flex flex-column mb-3">
-                                                <label for="transfer_reference_number">Transfer Reference Number</label>
+                                                <label for="transfer_reference_number">Transfer Reference
+                                                    Number</label>
                                                 <input type="number" class="form-control" id="transfer_reference_number"
                                                     placeholder="Enter Transfer Reference Number"
                                                     name="transfer_reference_number" required />
@@ -205,7 +207,8 @@
                                             </div>
                                             <div class="input-group-collection-inner d-flex flex-column mb-3">
                                                 <label for="discount">Discount <span
-                                                        style="font-size: 12px !important; color:#868686">Max Discounts:
+                                                        style="font-size: 12px !important; color:#868686">Max
+                                                        Discounts:
                                                         5% (7 Days), 3% (30 Days)</span></label>
                                                 <input type="number" class="form-control" placeholder="3%"
                                                     name="discount" id="discount" required />
@@ -215,7 +218,8 @@
                                             </div>
 
                                             <div class="input-group-collection-inner d-flex flex-column mb-3">
-                                                <label for="screenshot" class="mb-1">Upload Transfer Screenshot</label>
+                                                <label for="screenshot" class="mb-1">Upload Transfer
+                                                    Screenshot</label>
                                                 <div class="d-flex flex-row px-4 justify-content-center align-items-center w-100 text-start mb-3 shadow-border"
                                                     style="border-radius: 8px;">
                                                     <div
@@ -250,7 +254,8 @@
                                                         <div class="invalid-feedback">Upload Transfer Screenshot is
                                                             required</div>
                                                         <ul id="file-preview"
-                                                            class="mt-1 d-flex flex-column text-start ps-0 mb-0"></ul>
+                                                            class="mt-1 d-flex flex-column text-start ps-0 mb-0">
+                                                        </ul>
                                                     </div>
                                                 </div>
                                             </div>
@@ -275,9 +280,18 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="d-flex flex-column w-100 shadow-border mb-3 " style="border-radius: 8px;">
-                                <p class="mb-0 py-2">
+                            <div id="fundTransferWrapper"
+                                class="d-flex flex-column justify-content-start align-items-center text-start pb-3">
+                                <button class="red_small_option_button w-100 text-start" type="button"
+                                    id="addFundTransfer">+ Add Another Fund
+                                    Transfer</button>
+                            </div>
+                        </div>
+                        <!-- cheque payment collapse -->
+                        <div class="d-flex w-100 flex-column">
+                            <div class="d-flex flex-column w-100 shadow-border mb-3 addChequePaymentSection"
+                                id="addChequePaymentSection" style="border-radius: 8px;">
+                                <p class="mb-0 py-3">
                                     <button class="collapse-toggle" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#cash_payment3" aria-expanded="false"
                                         aria-controls="cash_payment3">
@@ -337,7 +351,8 @@
                                             </div>
                                             <div class="input-group-collection-inner d-flex flex-column mb-3">
                                                 <label for="discount">Discount <span
-                                                        style="font-size: 12px !important; color:#868686">Max Discounts:
+                                                        style="font-size: 12px !important; color:#868686">Max
+                                                        Discounts:
                                                         5% (7 Days), 3% (30 Days)</span></label>
                                                 <input type="number" class="form-control" placeholder="3%"
                                                     name="discount" id="discount" required />
@@ -393,7 +408,8 @@
                                                         <div class="invalid-feedback">Upload Transfer Screenshot is
                                                             required</div>
                                                         <ul id="file-preview-cheque"
-                                                            class="mt-1 d-flex flex-column text-start ps-0 mb-0"></ul>
+                                                            class="mt-1 d-flex flex-column text-start ps-0 mb-0">
+                                                        </ul>
                                                     </div>
                                                 </div>
                                             </div>
@@ -418,9 +434,19 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="d-flex flex-column w-100 shadow-border mb-3 " style="border-radius: 8px;">
-                                <p class="mb-0 py-2">
+                            <div id="addChequePaymentWrapper"
+                                class="d-flex flex-column justify-content-start align-items-center text-start pb-3">
+                                <button class="red_small_option_button w-100 text-start" type="button"
+                                    id="addChequePayment">+ Add Another
+                                    Cheque
+                                    Payment</button>
+                            </div>
+                        </div>
+                        <!-- card payment collapse -->
+                        <div class="d-flex w-100 flex-column">
+                            <div class="d-flex flex-column w-100 shadow-border mb-3 addCardPaymentSection"
+                                id="addCardPaymentSection" style="border-radius: 8px;">
+                                <p class="mb-0 py-3">
                                     <button class="collapse-toggle" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#cash_payment4" aria-expanded="false"
                                         aria-controls="cash_payment4">
@@ -450,7 +476,8 @@
                                                 </div>
                                             </div>
                                             <div class="input-group-collection-inner d-flex flex-column mb-3">
-                                                <label for="transfer_reference_number">Transfer Reference Number</label>
+                                                <label for="transfer_reference_number">Transfer Reference
+                                                    Number</label>
                                                 <input type="number" class="form-control" id="transfer_reference_number"
                                                     placeholder="Enter Transfer Reference Number"
                                                     name="transfer_reference_number" required />
@@ -460,7 +487,8 @@
                                             </div>
                                             <div class="input-group-collection-inner d-flex flex-column mb-3">
                                                 <label for="card_discount">Discount <span
-                                                        style="font-size: 12px !important; color:#868686">Max Discounts:
+                                                        style="font-size: 12px !important; color:#868686">Max
+                                                        Discounts:
                                                         5% (7 Days), 3% (30 Days)</span></label>
                                                 <input type="number" class="form-control" placeholder="3%"
                                                     name="card_discount" id="card_discount" required />
@@ -506,7 +534,8 @@
                                                         <div class="invalid-feedback">Upload Transfer Screenshot is
                                                             required</div>
                                                         <ul id="file-preview-card-payment"
-                                                            class="mt-1 d-flex flex-column text-start ps-0 mb-0"></ul>
+                                                            class="mt-1 d-flex flex-column text-start ps-0 mb-0">
+                                                        </ul>
                                                     </div>
                                                 </div>
                                             </div>
@@ -531,98 +560,107 @@
                                     </div>
                                 </div>
                             </div>
+                            <div id="addCardPaymentWrapper"
+                                class="d-flex flex-column justify-content-start align-items-center text-start pb-3">
+                                <button class="red_small_option_button w-100 text-start" type="button"
+                                    id="addCardPayment">+ Add
+                                    Another Card
+                                    Payment</button>
+                            </div>
                         </div>
+                    </div>
 
-                        <div class="d-flex flex-column w-100 shadow-border mb-3 py-3 px-3 " style="border-radius: 8px;">
+                    <!-- payment summery section -->
+                    <div class="d-flex flex-column w-100 shadow-border mb-3 py-3 pb-2 px-3 "
+                        style="border-radius: 8px;">
+                        <span class="payment-summery-text-collection mb-2">Payment Summery </span>
+                        <div class="d-flex flex-column mb-2">
+                            <label class="form-check-label d-flex flex-column mb-2 pb-2"
+                                style="border-bottom: solid 1px #EAECF0">
+                                <span class="label-value-title">Cash Payment</span>
+                            </label>
                             <label class="form-check-label d-flex flex-column">
                                 <div class="d-flex flex-row mb-1">
-                                    <span class="label-name">Customer’s Mobile No. :</span>
-                                    <span class="label-value"> 0754265235</span>
+                                    <span class="label-name">Expect to pay :</span>
+                                    <span class="label-value">Rs. 100,000.00</span>
+                                </div>
+                                <div class="d-flex flex-row mb-3">
+                                    <span class="label-name">Discount : </span>
+                                    <span class="label-value">3%</span>
                                 </div>
                             </label>
-                            <div class="d-flex flex-row px-4 justify-content-center align-items-center w-100 text-start mb-3 shadow-border"
-                                style=" border-radius: 8px;">
-                                <div class="col-12 d-flex flex-column py-4 text-center">
-                                    <p class="gray-small-title mb-1" style="color: #595959; font-weight: 500;">Payment
-                                        Amount</p>
-                                    <p class="black-large-text mb-1" style="color:#CC0000">Rs. 500,000.00</p>
+                        </div>
+                        <!-- fund transfer -->
+                        <div class="d-flex flex-column">
+                            <label class="form-check-label d-flex flex-column mb-2 pb-2"
+                                style="border-bottom: solid 1px #EAECF0">
+                                <span class="label-value-title">Fund Transfer</span>
+                            </label>
+                            <label class="form-check-label d-flex flex-column">
+                                <div class="d-flex flex-row mb-1">
+                                    <span class="label-name">Expect to pay :</span>
+                                    <span class="label-value">Rs. 400,000.00</span>
                                 </div>
+                                <div class="d-flex flex-row mb-3">
+                                    <span class="label-name">Discount : </span>
+                                    <span class="label-value">4%</span>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="d-flex flex-row px-4 justify-content-center align-items-center w-100 text-start mb-2 shadow-border"
+                            style=" border-radius: 8px;">
+                            <div class="col-12 d-flex flex-column py-4 text-center">
+                                <p class="gray-small-title mb-1" style="color: #595959; font-weight: 500;">Payment
+                                    Amount</p>
+                                <p class="black-large-text mb-1" style="color:#CC0000">Rs. 500,000.00</p>
                             </div>
                         </div>
-                        <style>.signature-container {
-                            border: 1px solid #ccc;
-                            padding: 20px;
-                            width: 300px;
-                            margin: auto;
-                        }
-                        .signature-pad {
-                            border: 1px solid #000;
-                            width: 100%;
-                            height: 150px;
-                            cursor: crosshair;
-                        }
-                        .signature-buttons {
-                            margin-top: 10px;
-                        }</style>
-                        <div class="signature-container">
-                            <h2>E-Signature</h2>
-                            <p>Sign below using your mouse or touch input:</p>
-                            <canvas id="signaturePad" class="signature-pad"></canvas>
-                            <div class="signature-buttons">
-                                <button id="clearButton">Clear</button>
-                                <button id="saveButton">Save</button>
+                    </div>
+
+                    <!-- ADM signature section -->
+                    <div class="flex-row">
+                        <div class="wrapper signature_pad d-flex flex-column">
+                            <h3 class="mb-0">E-signature</h3>
+                            <p>Sign to confirm payment.</p>
+                            <canvas id="signature-pad-adm" width="300" height="250"></canvas>
+                            <div class="d-flex flex-row my-2">
+                                <div class="clear-btn styled-button-red me-2">
+                                    <button  id="clear-admin"><span> Clear </span></button>
+                                </div>
+                                <!-- <div class="save-btn styled-button-red">
+                                    <button id="save-admin"><span> Save </span></button>
+                                </div> -->
                             </div>
-                            <p>Alternatively, type your name:</p>
-                            <input type="text" id="typedName" placeholder="Type your name" style="width: 100%; padding: 5px;">
                         </div>
-                    
-                        <script>
-                            const canvas = document.getElementById('signaturePad');
-                            const clearButton = document.getElementById('clearButton');
-                            const saveButton = document.getElementById('saveButton');
-                            const typedName = document.getElementById('typedName');
-                            const ctx = canvas.getContext('2d');
-                    
-                            let isDrawing = false;
-                    
-                            // Set canvas dimensions
-                            canvas.width = 400;
-                            canvas.height = 150;
-                    
-                            // Drawing events
-                            canvas.addEventListener('mousedown', startDrawing);
-                            canvas.addEventListener('mousemove', draw);
-                            canvas.addEventListener('mouseup', stopDrawing);
-                            canvas.addEventListener('mouseout', stopDrawing);
-                    
-                            function startDrawing(e) {
-                                isDrawing = true;
-                                ctx.beginPath();
-                                ctx.moveTo(e.offsetX, e.offsetY);
-                            }
-                    
-                            function draw(e) {
-                                if (!isDrawing) return;
-                                ctx.lineTo(e.offsetX, e.offsetY);
-                                ctx.stroke();
-                            }
-                    
-                            function stopDrawing() {
-                                isDrawing = false;
-                            }
-                    
-                            // Clear canvas
-                            clearButton.addEventListener('click', () => {
-                                ctx.clearRect(0, 0, canvas.width, canvas.height);
-                            });
-                    
-                            // Save signature
-                            saveButton.addEventListener('click', () => {
-                                const signatureData = canvas.toDataURL();
-                                console.log('Saved Signature:', signatureData);
-                                alert('Signature saved! Check the console for the base64 data.');
-                            });
-                        </script>
+
+                    </div>
+                    <div class="form-check my-3">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label ckeck-label-collection-inner ms-3" for="flexCheckDefault">
+                            Temporary Receipt
+                        </label>
+                    </div>
+                    <!-- customer signature -->
+                    <div class="flex-row">
+                        <div class="wrapper signature_pad d-flex flex-column">
+                            <h3 class="mb-0">Customer's E-signature</h3>
+                            <p>Sign to confirm payment.</p>
+                            <canvas id="signature-pad-customer" width="300" height="250"></canvas>
+                            <div class="d-flex flex-row my-2">
+                                <div class="clear-btn styled-button-red me-2">
+                                    <button  id="clear-customer"><span> Clear </span></button>
+                                </div>
+                                <!-- <div class="save-btn styled-button-red">
+                                    <button  id="save-customer"><span> Save </span></button>
+                                </div> -->
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="d-flex w-100 justify-content-center align-items-center pt-3">
+                        <button class="styled-button-normal w-100 px-5" style="width: 100% !important; font-size: 14px !important; font-weight: 600; height: 40px !important; min-height: 40px !important"  type="submit">Submit Payment</button>
                     </div>
                 </div>
             </div>
@@ -894,6 +932,65 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/iconify/2.0.0/iconify.min.js"
         integrity="sha512-lYMiwcB608+RcqJmP93CMe7b4i9G9QK1RbixsNu4PzMRJMsqr/bUrkXUuFzCNsRUo3IXNUr5hz98lINURv5CNA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.3.5/signature_pad.min.js"
+        integrity="sha512-kw/nRM/BMR2XGArXnOoxKOO5VBHLdITAW00aG8qK4zBzcLVZ4nzg7/oYCaoiwc8U9zrnsO9UHqpyljJ8+iqYiQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+          function initializeSignaturePad(canvasId) {
+        var canvas = document.getElementById(canvasId);
+
+        function resizeCanvas() {
+            var ratio = Math.max(window.devicePixelRatio || 1, 1);
+            canvas.width = canvas.offsetWidth * ratio;
+            canvas.height = canvas.offsetHeight * ratio;
+            canvas.getContext("2d").scale(ratio, ratio);
+        }
+
+        window.onresize = resizeCanvas;
+        resizeCanvas();
+
+        var signaturePad = new SignaturePad(canvas, {
+            backgroundColor: 'rgb(250,250,250)'
+        });
+
+        return signaturePad;
+    }
+
+    // Initialize signature pads
+    var adminSignaturePad = initializeSignaturePad('signature-pad-adm');
+    var customerSignaturePad = initializeSignaturePad('signature-pad-customer');
+
+    // Clear buttons for both signature pads
+    document.getElementById("clear-admin").addEventListener('click', function () {
+        adminSignaturePad.clear();
+    });
+
+    document.getElementById("clear-customer").addEventListener('click', function () {
+        customerSignaturePad.clear();
+    });
+
+    // Save buttons for both signature pads
+    document.getElementById("save-admin").addEventListener('click', function () {
+        if (adminSignaturePad.isEmpty()) {
+            alert("Admin signature is empty.");
+        } else {
+            var dataURL = adminSignaturePad.toDataURL();
+            console.log("Admin signature saved:", dataURL);
+            // You can send this dataURL to the server or do something with it
+        }
+    });
+
+    document.getElementById("save-customer").addEventListener('click', function () {
+        if (customerSignaturePad.isEmpty()) {
+            alert("Customer signature is empty.");
+        } else {
+            var dataURL = customerSignaturePad.toDataURL();
+            console.log("Customer signature saved:", dataURL);
+            // You can send this dataURL to the server or do something with it
+        }
+    });
+    </script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const collapseToggles = document.querySelectorAll('.collapse-toggle');
@@ -1004,6 +1101,110 @@
                 previewList.appendChild(listItem);
             });
         });
+
+        let collapseCounter = 21;
+
+        const addFundTransferButton = document.getElementById('addFundTransfer');
+        addFundTransferButton.addEventListener('click', () => {
+            const originalCollapse = document.getElementById('fundTransferSection');
+            const newCollapse = originalCollapse.cloneNode(true);
+
+            const collapseButton = newCollapse.querySelector('.collapse-toggle');
+
+            if (collapseButton) {
+                const titleNumber = collapseCounter - 19;
+                collapseButton.textContent = `Fund Transfer ${titleNumber}`;
+
+                const collapseTarget = collapseButton.getAttribute('data-bs-target');
+                const newTargetId = `cash_payment${collapseCounter}`;
+
+                collapseButton.setAttribute('data-bs-target', `#${newTargetId}`);
+
+                collapseButton.setAttribute('aria-controls', newTargetId);
+
+                const collapseSection = newCollapse.querySelector(`#${collapseTarget.slice(1)}`);
+                collapseSection.id = newTargetId;
+
+                collapseCounter++;
+
+                const buttonWrapperDiv = document.getElementById('fundTransferWrapper');
+                buttonWrapperDiv.insertBefore(newCollapse, addFundTransferButton);
+            } else {
+                console.error("Could not find the collapse toggle button inside the cloned section.");
+            }
+        });
+
+
+
+
+        let collapseCounterCheque = 31;
+
+        const addChequePaymentButton = document.getElementById('addChequePayment');
+        addChequePaymentButton.addEventListener('click', () => {
+            const originalCollapseCheque = document.getElementById('addChequePaymentSection');
+            const newCollapseCheque = originalCollapseCheque.cloneNode(true);
+
+            const collapseButtonCheque = newCollapseCheque.querySelector('.collapse-toggle');
+
+            if (collapseButtonCheque) {
+                const titleNumberCheque = collapseCounterCheque - 29;
+                collapseButtonCheque.textContent = `Cheque Payment ${titleNumberCheque}`;
+
+                const collapseTargetCheque = collapseButtonCheque.getAttribute('data-bs-target');
+                const newTargetIdCheque = `cash_payment${collapseCounterCheque}`;
+
+                collapseButtonCheque.setAttribute('data-bs-target', `#${newTargetIdCheque}`);
+
+                collapseButtonCheque.setAttribute('aria-controls', newTargetIdCheque);
+
+                const collapseSectionCheque = newCollapseCheque.querySelector(`#${collapseTargetCheque.slice(1)}`);
+                collapseSectionCheque.id = newTargetIdCheque;
+
+                collapseCounterCheque++;
+
+                const buttonWrapperDivCheque = document.getElementById('addChequePaymentWrapper');
+                buttonWrapperDivCheque.insertBefore(newCollapseCheque, addChequePaymentButton);
+            } else {
+                console.error("Could not find the collapse toggle button inside the cloned section.");
+            }
+        });
+
+
+
+
+        let collapseCounterCard = 41;
+
+        const addCardPaymentButton = document.getElementById('addCardPayment');
+        addCardPaymentButton.addEventListener('click', () => {
+            const originalCollapseCard = document.getElementById('addCardPaymentSection');
+            const newCollapseCard = originalCollapseCard.cloneNode(true);
+
+            const collapseButtonCard = newCollapseCard.querySelector('.collapse-toggle');
+
+            if (collapseButtonCard) {
+                const titleNumberCard = collapseCounterCard - 39;
+                collapseButtonCard.textContent = `Card Payment ${titleNumberCard}`;
+
+                const collapseTargetCard = collapseButtonCard.getAttribute('data-bs-target');
+                const newTargetIdCard = `cash_payment${collapseCounterCard}`;
+
+                collapseButtonCard.setAttribute('data-bs-target', `#${newTargetIdCard}`);
+
+                collapseButtonCard.setAttribute('aria-controls', newTargetIdCard);
+
+                const collapseSectionCard = newCollapseCard.querySelector(`#${collapseTargetCard.slice(1)}`);
+                collapseSectionCard.id = newTargetIdCard;
+
+                collapseCounterCard++;
+
+                const buttonWrapperDivCard = document.getElementById('addCardPaymentWrapper');
+                buttonWrapperDivCard.insertBefore(newCollapseCard, addCardPaymentButton);
+            } else {
+                console.error("Could not find the collapse toggle button inside the cloned section.");
+            }
+        });
+
+
     </script>
 
 </body>

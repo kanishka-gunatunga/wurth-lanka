@@ -780,7 +780,7 @@ body {
     font-size: 13px !important;
 }
 
-.collapse-wrapper button{
+.collapse-wrapper .collapse-toggle{
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -793,7 +793,7 @@ body {
     font-weight: 500;
     font-size: 16px !important;
 }
-.collapse-wrapper button i{
+.collapse-wrapper .collapse-toggle i{
     background-color: var(--color-primary);
     color: #fff; border-radius: 100%;
     width: 20px;
@@ -814,12 +814,13 @@ body {
     background-color: var(--color-primary) !important;
     color: var(--color-white) !important;
     font-family: var(--font-secondary) !important;
-    font-size: 11px !important;
+    font-size: 15px !important;
     font-weight: 400 !important;
     padding: 10px 15px !important;
     border-radius: 8px !important;
     line-height: 10px !important;
     width: max-content  !important;
+    border: none;
 }
 
 .input-group-collection-inner label {
@@ -853,4 +854,35 @@ body {
     color: 707070 !important;
     font-size: 12px !important;
     font-weight: 500 !important;
+}
+
+.red_small_option_button {
+    color: var(--color-primary) !important;
+    font-family: var(--font-secondary) !important;
+    font-weight: 500 !important;
+    font-size: 12px !important;
+    line-height: 20px !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.payment-summery-text-collection{
+    font-size: 14px; 
+    font-weight: 500;
+    font-family: var(--font-secondary) !important;
+    color: #000;
+}
+.label-value-title{
+    font-size: 13px; 
+    font-weight: 500;
+    font-family: var(--font-secondary) !important;
+    color: #000;
+}
+.ckeck-label-collection-inner{
+    font-size: 12px; 
+    font-weight: 500;
+    font-family: var(--font-secondary) !important;
+    color: #000;
 }
