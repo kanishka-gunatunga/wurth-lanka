@@ -45,7 +45,7 @@
     width: max-content !important;
     border: none;
     font-family: var(--font-secondary);
-    font-size: 18px;
+    font-size: 16px;
     color: var(--color-white);
 }
 
@@ -766,12 +766,26 @@ body {
     border: none !important;
     background-color: var(--color-primary);
 }
+
+.form-check-input-table{
+    border: solid 1px #D2D5DA !important;
+    border-radius: 6px !important;
+    width: 20px !important;
+    height: 20px !important;
+    margin-left: 0px !important;
+}
+.form-check-input-table:checked{
+    border: none !important;
+    background-color: var(--color-primary) !important;
+}
+
 .form-check-label .label-name{
     color: #000;
     font-family: var(--font-secondary);
     font-weight: 500;
     font-size: 13px !important;
     margin-right: 10px;
+    min-width: max-content;
 }
 .form-check-label .label-value{
     color: #000;
@@ -779,7 +793,33 @@ body {
     font-weight: 400;
     font-size: 13px !important;
 }
-
+.title-label-name{
+    color: #000;
+    font-family: var(--font-secondary);
+    font-weight: 500;
+    font-size: 14px !important;
+    margin-right: 10px;
+}
+.title-600-14-black{
+    color: #000;
+    font-family: var(--font-secondary);
+    font-weight: 600;
+    font-size: 14px !important;
+    margin-right: 10px;
+}
+.title-600-13-gray{
+    color: #BEBEBE;
+    font-family: var(--font-secondary);
+    font-weight: 500;
+    font-size: 14px !important;
+    margin-right: 10px;
+}
+.transparent-button-bg{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
 .collapse-wrapper .collapse-toggle{
     width: 100%;
     display: flex;
@@ -885,4 +925,70 @@ body {
     font-weight: 500;
     font-family: var(--font-secondary) !important;
     color: #000;
+}
+
+.pill-tag-styles{
+    background-color: #FFF5F6;
+    color:  var(--color-primary);
+    font-size: 10px; 
+    font-weight: 500;
+    font-family: var(--font-secondary) !important;
+    padding: 8px 30px 20px 8px;
+    margin-bottom: 0px;
+    border: none !important;
+    box-shadow: 0 4px 4px 0 #0000001A;
+}
+.pill-tag-styles .btn-close{
+    top: 2px; 
+    right: 3px;
+    font-size: 10px;
+    background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23CC0000'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat; 
+
+}
+
+.dropdown-search{
+    font-size: 12px; 
+    font-weight: 500;
+    font-family: var(--font-secondary) !important;
+    color:  #000;
+    padding: 0px !important;
+    padding-right: 10px !important;;
+}
+.dropdown-search::placeholder{
+    font-size: 12px; 
+    font-weight: 500;
+    font-family: var(--font-secondary) !important;
+    color:  #9D9D9D;
+}
+
+
+
+.checkbox-group .form-check-label{
+    color: #000;
+    font-family: var(--font-secondary);
+    font-weight: 500;
+    font-size: 14px !important;
+}
+.checkbox-group .form-check-input{
+    margin-left: 0px !important;
+}
+.red-17-600-text{
+    color: var(--color-primary);
+    font-family: var(--font-secondary);
+    font-weight: 600;
+    font-size: 17px !important;
+}
+.small-13-500-black{
+    color: #000;
+    font-family: var(--font-secondary);
+    font-weight: 500;
+    font-size: 13px !important;
+}
+.small-13-500-black span{
+    font-weight: 400;
+}
+.hr-line-gray{
+    width: 100%;
+    height: 1px;
+    background-color: #D3D3D3;
 }
