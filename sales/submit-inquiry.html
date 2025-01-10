@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wurth Lanka | Collections</title>
+    <title>Wurth Lanka | Edit Profile</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -14,12 +14,8 @@
 
 <body>
     <style>
-        .table>:not(caption)>*>* {
-            padding: 3px 5px !important;
-        }
-
-        .table>:not(:last-child)>:last-child>* {
-            border-bottom-color: transparent !important;
+        .form-control {
+            padding: 8px !important;
         }
     </style>
     <!-- body wrapper -->
@@ -46,177 +42,153 @@
                 </button>
             </div>
         </div>
-
-        <!-- body content -->
-        <div class="content px-0">
-            <div class="d-flex flex-row px-4 justify-content-between align-items-center w-100 text-start  mb-3">
-                <h3 class="page-title">Bulk Payment</h3>
-            </div>
-
-            <!-- dropdown section -->
-            <div class="container px-3">
-                <div class="dropdown-overlay" id="dropdownOverlay"></div>
-                <div class="custom-select-wrapper" id="customSelectWrapper">
-                    <div class="custom-select" id="customSelect" style="padding: 5px 10px !important;">
-                        <div class="d-flex flex-row align-items-center w-100">
-                            <i class="bi bi-search me-2"></i>
-                            <input type="text" id="searchInput" class="form-control mb-0 p-0 dropdown-search"
-                                placeholder="Search Customers">
-                        </div>
-                        <i class="bi bi-chevron-down chevron"></i>
-                    </div>
-                    <div class="custom-dropdown" id="customDropdown">
-                        <table class="table dashboard-table">
-                            <thead>
-                                <tr>
-                                    <th scope="col"></th>
-                                    <th scope="col">Full Name</th>
-                                    <th scope="col">Customer ID</th>
-                                </tr>
-                            </thead>
-                            <tbody id="dropdownItems">
-                                <tr class="custom-dropdown-item">
-                                    <td><input class="form-check-input form-check-input-table ms-0" type="checkbox"
-                                            value=""></td>
-                                    <td style="line-height: 25px;">Dimo Lanka - Colombo 01</td>
-                                    <td style="line-height: 25px;">1586423211</td>
-                                </tr>
-                                <tr class="custom-dropdown-item">
-                                    <td><input class="form-check-input form-check-input-table ms-0" type="checkbox"
-                                            value=""></td>
-                                    <td style="line-height: 25px;">Dimo Lanka - Colombo 02</td>
-                                    <td style="line-height: 25px;">1586423211</td>
-                                </tr>
-                                <tr class="custom-dropdown-item">
-                                    <td><input class="form-check-input form-check-input-table ms-0" type="checkbox"
-                                            value=""></td>
-                                    <td style="line-height: 25px;">Dimo Lanka - Colombo 03</td>
-                                    <td style="line-height: 25px;">1586423211</td>
-                                </tr>
-                                <tr class="custom-dropdown-item">
-                                    <td><input class="form-check-input form-check-input-table ms-0" type="checkbox"
-                                            value=""></td>
-                                    <td style="line-height: 25px;">Dimo Lanka - Colombo 04</td>
-                                    <td style="line-height: 25px;">1586423211</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-
-            <!-- tags -->
-            <div class="d-flex selected-items px-3 py-3 d-flex flex-wrap gap-2">
-                <div class="alert alert-danger alert-dismissible fade show rounded-pill py-2 pill-tag-styles"
-                    role="alert">
-                    Dimo Lanka - Nugegoda
-                    <button type="button" class="btn-close p-2" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-                <div class="alert alert-danger alert-dismissible fade show rounded-pill py-2 pill-tag-styles"
-                    role="alert">
-                    Dimo Lanka - Colombo
-                    <button type="button" class="btn-close p-2" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-                <div class="alert alert-danger alert-dismissible fade show rounded-pill py-2 pill-tag-styles"
-                    role="alert">
-                    Dimo Lanka - Galle
-                    <button type="button" class="btn-close p-2" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-                <div class="alert alert-danger alert-dismissible fade show rounded-pill py-2 pill-tag-styles"
-                    role="alert">
-                    Dimo Lanka - Colombo 01
-                    <button type="button" class="btn-close p-2" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-            </div>
-
-
-            <div class="d-flex w-100 flex-column px-3 mb-0 mt-3">
-                <div class="card-view px-0 pt-0 pb-0">
-                    <div class="d-flex flex-row justify-content-between align-items-center px-3 mb-0">
-                        <h4 class="black-title mb-0">Select Invoices</h4>
-                        <a href="" class="my-3 small-button">
-                            Done
-                        </a>
-                    </div>
-                    <div class="scrollable-section-deposit" style="height: calc(100vh - 410px)">
-                        <div class="d-flex flex-column">
-                            <table class="table dashboard-table">
-                                <thead>
-                                    <tr>
-                                        <th scope="col"></th>
-                                        <th scope="col">Full Name</th>
-                                        <th scope="col">Invoice Number</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><input class="form-check-input form-check-input-table ms-0" type="checkbox"
-                                                value="" id="flexCheckDefault"></td>
-                                        <td style="line-height: 25px;">Dimo Lanka - Colombo 02</td>
-                                        <td style="line-height: 25px;">1586423211</td>
-                                    </tr>
-                                    <tr>
-                                        <td><input class="form-check-input form-check-input-table ms-0" type="checkbox"
-                                                value="" id="flexCheckDefault"></td>
-                                        <td style="line-height: 25px;">Dimo Lanka - Colombo 02</td>
-                                        <td style="line-height: 25px;">1586423211</td>
-                                    </tr>
-                                    <tr>
-                                        <td><input class="form-check-input form-check-input-table ms-0" type="checkbox"
-                                                value="" id="flexCheckDefault"></td>
-                                        <td style="line-height: 25px;">Dimo Lanka - Colombo 02</td>
-                                        <td style="line-height: 25px;">1586423211</td>
-                                    </tr>
-                                    <tr>
-                                        <td><input class="form-check-input form-check-input-table ms-0" type="checkbox"
-                                                value="" id="flexCheckDefault"></td>
-                                        <td style="line-height: 25px;">Dimo Lanka - Colombo 02</td>
-                                        <td style="line-height: 25px;">1586423211</td>
-                                    </tr>
-                                    <tr>
-                                        <td><input class="form-check-input form-check-input-table ms-0" type="checkbox"
-                                                value="" id="flexCheckDefault"></td>
-                                        <td style="line-height: 25px;">Dimo Lanka - Colombo 02</td>
-                                        <td style="line-height: 25px;">1586423211</td>
-                                    </tr>
-                                    <tr>
-                                        <td><input class="form-check-input form-check-input-table ms-0" type="checkbox"
-                                                value="" id="flexCheckDefault"></td>
-                                        <td style="line-height: 25px;">Dimo Lanka - Colombo 02</td>
-                                        <td style="line-height: 25px;">1586423211</td>
-                                    </tr>
-                                    <tr>
-                                        <td><input class="form-check-input form-check-input-table ms-0" type="checkbox"
-                                                value="" id="flexCheckDefault"></td>
-                                        <td style="line-height: 25px;">Dimo Lanka - Colombo 02</td>
-                                        <td style="line-height: 25px;">1586423211</td>
-                                    </tr>
-                                    <tr>
-                                        <td><input class="form-check-input form-check-input-table ms-0" type="checkbox"
-                                                value="" id="flexCheckDefault"></td>
-                                        <td style="line-height: 25px;">Dimo Lanka - Colombo 02</td>
-                                        <td style="line-height: 25px;">1586423211</td>
-                                    </tr>
-                                    <tr>
-                                        <td><input class="form-check-input form-check-input-table ms-0" type="checkbox"
-                                                value="" id="flexCheckDefault"></td>
-                                        <td style="line-height: 25px;">Dimo Lanka - Colombo 02</td>
-                                        <td style="line-height: 25px;">1586423211</td>
-                                    </tr>
-                                    <tr>
-                                        <td><input class="form-check-input form-check-input-table ms-0" type="checkbox"
-                                                value="" id="flexCheckDefault"></td>
-                                        <td style="line-height: 25px;">Dimo Lanka - Colombo 02</td>
-                                        <td style="line-height: 25px;">1586423211</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+        <div class="d-flex flex-row px-3 mt-4 justify-content-between align-items-center w-100 text-start pt-2 mb-0">
+            <h3 class="page-title">Submit a Inquiry</h3>
         </div>
+        <!-- body content -->
+        <form id="profileForm" class="content  needs-validation p-2" novalidate>
+            <!-- row 2 -->
+            <div class=" scrollable-section">
+                <div class="d-flex flex-column justify-content-center align-items-center p-2">
+                    <div class="mb-3 w-100 ">
+
+                        <div class="input-group-profile d-flex flex-column mb-3">
+                            <div class="container px-0">
+                                <div class="dropdown-overlay" id="dropdownOverlay"></div>
+                                <h4 class="black-title mb-0">Inquiry Type</h4>
+                                <div class="custom-select-wrapper mt-2" id="customSelectWrapper">
+                                    <div class="custom-select" style="padding: 6px 10px !important;" id="customSelect">
+                                        <span>Select Inquiry type</span>
+                                        <i class="bi bi-chevron-down chevron"></i>
+                                    </div>
+                                    <div class="custom-dropdown" id="customDropdown">
+                                        <div class="custom-dropdown-item" data-value="1">None</div>
+                                        <div class="custom-dropdown-item" data-value="2">Cash Deposit</div>
+                                        <div class="custom-dropdown-item" data-value="3">Cheque Deposit</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="input-group-profile d-flex flex-column mb-3">
+                            <label for="adm_number">ADM Number</label>
+                            <input type="number" class="form-control" placeholder="" name="adm_number" id="adm_number"
+                                required />
+                            <div class="invalid-feedback">
+                                ADM Number is required
+                            </div>
+                        </div>
+
+                        <div class="input-group-profile d-flex flex-column mb-3">
+                            <label for="name">ADM Name</label>
+                            <input type="text" class="form-control" placeholder="" name="name" required />
+                            <div class="invalid-feedback">
+                                ADM Name is required
+                            </div>
+                        </div>
+
+                        <div class="input-group-profile d-flex flex-column mb-3">
+                            <label for="dropdownOverlayCustomer">Select Customer Name</label>
+                            <!-- dropdown section customer -->
+                            <div class="container px-0">
+                                <div class="dropdown-overlay" id="dropdownOverlayCustomer"></div>
+                                <div class="custom-select-wrapper" id="customSelectWrapperCustomer">
+                                    <div class="custom-select" id="customSelectCustomer"
+                                        style="padding: 0px 10px !important;">
+                                        <div class="d-flex flex-row align-items-center w-100">
+                                            <i class="bi bi-search me-2"></i>
+                                            <input type="text" id="searchInputCustomer"
+                                                class="form-control mb-0 p-0 dropdown-search"
+                                                placeholder="Select Customer" style="border: none !important">
+                                        </div>
+                                        <i class="bi bi-chevron-down chevronCustomer"></i>
+                                    </div>
+                                    <div class="custom-dropdown" id="customDropdownCustomer">
+                                        <table class="table dashboard-table">
+                                            <tbody id="dropdownItemsCustomer">
+                                                <tr class="custom-dropdown-item">
+                                                    <td style="line-height: 25px;">Dimo Lanka - Colombo 01</td>
+                                                </tr>
+                                                <tr class="custom-dropdown-item">
+                                                    <td style="line-height: 25px;">Dimo Lanka - Colombo 02</td>
+                                                </tr>
+                                                <tr class="custom-dropdown-item">
+                                                    <td style="line-height: 25px;">Dimo Lanka - Colombo 03</td>
+                                                </tr>
+                                                <tr class="custom-dropdown-item">
+                                                    <td style="line-height: 25px;">Dimo Lanka - Colombo 04</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="invalid-feedback">
+                                Customer Name is required
+                            </div>
+                        </div>
+
+                        <div class="input-group-profile d-flex flex-column mb-3">
+                            <label for="name">Select Invoice Number</label>
+                            <!-- dropdown section invoice -->
+                            <div class="container px-0">
+                                <div class="dropdown-overlay" id="dropdownOverlayInvoice"></div>
+                                <div class="custom-select-wrapper" id="customSelectWrapperInvoice">
+                                    <div class="custom-select" id="customSelectInvoice"
+                                        style="padding: 0px 10px !important;">
+                                        <div class="d-flex flex-row align-items-center w-100">
+                                            <i class="bi bi-search me-2"></i>
+                                            <input type="text" id="searchInputInvoice"
+                                                class="form-control mb-0 p-0 dropdown-search"
+                                                placeholder="Select Invoice Number" style="border: none !important">
+                                        </div>
+                                        <i class="bi bi-chevron-down chevronInvoice"></i>
+                                    </div>
+                                    <div class="custom-dropdown" id="customDropdownInvoice">
+                                        <table class="table dashboard-table mb-0">
+                                            <tbody id="dropdownItemsInvoice">
+                                                <tr class="custom-dropdown-item">
+                                                    <td style="line-height: 25px;">1586423211</td>
+                                                </tr>
+                                                <tr class="custom-dropdown-item">
+                                                    <td style="line-height: 25px;">1586423211</td>
+                                                </tr>
+                                                <tr class="custom-dropdown-item">
+                                                    <td style="line-height: 25px;">1546423211</td>
+                                                </tr>
+                                                <tr class="custom-dropdown-item">
+                                                    <td style="line-height: 25px;">1547423211</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="invalid-feedback">
+                                Invoice Number is required
+                            </div>
+                        </div>
+
+                        <div class="input-group-profile d-flex flex-column mb-3">
+                            <label for="name">Reason</label>
+                            <textarea type="text" style="border-radius: 8px !important;" class="form-control" rows="6" placeholder="Enter the reason"
+                                name="reason" required></textarea>
+                            <div class="invalid-feedback">
+                                Reason is required
+                            </div>
+                        </div>
+
+
+
+                        <div class="d-flex w-100 justify-content-center align-items-center pt-3">
+                            <button class="styled-button-normal w-100 px-5"
+                                style="width: 100% !important; font-size: 14px !important; font-weight: 600; height: 40px !important; min-height: 40px !important"
+                                type="submit">Submit Inquiry</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
 
         <!-- offcanvas - profile -->
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
@@ -484,20 +456,25 @@
         integrity="sha512-lYMiwcB608+RcqJmP93CMe7b4i9G9QK1RbixsNu4PzMRJMsqr/bUrkXUuFzCNsRUo3IXNUr5hz98lINURv5CNA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-        document.querySelectorAll('[data-bs-toggle="collapse"]').forEach(button => {
-            button.addEventListener('click', function () {
-                const icon = this.querySelector('.collapse-icon');
-                icon.classList.toggle('bi-chevron-down');
-                icon.classList.toggle('bi-chevron-up');
-            });
-        });
-    </script>
+        document.getElementById('imageUpload').addEventListener('change', function (event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
 
+                reader.onload = function (e) {
+                    const profilePic = document.getElementById('profilePic');
+                    profilePic.src = e.target.result;
+                };
+
+                reader.readAsDataURL(file);
+            }
+        });
+
+    </script>
     <script>
         const customSelect = document.getElementById('customSelect');
         const customDropdown = document.getElementById('customDropdown');
-        const searchInput = document.getElementById('searchInput');
-        const dropdownItems = document.getElementById('dropdownItems');
+        const customDropdownItems = customDropdown.querySelectorAll('.custom-dropdown-item');
         const chevron = customSelect.querySelector('.chevron');
         const dropdownOverlay = document.getElementById('dropdownOverlay');
         const customSelectWrapper = document.getElementById('customSelectWrapper');
@@ -516,17 +493,135 @@
             }
         });
 
-        searchInput.addEventListener('input', () => {
-            const filter = searchInput.value.toLowerCase();
-            const rows = dropdownItems.querySelectorAll('tr');
+        customDropdownItems.forEach(item => {
+            item.addEventListener('click', () => {
+                customSelect.querySelector('span').textContent = item.textContent;
+                customDropdown.classList.remove('show');
+                customSelectWrapper.classList.remove('open');
+                dropdownOverlay.style.display = 'none';
+
+                customSelect.classList.add('selected');
+
+                customDropdownItems.forEach(i => i.classList.remove('selected'));
+                item.classList.add('selected');
+            });
+        });
+    </script>
+
+    <script>
+        const customSelectCustomer = document.getElementById('customSelectCustomer');
+        const customDropdownCustomer = document.getElementById('customDropdownCustomer');
+        const searchInputCustomer = document.getElementById('searchInputCustomer');
+        const dropdownItemsCustomer = document.getElementById('dropdownItemsCustomer');
+        const dropdownOverlayCustomer = document.getElementById('dropdownOverlayCustomer');
+        const customSelectWrapperCustomer = document.getElementById('customSelectWrapperCustomer');
+
+        customSelectCustomer.addEventListener('click', () => {
+            customDropdownCustomer.classList.toggle('show');
+            customSelectWrapperCustomer.classList.toggle('open');
+            dropdownOverlayCustomer.style.display = customDropdownCustomer.classList.contains('show') ? 'block' : 'none';
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!customSelectCustomer.contains(event.target) && !customDropdownCustomer.contains(event.target)) {
+                customDropdownCustomer.classList.remove('show');
+                customSelectWrapperCustomer.classList.remove('open');
+                dropdownOverlayCustomer.style.display = 'none';
+            }
+        });
+
+        searchInputCustomer.addEventListener('input', () => {
+            const filter = searchInputCustomer.value.toLowerCase();
+            const rows = dropdownItemsCustomer.querySelectorAll('tr');
             rows.forEach(row => {
                 const text = row.innerText.toLowerCase();
                 row.style.display = text.includes(filter) ? '' : 'none';
             });
         });
+
+        dropdownItemsCustomer.addEventListener('click', (event) => {
+            const clickedRow = event.target.closest('tr');
+            if (clickedRow) {
+                searchInputCustomer.value = clickedRow.innerText.trim();
+                customDropdownCustomer.classList.remove('show');
+                customSelectWrapperCustomer.classList.remove('open');
+                dropdownOverlayCustomer.style.display = 'none';
+            }
+        });
     </script>
 
 
+    <script>
+        const customSelectInvoice = document.getElementById('customSelectInvoice');
+        const customDropdownInvoice = document.getElementById('customDropdownInvoice');
+        const searchInputInvoice = document.getElementById('searchInputInvoice');
+        const dropdownItemsInvoice = document.getElementById('dropdownItemsInvoice');
+        const dropdownOverlayInvoice = document.getElementById('dropdownOverlayInvoice');
+        const customSelectWrapperInvoice = document.getElementById('customSelectWrapperInvoice');
+
+        customSelectInvoice.addEventListener('click', () => {
+            customDropdownInvoice.classList.toggle('show');
+            customSelectWrapperInvoice.classList.toggle('open');
+            dropdownOverlayInvoice.style.display = customDropdownInvoice.classList.contains('show') ? 'block' : 'none';
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!customSelectInvoice.contains(event.target) && !customDropdownInvoice.contains(event.target)) {
+                customDropdownInvoice.classList.remove('show');
+                customSelectWrapperInvoice.classList.remove('open');
+                dropdownOverlayInvoice.style.display = 'none';
+            }
+        });
+
+        searchInputInvoice.addEventListener('input', () => {
+            const filter = searchInputInvoice.value.toLowerCase();
+            const rows = dropdownItemsInvoice.querySelectorAll('tr');
+            rows.forEach(row => {
+                const text = row.innerText.toLowerCase();
+                row.style.display = text.includes(filter) ? '' : 'none';
+            });
+        });
+
+        dropdownItemsInvoice.addEventListener('click', (event) => {
+            const clickedRow = event.target.closest('tr');
+            if (clickedRow) {
+                searchInputInvoice.value = clickedRow.innerText.trim();
+                customDropdownInvoice.classList.remove('show');
+                customSelectWrapperInvoice.classList.remove('open');
+                dropdownOverlayInvoice.style.display = 'none';
+            }
+        });
+    </script>
+
+
+    <script>
+        (function () {
+            const form = document.querySelector('#profileForm');
+
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+
+                const newPassword = document.getElementById('new_password').value;
+                const confirmNewPassword = document.getElementById('confirm_new_password').value;
+
+                if (newPassword !== confirmNewPassword) {
+                    event.preventDefault();
+                    event.stopPropagation();
+
+                    const confirmField = document.getElementById('confirm_new_password');
+                    confirmField.setCustomValidity('Passwords do not match');
+                    confirmField.reportValidity();
+                } else {
+                    document.getElementById('confirm_new_password').setCustomValidity('');
+                }
+
+                form.classList.add('was-validated');
+            });
+        })();
+    </script>
 </body>
 
 </html>

@@ -447,11 +447,11 @@ body {
     margin-bottom: 0px !important;
 }
 
-.input-group-profile input {
+.input-group-profile input, .input-group-profile textarea{
     outline: none !important;
     box-shadow: none !important;
     color: #707070 !important;
-    font-size: 12px !important;
+    font-size: 14px !important;
     font-weight: 400 !important;
     font-family: var(--font-secondary) !important;
     border: solid 0.5px #544C4C24 !important;
@@ -459,7 +459,7 @@ body {
 }
 
 .input-group-profile input::placeholder {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 400;
     font-family: var(--font-primary);
 }
@@ -721,7 +721,7 @@ body {
     border-bottom-right-radius: 8px;
     border-bottom-left-radius: 8px;
     display: none;
-    z-index: 1050; 
+    z-index: 1060; 
     max-height: 200px;
     overflow-y: auto;
     margin-top: 5px;
@@ -991,4 +991,8 @@ body {
     width: 100%;
     height: 1px;
     background-color: #D3D3D3;
+}
+
+input{
+    border-radius: 8px !important;
 }

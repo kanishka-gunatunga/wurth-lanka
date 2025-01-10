@@ -4,22 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wurth Lanka | Collections</title>
+    <title>Wurth Lanka | Edit Profile</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/adm_styles.css">
     <link rel="stylesheet" href="css/calander.css">
+    <link rel="stylesheet" href="css/signature_pad.css">
+
 </head>
 
 <body>
     <style>
-        .table>:not(caption)>*>* {
-            padding: 3px 5px !important;
-        }
-
-        .table>:not(:last-child)>:last-child>* {
-            border-bottom-color: transparent !important;
+        .form-control {
+            padding: 8px !important;
         }
     </style>
     <!-- body wrapper -->
@@ -46,177 +44,107 @@
                 </button>
             </div>
         </div>
-
-        <!-- body content -->
-        <div class="content px-0">
-            <div class="d-flex flex-row px-4 justify-content-between align-items-center w-100 text-start  mb-3">
-                <h3 class="page-title">Bulk Payment</h3>
-            </div>
-
-            <!-- dropdown section -->
-            <div class="container px-3">
-                <div class="dropdown-overlay" id="dropdownOverlay"></div>
-                <div class="custom-select-wrapper" id="customSelectWrapper">
-                    <div class="custom-select" id="customSelect" style="padding: 5px 10px !important;">
-                        <div class="d-flex flex-row align-items-center w-100">
-                            <i class="bi bi-search me-2"></i>
-                            <input type="text" id="searchInput" class="form-control mb-0 p-0 dropdown-search"
-                                placeholder="Search Customers">
-                        </div>
-                        <i class="bi bi-chevron-down chevron"></i>
-                    </div>
-                    <div class="custom-dropdown" id="customDropdown">
-                        <table class="table dashboard-table">
-                            <thead>
-                                <tr>
-                                    <th scope="col"></th>
-                                    <th scope="col">Full Name</th>
-                                    <th scope="col">Customer ID</th>
-                                </tr>
-                            </thead>
-                            <tbody id="dropdownItems">
-                                <tr class="custom-dropdown-item">
-                                    <td><input class="form-check-input form-check-input-table ms-0" type="checkbox"
-                                            value=""></td>
-                                    <td style="line-height: 25px;">Dimo Lanka - Colombo 01</td>
-                                    <td style="line-height: 25px;">1586423211</td>
-                                </tr>
-                                <tr class="custom-dropdown-item">
-                                    <td><input class="form-check-input form-check-input-table ms-0" type="checkbox"
-                                            value=""></td>
-                                    <td style="line-height: 25px;">Dimo Lanka - Colombo 02</td>
-                                    <td style="line-height: 25px;">1586423211</td>
-                                </tr>
-                                <tr class="custom-dropdown-item">
-                                    <td><input class="form-check-input form-check-input-table ms-0" type="checkbox"
-                                            value=""></td>
-                                    <td style="line-height: 25px;">Dimo Lanka - Colombo 03</td>
-                                    <td style="line-height: 25px;">1586423211</td>
-                                </tr>
-                                <tr class="custom-dropdown-item">
-                                    <td><input class="form-check-input form-check-input-table ms-0" type="checkbox"
-                                            value=""></td>
-                                    <td style="line-height: 25px;">Dimo Lanka - Colombo 04</td>
-                                    <td style="line-height: 25px;">1586423211</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-
-            <!-- tags -->
-            <div class="d-flex selected-items px-3 py-3 d-flex flex-wrap gap-2">
-                <div class="alert alert-danger alert-dismissible fade show rounded-pill py-2 pill-tag-styles"
-                    role="alert">
-                    Dimo Lanka - Nugegoda
-                    <button type="button" class="btn-close p-2" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-                <div class="alert alert-danger alert-dismissible fade show rounded-pill py-2 pill-tag-styles"
-                    role="alert">
-                    Dimo Lanka - Colombo
-                    <button type="button" class="btn-close p-2" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-                <div class="alert alert-danger alert-dismissible fade show rounded-pill py-2 pill-tag-styles"
-                    role="alert">
-                    Dimo Lanka - Galle
-                    <button type="button" class="btn-close p-2" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-                <div class="alert alert-danger alert-dismissible fade show rounded-pill py-2 pill-tag-styles"
-                    role="alert">
-                    Dimo Lanka - Colombo 01
-                    <button type="button" class="btn-close p-2" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-            </div>
-
-
-            <div class="d-flex w-100 flex-column px-3 mb-0 mt-3">
-                <div class="card-view px-0 pt-0 pb-0">
-                    <div class="d-flex flex-row justify-content-between align-items-center px-3 mb-0">
-                        <h4 class="black-title mb-0">Select Invoices</h4>
-                        <a href="" class="my-3 small-button">
-                            Done
-                        </a>
-                    </div>
-                    <div class="scrollable-section-deposit" style="height: calc(100vh - 410px)">
-                        <div class="d-flex flex-column">
-                            <table class="table dashboard-table">
-                                <thead>
-                                    <tr>
-                                        <th scope="col"></th>
-                                        <th scope="col">Full Name</th>
-                                        <th scope="col">Invoice Number</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><input class="form-check-input form-check-input-table ms-0" type="checkbox"
-                                                value="" id="flexCheckDefault"></td>
-                                        <td style="line-height: 25px;">Dimo Lanka - Colombo 02</td>
-                                        <td style="line-height: 25px;">1586423211</td>
-                                    </tr>
-                                    <tr>
-                                        <td><input class="form-check-input form-check-input-table ms-0" type="checkbox"
-                                                value="" id="flexCheckDefault"></td>
-                                        <td style="line-height: 25px;">Dimo Lanka - Colombo 02</td>
-                                        <td style="line-height: 25px;">1586423211</td>
-                                    </tr>
-                                    <tr>
-                                        <td><input class="form-check-input form-check-input-table ms-0" type="checkbox"
-                                                value="" id="flexCheckDefault"></td>
-                                        <td style="line-height: 25px;">Dimo Lanka - Colombo 02</td>
-                                        <td style="line-height: 25px;">1586423211</td>
-                                    </tr>
-                                    <tr>
-                                        <td><input class="form-check-input form-check-input-table ms-0" type="checkbox"
-                                                value="" id="flexCheckDefault"></td>
-                                        <td style="line-height: 25px;">Dimo Lanka - Colombo 02</td>
-                                        <td style="line-height: 25px;">1586423211</td>
-                                    </tr>
-                                    <tr>
-                                        <td><input class="form-check-input form-check-input-table ms-0" type="checkbox"
-                                                value="" id="flexCheckDefault"></td>
-                                        <td style="line-height: 25px;">Dimo Lanka - Colombo 02</td>
-                                        <td style="line-height: 25px;">1586423211</td>
-                                    </tr>
-                                    <tr>
-                                        <td><input class="form-check-input form-check-input-table ms-0" type="checkbox"
-                                                value="" id="flexCheckDefault"></td>
-                                        <td style="line-height: 25px;">Dimo Lanka - Colombo 02</td>
-                                        <td style="line-height: 25px;">1586423211</td>
-                                    </tr>
-                                    <tr>
-                                        <td><input class="form-check-input form-check-input-table ms-0" type="checkbox"
-                                                value="" id="flexCheckDefault"></td>
-                                        <td style="line-height: 25px;">Dimo Lanka - Colombo 02</td>
-                                        <td style="line-height: 25px;">1586423211</td>
-                                    </tr>
-                                    <tr>
-                                        <td><input class="form-check-input form-check-input-table ms-0" type="checkbox"
-                                                value="" id="flexCheckDefault"></td>
-                                        <td style="line-height: 25px;">Dimo Lanka - Colombo 02</td>
-                                        <td style="line-height: 25px;">1586423211</td>
-                                    </tr>
-                                    <tr>
-                                        <td><input class="form-check-input form-check-input-table ms-0" type="checkbox"
-                                                value="" id="flexCheckDefault"></td>
-                                        <td style="line-height: 25px;">Dimo Lanka - Colombo 02</td>
-                                        <td style="line-height: 25px;">1586423211</td>
-                                    </tr>
-                                    <tr>
-                                        <td><input class="form-check-input form-check-input-table ms-0" type="checkbox"
-                                                value="" id="flexCheckDefault"></td>
-                                        <td style="line-height: 25px;">Dimo Lanka - Colombo 02</td>
-                                        <td style="line-height: 25px;">1586423211</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+        <div class="d-flex flex-row px-3 mt-4 justify-content-between align-items-center w-100 text-start pt-2 mb-0">
+            <h3 class="page-title">Advance Payment</h3>
         </div>
+        <!-- body content -->
+        <form id="profileForm" class="content  needs-validation p-2" novalidate>
+            <!-- row 2 -->
+            <div class=" scrollable-section">
+                <div class="d-flex flex-column justify-content-center align-items-center p-2">
+                    <div class="mb-3 w-100 ">
+
+
+                        <div class="input-group-profile d-flex flex-column mb-3">
+                            <label for="adm_number">Date</label>
+                            <input type="date" class="form-control" placeholder="" name="adm_number" id="adm_number"
+                                required />
+                            <div class="invalid-feedback">
+                                Date is required
+                            </div>
+                        </div>
+
+                        <div class="input-group-profile d-flex flex-column mb-3">
+                            <label for="adm_number">ADM Number</label>
+                            <input type="number" class="form-control" placeholder="" name="adm_number" id="adm_number"
+                                required />
+                            <div class="invalid-feedback">
+                                ADM Number is required
+                            </div>
+                        </div>
+
+                        <div class="input-group-profile d-flex flex-column mb-3">
+                            <label for="name">ADM Name</label>
+                            <input type="text" class="form-control" placeholder="" name="name" required />
+                            <div class="invalid-feedback">
+                                ADM Name is required
+                            </div>
+                        </div>
+
+                        <div class="input-group-profile d-flex flex-column mb-3">
+                            <div class="container px-0">
+                                <div class="dropdown-overlay" id="dropdownOverlay"></div>
+                                <h4 class="black-title mb-0">Select Customer Name</h4>
+                                <div class="custom-select-wrapper mt-2" id="customSelectWrapper">
+                                    <div class="custom-select" style="padding: 6px 10px !important;" id="customSelect">
+                                        <span>Select Customer Name</span>
+                                        <i class="bi bi-chevron-down chevron"></i>
+                                    </div>
+                                    <div class="custom-dropdown" id="customDropdown">
+                                        <div class="custom-dropdown-item" data-value="1">Customer01</div>
+                                        <div class="custom-dropdown-item" data-value="2">Customer02</div>
+                                        <div class="custom-dropdown-item" data-value="3">Customer03</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="input-group-profile d-flex flex-column mb-3">
+                            <label for="payment_amount">Payment Amount</label>
+                            <input type="number" class="form-control" placeholder="" name="payment_amount" required />
+                            <div class="invalid-feedback">
+                                Payment Amount is required
+                            </div>
+                        </div>
+
+
+
+                        <div class="input-group-profile d-flex flex-column mb-3">
+                            <label for="name">Reason</label>
+                            <textarea type="text" style="border-radius: 8px !important;" class="form-control" rows="6"
+                                placeholder="Enter the reason" name="reason" required></textarea>
+                            <div class="invalid-feedback">
+                                Reason is required
+                            </div>
+                        </div>
+
+                        <!-- customer signature -->
+                        <div class="flex-row">
+                            <div class="wrapper signature_pad d-flex flex-column">
+                                <h3 class="mb-0">Customer's E-signature</h3>
+                                <p>Sign to confirm payment.</p>
+                                <canvas id="signature-pad-customer" width="300" height="250"></canvas>
+                                <div class="d-flex flex-row my-2">
+                                    <div class="clear-btn styled-button-red me-2">
+                                        <button id="clear-customer"><span> Clear </span></button>
+                                    </div>
+                                    <!-- <div class="save-btn styled-button-red">
+                                            <button  id="save-customer"><span> Save </span></button>
+                                        </div> -->
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="d-flex w-100 justify-content-center align-items-center pt-3">
+                            <button class="styled-button-normal w-100 px-5"
+                                style="width: 100% !important; font-size: 14px !important; font-weight: 600; height: 40px !important; min-height: 40px !important"
+                                type="submit">Submit Payment</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
 
         <!-- offcanvas - profile -->
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
@@ -483,21 +411,29 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/iconify/2.0.0/iconify.min.js"
         integrity="sha512-lYMiwcB608+RcqJmP93CMe7b4i9G9QK1RbixsNu4PzMRJMsqr/bUrkXUuFzCNsRUo3IXNUr5hz98lINURv5CNA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.3.5/signature_pad.min.js"
+        integrity="sha512-kw/nRM/BMR2XGArXnOoxKOO5VBHLdITAW00aG8qK4zBzcLVZ4nzg7/oYCaoiwc8U9zrnsO9UHqpyljJ8+iqYiQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-        document.querySelectorAll('[data-bs-toggle="collapse"]').forEach(button => {
-            button.addEventListener('click', function () {
-                const icon = this.querySelector('.collapse-icon');
-                icon.classList.toggle('bi-chevron-down');
-                icon.classList.toggle('bi-chevron-up');
-            });
-        });
-    </script>
+        document.getElementById('imageUpload').addEventListener('change', function (event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
 
+                reader.onload = function (e) {
+                    const profilePic = document.getElementById('profilePic');
+                    profilePic.src = e.target.result;
+                };
+
+                reader.readAsDataURL(file);
+            }
+        });
+
+    </script>
     <script>
         const customSelect = document.getElementById('customSelect');
         const customDropdown = document.getElementById('customDropdown');
-        const searchInput = document.getElementById('searchInput');
-        const dropdownItems = document.getElementById('dropdownItems');
+        const customDropdownItems = customDropdown.querySelectorAll('.custom-dropdown-item');
         const chevron = customSelect.querySelector('.chevron');
         const dropdownOverlay = document.getElementById('dropdownOverlay');
         const customSelectWrapper = document.getElementById('customSelectWrapper');
@@ -516,17 +452,86 @@
             }
         });
 
-        searchInput.addEventListener('input', () => {
-            const filter = searchInput.value.toLowerCase();
-            const rows = dropdownItems.querySelectorAll('tr');
-            rows.forEach(row => {
-                const text = row.innerText.toLowerCase();
-                row.style.display = text.includes(filter) ? '' : 'none';
+        customDropdownItems.forEach(item => {
+            item.addEventListener('click', () => {
+                customSelect.querySelector('span').textContent = item.textContent;
+                customDropdown.classList.remove('show');
+                customSelectWrapper.classList.remove('open');
+                dropdownOverlay.style.display = 'none';
+
+                customSelect.classList.add('selected');
+
+                customDropdownItems.forEach(i => i.classList.remove('selected'));
+                item.classList.add('selected');
             });
         });
     </script>
 
+    <script>
+        (function () {
+            const form = document.querySelector('#profileForm');
 
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+
+                const newPassword = document.getElementById('new_password').value;
+                const confirmNewPassword = document.getElementById('confirm_new_password').value;
+
+                if (newPassword !== confirmNewPassword) {
+                    event.preventDefault();
+                    event.stopPropagation();
+
+                    const confirmField = document.getElementById('confirm_new_password');
+                    confirmField.setCustomValidity('Passwords do not match');
+                    confirmField.reportValidity();
+                } else {
+                    document.getElementById('confirm_new_password').setCustomValidity('');
+                }
+
+                form.classList.add('was-validated');
+            });
+        })();
+    </script>
+    <script>
+        function initializeCustomerSignaturePad() {
+            var canvas = document.getElementById('signature-pad-customer');
+    
+            function resizeCanvas() {
+                var ratio = Math.max(window.devicePixelRatio || 1, 1);
+                canvas.width = canvas.offsetWidth * ratio;
+                canvas.height = canvas.offsetHeight * ratio;
+                canvas.getContext("2d").scale(ratio, ratio);
+            }
+    
+            window.onresize = resizeCanvas;
+            resizeCanvas();
+    
+            var signaturePad = new SignaturePad(canvas, {
+                backgroundColor: 'rgb(250,250,250)' 
+            });
+    
+            return signaturePad;
+        }
+    
+        var customerSignaturePad = initializeCustomerSignaturePad();
+    
+        document.getElementById("clear-customer").addEventListener('click', function () {
+            customerSignaturePad.clear();
+        });
+    
+        document.getElementById("save-customer").addEventListener('click', function () {
+            if (customerSignaturePad.isEmpty()) {
+                alert("Customer signature is empty.");
+            } else {
+                var dataURL = customerSignaturePad.toDataURL();
+                console.log("Customer signature saved:", dataURL);
+            }
+        });
+    </script>
+    
 </body>
 
 </html>
