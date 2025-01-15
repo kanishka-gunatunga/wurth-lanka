@@ -1049,22 +1049,25 @@ input{
 
 
 /* side panel active items */
-.side_panel .svg-normal {
-    display: block;
+
+
+.side-panel-collapse:not(.collapsed) span, .side-panel-collapse:not(.collapsed) i, .side-panel-collapse:not(.collapsed) .collapseSVG svg path{
+    color: var(--color-primary) !important;
+    fill: var(--color-primary) !important;
 }
 
-.side_panel .svg-active {
-    display: none;
+.side-panel-collapse .collapsed span, .side-panel-collapse .collapsed i, .side-panel-collapse .collapsed .collapseSVG svg path{
+    color: var(--color-dark-gray-text) !important;
+    fill: #000 !important;
 }
 
-.side_panel .col a.active .svg-normal {
-    display: none;
+
+
+/* .side-panel-collapse:not(.collapsed) span, .side-panel-collapse:not(.collapsed) i{
+    color: var(--color-primary) !important;
 }
 
-.side_panel .col a.active .svg-active {
-    display: block;
-}
+.side-panel-collapse .collapsed span, .side-panel-collapse .collapsed i{
+    color: var(--color-dark-gray-text) !important;
+} */
 
-.side_panel a.active, .footer a.active {
-    color: var(--color-primary);
-}
