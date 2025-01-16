@@ -1133,7 +1133,11 @@ button:focus:not(:focus-visible) {
 .accordion-body .card-body {
     padding: 0px !important;
 }
-
+.notification-link{
+    position: fixed;
+    bottom: 70px;
+    right: 10px;
+}
 /* .side-panel-collapse:not(.collapsed) span, .side-panel-collapse:not(.collapsed) i{
     color: var(--color-primary) !important;
 }
