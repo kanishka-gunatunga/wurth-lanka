@@ -107,7 +107,7 @@ input::placeholder {
 body {
     margin: 0;
     background-color: black;
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -524,7 +524,7 @@ body {
     width: 100%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
 
     .scrollable-section {
         height: calc(100vh - 254px);
@@ -539,7 +539,7 @@ body {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     body {
         margin: 0;
         background-color: black;
