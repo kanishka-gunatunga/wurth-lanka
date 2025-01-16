@@ -312,7 +312,7 @@ body {
 .content {
     flex: 1;
     background-color: var(--color-white);
-    padding: 20px;
+    padding: 15px;
     overflow-y: auto;
 }
 
