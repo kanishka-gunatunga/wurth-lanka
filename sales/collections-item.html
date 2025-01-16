@@ -12,67 +12,6 @@
     <link rel="stylesheet" href="css/calander.css">
     <link rel="stylesheet" href="css/signature_pad.css">
 </head>
-<style>
-    .accordion-button::after {
-        background-color: #CC0000;
-        border-radius: 100%;
-        color: #fff;
-        font-size: 14px;
-
-        background-size: 15px !important;
-        background-position: center !important;
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
-
-    }
-
-    .accordion-button:not(.collapsed)::after {
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
-
-    }
-
-    .accordion-header {
-        background-color: #fff !important;
-        border-radius: 8px !important;
-    }
-
-    .accordion-button:not(.collapsed) {
-        background-color: #fff !important;
-        border-radius: 8px !important;
-    }
-
-    button:focus:not(:focus-visible) {
-        outline: none !important;
-        box-shadow: none !important;
-    }
-
-    .accordion-button:focus {
-        outline: none !important;
-    }
-
-    .accordion-button {
-        font-size: 16px !important;
-        font-weight: 500 !important;
-        color: #000 !important;
-        font-family: var(--font-secondary);
-    }
-
-    .add-another-button {
-        font-size: 12px !important;
-        font-weight: 500 !important;
-        color: var(--color-primary) !important;
-        font-family: var(--font-secondary);
-        background-color: transparent !important;
-        border: none !important;
-        outline: none !important;
-        box-shadow: none !important;
-        padding-top: 0px;
-        margin-top: 0px !important;
-    }
-
-    .accordion-body .card-body {
-        padding: 0px !important;
-    }
-</style>
 
 <body>
     <!-- body wrapper -->
@@ -248,7 +187,7 @@
                                 </div>
 
                                 <!-- Fund Transfer Accordion Item -->
-                                <div class="accordion-item shadow-border mb-3" style="border-radius: 8px;">
+                                <div id="fundAccordionItem" class="accordion-item shadow-border mb-3" style="border-radius: 8px;">
                                     <p class="accordion-header" id="fundTransferHeading">
                                         <button class="accordion-button d-flex justify-content-between" type="button"
                                             data-bs-toggle="collapse" data-bs-target="#cash_payment2"
@@ -381,7 +320,7 @@
                                     Transfer</button>
 
                                 <!-- Cheque Payment Accordion Item -->
-                                <div class="accordion-item shadow-border mb-3" style="border-radius: 8px;">
+                                <div id="chequeAccordionItem" class="accordion-item shadow-border mb-3" style="border-radius: 8px;">
                                     <p class="accordion-header" id="chequePaymentHeading">
                                         <button class="accordion-button d-flex justify-content-between" type="button"
                                             data-bs-toggle="collapse" data-bs-target="#cheque_payment1"
@@ -548,7 +487,7 @@
                                     Payment</button>
 
                                 <!-- Card Payment Accordion Item -->
-                                <div class="accordion-item shadow-border mb-3" style="border-radius: 8px;">
+                                <div id="cardAccordionItem" class="accordion-item shadow-border mb-3" style="border-radius: 8px;">
                                     <p class="accordion-header" id="cardPaymentHeading">
                                         <button class="accordion-button d-flex justify-content-between" type="button"
                                             data-bs-toggle="collapse" data-bs-target="#card_payment1"
@@ -1173,68 +1112,58 @@
         });
     </script>
     <script>
-        document.getElementById('addFundTransfer').addEventListener('click', function () {
-            let fundTransferItem = document.querySelector('#paymentAccordion .accordion-item:nth-of-type(2)');
-            let newFundTransferItem = fundTransferItem.cloneNode(true);
-
-            let numberOfItems = document.querySelectorAll('#paymentAccordion .accordion-item').length;
-            newFundTransferItem.querySelector('.accordion-header button').setAttribute('data-bs-target', '#cash_payment' + (numberOfItems + 1));
-            newFundTransferItem.querySelector('.accordion-header button').setAttribute('aria-controls', 'cash_payment' + (numberOfItems + 1));
-            newFundTransferItem.querySelector('.accordion-collapse').setAttribute('id', 'cash_payment' + (numberOfItems + 1));
-
-            let formElements = newFundTransferItem.querySelectorAll('input');
-            formElements.forEach(input => input.value = '');
-
-            let addButton = document.getElementById('addFundTransfer');
-            addButton.parentNode.insertBefore(newFundTransferItem, addButton);
-        });
-
-        document.getElementById('addChequePayment').addEventListener('click', function () {
-            let chequePaymentItem = document.querySelector('#paymentAccordion .accordion-item:nth-of-type(3)');
-            let newChequePaymentItem = chequePaymentItem.cloneNode(true);
-
-            let numberOfItems = document.querySelectorAll('#paymentAccordion .accordion-item').length;
-            newChequePaymentItem.querySelector('.accordion-header button').setAttribute('data-bs-target', '#cheque_payment' + (numberOfItems + 1));
-            newChequePaymentItem.querySelector('.accordion-header button').setAttribute('aria-controls', 'cheque_payment' + (numberOfItems + 1));
-            newChequePaymentItem.querySelector('.accordion-collapse').setAttribute('id', 'cheque_payment' + (numberOfItems + 1));
-
-            let formElements = newChequePaymentItem.querySelectorAll('input');
-            formElements.forEach(input => input.value = '');
-
-            let addButton = document.getElementById('addChequePayment');
-            addButton.parentNode.insertBefore(newChequePaymentItem, addButton);
-        });
-
-        document.getElementById('addCardPayment').addEventListener('click', function () {
-            let cardPaymentItem = document.querySelector('#paymentAccordion .accordion-item:nth-of-type(4)');
-            let newCardPaymentItem = cardPaymentItem.cloneNode(true);
-
-            let numberOfItems = document.querySelectorAll('#paymentAccordion .accordion-item').length;
-            newCardPaymentItem.querySelector('.accordion-header button').setAttribute('data-bs-target', '#card_payment' + (numberOfItems + 1));
-            newCardPaymentItem.querySelector('.accordion-header button').setAttribute('aria-controls', 'card_payment' + (numberOfItems + 1));
-            newCardPaymentItem.querySelector('.accordion-collapse').setAttribute('id', 'card_payment' + (numberOfItems + 1));
-
-            let formElements = newCardPaymentItem.querySelectorAll('input');
-            formElements.forEach(input => input.value = '');
-
-            let addButton = document.getElementById('addCardPayment');
-            addButton.parentNode.insertBefore(newCardPaymentItem, addButton);
-        });
-
-
         document.addEventListener('DOMContentLoaded', function () {
-            const forms = document.querySelectorAll('.needs-validation');
+            const cloneCounts = {
+                fund: 0,
+                cheque: 0,
+                card: 0
+            };
 
-            forms.forEach(form => {
-                form.addEventListener('submit', function (event) {
-                    if (!form.checkValidity()) {
-                        event.preventDefault();
-                        event.stopPropagation();
+            function cloneAccordionItem(buttonId, itemId, prefix) {
+                document.getElementById(buttonId).addEventListener('click', function () {
+                    let accordionItem = document.getElementById(itemId); 
+                    if (!accordionItem) {
+                        console.error(`Accordion item not found for ID: ${itemId}`);
+                        return;
                     }
-                    form.classList.add('was-validated');
-                }, false);
-            });
+
+                    cloneCounts[prefix]++;
+
+                    let newAccordionItem = accordionItem.cloneNode(true);
+
+                    let newId = prefix + (cloneCounts[prefix]);
+
+                    newAccordionItem.querySelector('.accordion-header button').setAttribute('data-bs-target', `#${newId}`);
+                    newAccordionItem.querySelector('.accordion-header button').setAttribute('aria-controls', newId);
+                    newAccordionItem.querySelector('.accordion-collapse').setAttribute('id', newId);
+
+                    let formElements = newAccordionItem.querySelectorAll('input');
+                    formElements.forEach(input => input.value = '');
+
+                    let addButton = document.getElementById(buttonId);
+                    addButton.parentNode.insertBefore(newAccordionItem, addButton);
+                });
+            }
+
+            cloneAccordionItem('addFundTransfer', 'fundAccordionItem', 'fund');
+            cloneAccordionItem('addChequePayment', 'chequeAccordionItem', 'cheque');
+            cloneAccordionItem('addCardPayment', 'cardAccordionItem', 'card');
         });
+
+
+        // document.addEventListener('DOMContentLoaded', function () {
+        //     const forms = document.querySelectorAll('.needs-validation');
+
+        //     forms.forEach(form => {
+        //         form.addEventListener('submit', function (event) {
+        //             if (!form.checkValidity()) {
+        //                 event.preventDefault();
+        //                 event.stopPropagation();
+        //             }
+        //             form.classList.add('was-validated');
+        //         }, false);
+        //     });
+        // });
 
 
 
