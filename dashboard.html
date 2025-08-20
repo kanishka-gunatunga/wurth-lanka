@@ -7,390 +7,477 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="public/css/common.css">
-    <link rel="stylesheet" href="public/css/dashboard.css">
-    <link rel="stylesheet" href="public/css/sidebar.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-</head>
+    <link rel="stylesheet" href="public/css/common.css" />
+    <link rel="stylesheet" href="public/css/dashboard.css" />
+    <link rel="stylesheet" href="public/css/sidebar.css" />
+    <link rel="stylesheet" href="sidebarNew.css" />
+    <link rel="stylesheet" href="public/css/navbar-profile.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
 
-<body>
+  <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/"><img src="public/images/wruth-logo.png" alt=""></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-
-                    
-                </div>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/"
+          ><img src="public/images/wruth-logo.png" alt=""
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <!-- Profile section -->
+          <div class="navbar-profile">
+            <img
+              src="public/images/profile-icon.svg"
+              alt="Sofia Emilia"
+              class="profile-avatar"
+            />
+            <div class="profile-info">
+              <p class="profile-name">Sofia Emilia</p>
+              <p class="profile-designation">Admin</p>
             </div>
+          </div>
         </div>
+      </div>
     </nav>
 
     <div class="wrapper">
-
-        <!-- Sidebar  -->
-        <nav id="sidebar">
-            <ul>
-                <div class="d-flex justify-content-between">
-                    <p>Admin Dashboard</p>
-                    <button type="button" id="sidebarCollapse" class="btn ">
-                        <i class="fas fa-align-left"></i>
-                        <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-list" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd"
-                                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
-                            </svg></span>
-
-                    </button>
-                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fas fa-align-justify"></i>
-                    </button>
-                </div>
-
-                <li class="active"> <a href="{{url('dashboard')}}">Dashboard</a></li>
-                <li class="active"> <a href="">Management</a></li>
-                <li class="active"> <a href="">Access Control</a></li>
-                <li class="active"> <a href="customers.html">Customers</a></li>
-                <li class="active"> <a href="">Division Management</a></li>
-                <li class="active"> <a href="">All Collections</a></li>
-                <li class="active"> <a href="">Return Cheques</a></li>
-                <li class="active"> <a href="">Reminders</a></li>
-
-
-            </ul>
-
-        </nav>
-
-        <div class="container-fluid">
-            <div class="main-wrapper">
-                <h1 class="header-title">Dashboard</h1>
-
-                <div class="dashboard-main-container">
-                    <div class="row g-3">
-                        <div class="col-12 col-lg-2 card-wrapper">
-                            <div class="card header-card">
-                                <div class="card-body">
-                                    <h4 class="stat-card-title">Total Customers</h4>
-                                    <h5 class="stat-card-amount">1530</h5>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-lg-2 card-wrapper">
-                            <div class="card header-card">
-                                <div class="card-body">
-                                    <h4 class="stat-card-title">Total Users</h4>
-                                    <h5 class="stat-card-amount">1280</h5>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-lg-2 card-wrapper">
-                            <div class="card header-card">
-                                <div class="card-body">
-                                    <h4 class="stat-card-title">Sales Representatives</h4>
-                                    <h5 class="stat-card-amount">180</h5>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-lg-3 card-wrapper">
-                            <div class="card header-card">
-                                <div class="card-body">
-                                    <h4 class="stat-card-title">Finance Department Managers</h4>
-                                    <h5 class="stat-card-amount">40</h5>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-lg-3 card-wrapper">
-                            <div class="card header-card">
-                                <div class="card-body">
-                                    <h4 class="stat-card-title">Warehouse Managers</h4>
-                                    <h5 class="stat-card-amount">42</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Second Row -->
-                    <div class="row mt-3 g-3 justify-content-center">
-                        <div class="col-12 col-lg-3 card-wrapper">
-                            <div class="card header-card">
-                                <div class="card-body">
-                                    <h4 class="stat-card-title">Team Leaders</h4>
-                                    <h5 class="stat-card-amount">42</h5>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-lg-3 card-wrapper">
-                            <div class="card header-card">
-                                <div class="card-body">
-                                    <h4 class="stat-card-title">Area Sales Managers</h4>
-                                    <h5 class="stat-card-amount">32</h5>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-lg-3 card-wrapper">
-                            <div class="card header-card">
-                                <div class="card-body">
-                                    <h4 class="stat-card-title">Regional Sales Managers</h4>
-                                    <h5 class="stat-card-amount">15</h5>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-lg-3 card-wrapper">
-                            <div class="card header-card">
-                                <div class="card-body">
-                                    <h4 class="stat-card-title">Head of Division</h4>
-                                    <h5 class="stat-card-amount">4</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row mt-4">
-                        {{-- calender --}}
-                        <div class="row">
-                            <div class="col-12 col-sm-12 col-md-7 col-lg-7">
-                                <div class="card calender-card p-4">
-                                    <div class="calendar">
-                                        <div class="calendar-header">
-                                            <div>
-                                                <h2 id="month-year"></h2>
-                                            </div>
-                                            <div>
-                                                <button id="prev-month"><svg width="13" height="21" viewBox="0 0 13 21"
-                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M0.640496 10.4903C0.640496 10.689 0.674877 10.8724 0.743638 11.0404C0.82004 11.2085 0.934642 11.369 1.08745 11.5218L10.015 20.2545C10.2747 20.5142 10.588 20.6441 10.9547 20.6441C11.2068 20.6441 11.4322 20.583 11.6309 20.4608C11.8372 20.3462 12.0014 20.1857 12.1237 19.9794C12.2459 19.7808 12.307 19.5592 12.307 19.3147C12.307 18.948 12.1657 18.6233 11.883 18.3406L3.83791 10.4903L11.883 2.64008C12.1657 2.35739 12.307 2.03651 12.307 1.67742C12.307 1.42529 12.2459 1.19991 12.1237 1.00126C12.0014 0.802619 11.8372 0.645996 11.6309 0.531393C11.4322 0.409151 11.2068 0.348029 10.9547 0.348029C10.588 0.348029 10.2747 0.474092 10.015 0.726217L1.08745 9.45893C0.934642 9.61173 0.82004 9.77217 0.743638 9.94026C0.674877 10.1083 0.640496 10.2917 0.640496 10.4903Z"
-                                                            fill="#CC0000" />
-                                                    </svg>
-                                                </button>
-                                                <button id="next-month"><svg width="12" height="21" viewBox="0 0 12 21"
-                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M11.6665 10.4903C11.6665 10.2917 11.6283 10.1083 11.5519 9.94026C11.4755 9.77217 11.3609 9.61173 11.2081 9.45893L2.28059 0.726217C2.02846 0.474092 1.71522 0.348029 1.34085 0.348029C1.09636 0.348029 0.870979 0.409151 0.664694 0.531393C0.45841 0.645996 0.294146 0.802619 0.171904 1.00126C0.0573013 1.19991 8.56817e-08 1.42529 8.56817e-08 1.67742C8.56817e-08 2.03651 0.137523 2.35739 0.412569 2.64008L8.45766 10.4903L0.412569 18.3406C0.137523 18.6233 8.56817e-08 18.948 8.56817e-08 19.3147C8.56817e-08 19.5592 0.0573013 19.7808 0.171904 19.9794C0.294146 20.1857 0.45841 20.3462 0.664694 20.4608C0.870979 20.583 1.09636 20.6441 1.34085 20.6441C1.71522 20.6441 2.02846 20.5142 2.28059 20.2545L11.2081 11.5218C11.3609 11.369 11.4755 11.2085 11.5519 11.0404C11.6283 10.8724 11.6665 10.689 11.6665 10.4903Z"
-                                                            fill="#CC0000" />
-                                                    </svg>
-                                                </button>
-                                            </div>
-
-                                        </div>
-                                        <div class="calendar-body">
-                                            <div class="calendar-days">
-                                                <div>Sun</div>
-                                                <div>Mon</div>
-                                                <div>Tue</div>
-                                                <div>Wed</div>
-                                                <div>Thu</div>
-                                                <div>Fri</div>
-                                                <div>Sat</div>
-                                            </div>
-                                            <div id="calendar-dates" class="calendar-dates"></div>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <div class="card locked-users-card mt-4">
-                                    <div class="card-body">
-                                        <h2>Locked Users</h2>
-                                        <div class="table-responsive">
-                                            <table class="table">
-                                                <thead>
-                                                    <tr>
-                                                        <th scope="col">Date & Time</th>
-                                                        <th scope="col">Full Name</th>
-                                                        <th scope="col">User Id</th>
-                                                        <th scope="col">Actions</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <th scope="row">12 Dec 08:45 a.m.</th>
-                                                        <td>H.K. Perera</td>
-                                                        <td>2545678/td>
-                                                        <td>
-                                                            <button type="button"
-                                                                class="btn btn-success btn-sm">Unlock</button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">2</th>
-                                                        <td>Jacob</td>
-                                                        <td>Thornton</td>
-                                                        <td>@fat</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">3</th>
-                                                        <td>Larry</td>
-                                                        <td>the Bird</td>
-                                                        <td>@twitter</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-12 col-md-5 col-lg-5 ">
-                                <div class="card dashboard-custom-card">
-                                    <div id="txt" class="digital-clock card-body">
-                                        <div class="row d-flex justify-content-start">
-                                            <div class="col-3 hours">
-                                                <span class="clock-digit">1</span>
-                                                <span class="clock-digit">2</span>
-                                            </div>
-                                            <div class="col-1 dot">
-                                                <span class="clock-digit-colan">:</span>
-                                            </div>
-                                            <div class="col-3 mins">
-                                                <span class="clock-digit">2</span>
-                                                <span class="clock-digit">5</span>
-                                            </div>
-                                            <div class="col-1 dot">
-                                                <span class="clock-digit-colan">:</span>
-                                            </div>
-                                            <div class="col-3 seconds">
-                                                <span class="clock-digit">4</span>
-                                                <span class="clock-digit">5</span>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-
-                                <di class="card dashboard-custom-card">
-                                    <div class="card-body">
-                                        <h3 class="activity-task-title mb-3">Recent Activities</h3>
-                                        <p class="activity-task-description">User level Finance Manager change access
-                                            controls</p>
-                                    </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <!-- Sidebar -->
+      <nav id="sidebar" class="sidebar ms-3 mt-3">
+        <!-- Header section - Fixed at top -->
+        <div class="sidebar-header">
+          <div class="d-flex justify-content-between align-items-center">
+            <p class="sidebar-title">Admin Dashboard</p>
+            <button
+              class="sidebar-toggle border-0 bg-transparent"
+              type="button"
+              id="sidebarToggle"
+            >
+              <svg
+                width="29"
+                height="23"
+                viewBox="0 0 29 23"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M27.0415 1.01465L10.5732 1.01465"
+                  stroke="#CC0000"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M26.9849 7.85278L1.00014 7.85278"
+                  stroke="#CC0000"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M26.9849 14.6908L6.47061 14.6908"
+                  stroke="#CC0000"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M26.9849 21.5289H14.6763"
+                  stroke="#CC0000"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
 
+        <!-- Scrollable content section -->
+        <div class="sidebar-content">
+          <ul class="sidebar-list">
+            <li class="nav-item active">
+              <a href="/dashboard" class="nav-link">
+                <span class="me-4">
+                  <img
+                    src="public/images/side-bar/dashboard.svg"
+                    alt="Dashboard"
+                    class="nav-icon"
+                  />
+                </span>
+                Dashboard
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="/user-management" class="nav-link">
+                <span class="me-4">
+                  <img
+                    src="public/images/side-bar/user.svg"
+                    alt="User Management"
+                    class="nav-icon"
+                  />
+                </span>
+                User Management
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="/access-control" class="nav-link">
+                <span class="me-4">
+                  <img
+                    src="public/images/side-bar/access.svg"
+                    alt="Access Control"
+                    class="nav-icon"
+                  />
+                </span>
+                Access Control
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="/customers" class="nav-link">
+                <span class="me-4">
+                  <img
+                    src="public/images/side-bar/customers.svg"
+                    alt="Customers"
+                    class="nav-icon"
+                  />
+                </span>
+                Customers
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="/division-management" class="nav-link">
+                <span class="me-4">
+                  <img
+                    src="public/images/side-bar/division.svg"
+                    alt="Division Management"
+                    class="nav-icon"
+                  />
+                </span>
+                Division Management
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="/collections" class="nav-link">
+                <span class="me-4">
+                  <img
+                    src="public/images/side-bar/collections.svg"
+                    alt="Collections"
+                    class="nav-icon"
+                  />
+                </span>
+                All Collections
+                <span class="dropdown-arrow">
+                  <svg
+                    width="12"
+                    height="12"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="/return-cheques" class="nav-link">
+                <span class="me-4">
+                  <img
+                    src="public/images/side-bar/cheques.svg"
+                    alt="Return Cheques"
+                    class="nav-icon"
+                  />
+                </span>
+                Return Cheques
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="/notifications" class="nav-link">
+                <span class="me-4">
+                  <img
+                    src="public/images/side-bar/notifications.svg"
+                    alt="Notifications"
+                    class="nav-icon"
+                  />
+                </span>
+                Notifications
+                <span class="dropdown-arrow">
+                  <svg
+                    width="12"
+                    height="12"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Footer section - Fixed at bottom -->
+        <div class="sidebar-footer">
+          <ul class="sidebar-list">
+            <li class="nav-item">
+              <a href="/settings" class="nav-link">
+                <span class="me-4">
+                  <img
+                    src="public/images/side-bar/settings.svg"
+                    alt="Settings"
+                    class="nav-icon"
+                  />
+                </span>
+                Settings
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="/logout" class="nav-link">
+                <span class="me-4">
+                  <img
+                    src="public/images/side-bar/logout.svg"
+                    alt="Logout"
+                    class="nav-icon"
+                  />
+                </span>
+                Logout
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container-fluid">
+        <div class="main-wrapper">
+          <h1 class="header-title">Dashboard</h1>
+
+          <div class="dashboard-main-container">
+            <!-- Stats Cards - First Row -->
+            <div class="row mb-4">
+              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-3">
+                <div class="stat-card">
+                  <div class="stat-label">Total Users</div>
+                  <div class="stat-number">231</div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-3">
+                <div class="stat-card">
+                  <div class="stat-label">Sales Representatives</div>
+                  <div class="stat-number">180</div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-3">
+                <div class="stat-card">
+                  <div class="stat-label">Team Leaders</div>
+                  <div class="stat-number">12</div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-3">
+                <div class="stat-card">
+                  <div class="stat-label">Area Sales Managers</div>
+                  <div class="stat-number">10</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stats Cards - Second Row -->
+            <div class="row mb-4">
+              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-3">
+                <div class="stat-card">
+                  <div class="stat-label">Regional Sales Managers</div>
+                  <div class="stat-number">15</div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-3">
+                <div class="stat-card">
+                  <div class="stat-label">Warehouse Managers</div>
+                  <div class="stat-number">2</div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-3">
+                <div class="stat-card">
+                  <div class="stat-label">Finance Department Managers</div>
+                  <div class="stat-number">8</div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-3">
+                <div class="stat-card">
+                  <div class="stat-label">Head of Division</div>
+                  <div class="stat-number">4</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mt-4">
+              <!-- Locked Users Section -->
+              <div class="col-lg-8 col-md-12 mb-4">
+                <div class="section-card locked-users-card">
+                  <h3 class="page-title">Locked Users</h3>
+                  <div class="locked-users-table" id="tableContainer">
+                    <div class="table-wrapper">
+                      <table class="table users-table">
+                        <thead>
+                          <tr>
+                            <th>Date & Time <i class="sort-icon">▼</i></th>
+                            <th>Full Name</th>
+                            <th>User ID</th>
+                            <th>Actions</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>12 Dec 2024, 08:45 AM</td>
+                            <td>H.K Perera</td>
+                            <td>254565214</td>
+                            <td>
+                              <button class="btn unlock-btn">Unlock</button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>12 Dec 2024, 08:45 AM</td>
+                            <td>Pasan Randula</td>
+                            <td>254565214</td>
+                            <td>
+                              <button class="btn unlock-btn">Unlock</button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>12 Dec 2024, 08:45 AM</td>
+                            <td>H.K Perera</td>
+                            <td>254565214</td>
+                            <td>
+                              <button class="btn unlock-btn">Unlock</button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>12 Dec 2024, 08:45 AM</td>
+                            <td>Pasan Randula</td>
+                            <td>254565214</td>
+                            <td>
+                              <button class="btn unlock-btn">Unlock</button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>12 Dec 2024, 08:45 AM</td>
+                            <td>H.K Perera</td>
+                            <td>254565214</td>
+                            <td>
+                              <button class="btn unlock-btn">Unlock</button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Recent Activities Section -->
+              <div class="col-lg-4 col-md-12 mb-4">
+                <div class="section-card activities-card">
+                  <h3 class="page-title">Recent Activities</h3>
+                  <div class="activities-list">
+                    <div class="activity-item">
+                      <div class="activity-text">
+                        User level
+                        <span class="highlight-red">Finance Manager</span>
+                        change access controls
+                      </div>
+                      <div class="activity-time">30 min ago</div>
+                    </div>
+                    <div class="activity-item">
+                      <div class="activity-text">
+                        Update
+                        <span class="highlight-red">1256543</span> user's email
+                        address & phone number
+                      </div>
+                      <div class="activity-time">35 min ago</div>
+                    </div>
+                    <div class="activity-item">
+                      <div class="activity-text">
+                        Update
+                        <span class="highlight-red">1256543</span> user's email
+                        address & phone number
+                      </div>
+                      <div class="activity-time">35 min ago</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-
-
-</body>
-
+  </body>
 </html>
 
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5/LIpOcx5/siEoL8C09dDjyP8vMK+OX7ov9xkv4M"
+  crossorigin="anonymous"
+></script>
 
+<!-- Sidebar Toggle -->
 <script>
-    const calendarDates = document.getElementById("calendar-dates");
-    const monthYear = document.getElementById("month-year");
-    const prevMonth = document.getElementById("prev-month");
-    const nextMonth = document.getElementById("next-month");
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggleButton = document.getElementById("sidebarCollapse");
+    const sidebar = document.getElementById("sidebar");
 
-    let currentDate = new Date();
-
-    function renderCalendar(date) {
-        const year = date.getFullYear();
-        const month = date.getMonth();
-        const firstDay = new Date(year, month, 1).getDay();
-        const lastDate = new Date(year, month + 1, 0).getDate();
-
-        monthYear.textContent = `${date.toLocaleString("default", {
-            month: "long",
-        })} ${year}`;
-
-        calendarDates.innerHTML = "";
-
-        // Add blank spaces for days before the first of the month
-        for (let i = 0; i < firstDay; i++) {
-            const emptyDiv = document.createElement("div");
-            calendarDates.appendChild(emptyDiv);
-        }
-
-        // Add the days of the month
-        for (let day = 1; day <= lastDate; day++) {
-            const dateDiv = document.createElement("div");
-            dateDiv.textContent = day;
-
-            const today = new Date();
-            if (
-                year === today.getFullYear() &&
-                month === today.getMonth() &&
-                day === today.getDate()
-            ) {
-                dateDiv.classList.add("today");
-            }
-
-            calendarDates.appendChild(dateDiv);
-        }
-    }
-
-    prevMonth.addEventListener("click", () => {
-        currentDate.setMonth(currentDate.getMonth() - 1);
-        renderCalendar(currentDate);
+    toggleButton.addEventListener("click", function () {
+      sidebar.classList.toggle("active");
     });
-
-    nextMonth.addEventListener("click", () => {
-        currentDate.setMonth(currentDate.getMonth() + 1);
-        renderCalendar(currentDate);
-    });
-
-    renderCalendar(currentDate);
-
-
-
-
-    // digital clock
-    // function startTime() {
-    //     const today = new Date();
-    //     let h = today.getHours();
-    //     let m = today.getMinutes();
-    //     let s = today.getSeconds();
-    //     m = checkTime(m);
-    //     s = checkTime(s);
-    //     document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
-    //     setTimeout(startTime, 1000);
-    // }
-
-    // function checkTime(i) {
-    //     if (i < 10) {i = "0" + i};
-    //     return i;
-    // }
-
-    // startTime();
-
+  });
 </script>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5/LIpOcx5/siEoL8C09dDjyP8vMK+OX7ov9xkv4M"
-    crossorigin="anonymous"></script>
-
+<!-- Enhanced Sidebar Functionality -->
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const toggleButton = document.getElementById('sidebarCollapse');
-        const sidebar = document.getElementById('sidebar');
+  document.addEventListener("DOMContentLoaded", function () {
+    const sidebar = document.getElementById("sidebar");
+    const toggleButton = document.getElementById("sidebarCollapse");
+    const sidebarLinks = document.querySelectorAll(".sidebar-list li a");
 
-        toggleButton.addEventListener('click', function () {
-            sidebar.classList.toggle('active');
-        });
+    // Toggle sidebar visibility
+    toggleButton.addEventListener("click", function () {
+      sidebar.classList.toggle("collapsed");
     });
-</script>
 
-@endsection
+    // Set active class on navigation
+    const currentPath = window.location.pathname;
+    sidebarLinks.forEach((link) => {
+      if (link.getAttribute("href") === currentPath) {
+        link.parentElement.classList.add("active");
+      } else {
+        link.parentElement.classList.remove("active");
+      }
+    });
+  });
+</script>

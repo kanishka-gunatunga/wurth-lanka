@@ -1,217 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="public/css/common.css">
-    <link rel="stylesheet" href="sidebarNew.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="public/css/common.css" />
+    <link rel="stylesheet" href="sidebarNew.css" />
+    <link rel="stylesheet" href="public/css/navbar-profile.css" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-</head>
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
 
-
-
-<body>
-
-    
+  <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/"><img src="public/images/wruth-logo.png" alt=""></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/"
+          ><img src="public/images/wruth-logo.png" alt=""
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <!-- Profile section -->
+          <div class="navbar-profile">
+            <img
+              src="public/images/profile-icon.svg"
+              alt="Sofia Emilia"
+              class="profile-avatar"
+            />
+            <div class="profile-info">
+              <p class="profile-name">Sofia Emilia</p>
+              <p class="profile-designation">Admin</p>
             </div>
+          </div>
         </div>
+      </div>
     </nav>
 
     <div class="wrapper">
-
-        <!-- <div class="container mt-5">
-            <button class="border-0" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-collapse" aria-expanded="false" aria-controls="demoCollapse">
-                <svg width="29" height="23" viewBox="0 0 29 23" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M27.0415 1.01465L10.5732 1.01465" stroke="#CC0000" stroke-width="2"
-                                stroke-linecap="round" />
-                            <path d="M26.9849 7.85278L1.00014 7.85278" stroke="#CC0000" stroke-width="2"
-                                stroke-linecap="round" />
-                            <path d="M26.9849 14.6908L6.47061 14.6908" stroke="#CC0000" stroke-width="2"
-                                stroke-linecap="round" />
-                            <path d="M26.9849 21.5289H14.6763" stroke="#CC0000" stroke-width="2"
-                                stroke-linecap="round" />
-                </svg>
+      <!-- Sidebar -->
+      <nav id="sidebar" class="sidebar ms-3 mt-3">
+        <!-- Header section - Fixed at top -->
+        <div class="sidebar-header">
+          <div class="d-flex justify-content-between align-items-center">
+            <p class="sidebar-title">Admin Dashboard</p>
+            <button
+              class="sidebar-toggle border-0 bg-transparent"
+              type="button"
+              id="sidebarToggle"
+            >
+              <svg
+                width="29"
+                height="23"
+                viewBox="0 0 29 23"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M27.0415 1.01465L10.5732 1.01465"
+                  stroke="#CC0000"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M26.9849 7.85278L1.00014 7.85278"
+                  stroke="#CC0000"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M26.9849 14.6908L6.47061 14.6908"
+                  stroke="#CC0000"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M26.9849 21.5289H14.6763"
+                  stroke="#CC0000"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
             </button>
-            <div class="collapse horizontal-collapse mt-3" id="sidebar-collapse">
-                <div class="card card-body">
-                    This is the collapsible content!
-                </div>
-            </div>
-        </div> -->
+          </div>
+        </div>
 
-        <!-- Sidebar  -->
-        <nav id="sidebar" class="sidebar ms-3 mt-3">
-            <div class="d-flex justify-content-between">
-                <p class="sidebar-title">Admin Dashboard</p>
-                <span>
-                    <button class="border-0" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <svg width="29" height="23" viewBox="0 0 29 23" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M27.0415 1.01465L10.5732 1.01465" stroke="#CC0000" stroke-width="2"
-                                stroke-linecap="round" />
-                            <path d="M26.9849 7.85278L1.00014 7.85278" stroke="#CC0000" stroke-width="2"
-                                stroke-linecap="round" />
-                            <path d="M26.9849 14.6908L6.47061 14.6908" stroke="#CC0000" stroke-width="2"
-                                stroke-linecap="round" />
-                            <path d="M26.9849 21.5289H14.6763" stroke="#CC0000" stroke-width="2"
-                                stroke-linecap="round" />
-                        </svg>
-
-                    </button>
+        <!-- Scrollable content section -->
+        <div class="sidebar-content">
+          <ul class="sidebar-list">
+            <li class="nav-item active">
+              <a href="/dashboard" class="nav-link">
+                <span class="me-4">
+                  <img
+                    src="public/images/side-bar/dashboard.svg"
+                    alt="Dashboard"
+                    class="nav-icon"
+                  />
                 </span>
-            </div>
-            <div>
-                
-            </div>
-            <ul class="sidebar-list" id="navbarSupportedContent">
-                <li class="active">
-                    <span class="me-4">
-                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M4.625 0.764648C4.11613 0.764648 3.61224 0.864878 3.1421 1.05962C2.67197 1.25435 2.24479 1.53978 1.88496 1.89961C1.52513 2.25944 1.2397 2.68661 1.04497 3.15675C0.85023 3.62689 0.75 4.13078 0.75 4.63965C0.75 5.14852 0.85023 5.65241 1.04497 6.12255C1.2397 6.59268 1.52513 7.01986 1.88496 7.37969C2.24479 7.73951 2.67197 8.02494 3.1421 8.21968C3.61224 8.41442 4.11613 8.51465 4.625 8.51465C5.65271 8.51465 6.63834 8.10639 7.36504 7.37969C8.09174 6.65298 8.5 5.66736 8.5 4.63965C8.5 3.61193 8.09174 2.62631 7.36504 1.89961C6.63834 1.17291 5.65271 0.764648 4.625 0.764648ZM15.375 0.764648C14.8661 0.764648 14.3622 0.864878 13.8921 1.05962C13.422 1.25435 12.9948 1.53978 12.635 1.89961C12.2751 2.25944 11.9897 2.68661 11.795 3.15675C11.6002 3.62689 11.5 4.13078 11.5 4.63965C11.5 5.14852 11.6002 5.65241 11.795 6.12255C11.9897 6.59268 12.2751 7.01986 12.635 7.37969C12.9948 7.73951 13.422 8.02494 13.8921 8.21968C14.3622 8.41442 14.8661 8.51465 15.375 8.51465C16.4027 8.51465 17.3883 8.10639 18.115 7.37969C18.8417 6.65298 19.25 5.66736 19.25 4.63965C19.25 3.61193 18.8417 2.62631 18.115 1.89961C17.3883 1.17291 16.4027 0.764648 15.375 0.764648ZM4.625 11.5146C4.11613 11.5146 3.61224 11.6149 3.1421 11.8096C2.67197 12.0044 2.24479 12.2898 1.88496 12.6496C1.52513 13.0094 1.2397 13.4366 1.04497 13.9067C0.85023 14.3769 0.75 14.8808 0.75 15.3896C0.75 15.8985 0.85023 16.4024 1.04497 16.8725C1.2397 17.3427 1.52513 17.7699 1.88496 18.1297C2.24479 18.4895 2.67197 18.7749 3.1421 18.9697C3.61224 19.1644 4.11613 19.2646 4.625 19.2646C5.65271 19.2646 6.63834 18.8564 7.36504 18.1297C8.09174 17.403 8.5 16.4174 8.5 15.3896C8.5 14.3619 8.09174 13.3763 7.36504 12.6496C6.63834 11.9229 5.65271 11.5146 4.625 11.5146ZM15.375 11.5146C14.8661 11.5146 14.3622 11.6149 13.8921 11.8096C13.422 12.0044 12.9948 12.2898 12.635 12.6496C12.2751 13.0094 11.9897 13.4366 11.795 13.9067C11.6002 14.3769 11.5 14.8808 11.5 15.3896C11.5 15.8985 11.6002 16.4024 11.795 16.8725C11.9897 17.3427 12.2751 17.7699 12.635 18.1297C12.9948 18.4895 13.422 18.7749 13.8921 18.9697C14.3622 19.1644 14.8661 19.2646 15.375 19.2646C16.4027 19.2646 17.3883 18.8564 18.115 18.1297C18.8417 17.403 19.25 16.4174 19.25 15.3896C19.25 14.3619 18.8417 13.3763 18.115 12.6496C17.3883 11.9229 16.4027 11.5146 15.375 11.5146Z"
-                                stroke="#CC0000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </span>
-                    <a href="{{url('dashboard')}}">Dashboard</a>
-                </li>
-                <li>
-                    <span class="me-4">
-                        <svg width="16" height="22" viewBox="0 0 16 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M8.15997 9.88465C8.05997 9.87465 7.93997 9.87465 7.82997 9.88465C5.44997 9.80465 3.55997 7.85465 3.55997 5.45465C3.55997 3.00465 5.53997 1.01465 7.99997 1.01465C10.45 1.01465 12.44 3.00465 12.44 5.45465C12.43 7.85465 10.54 9.80465 8.15997 9.88465Z"
-                                stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            <path
-                                d="M3.15997 13.5746C0.739971 15.1946 0.739971 17.8346 3.15997 19.4446C5.90997 21.2846 10.42 21.2846 13.17 19.4446C15.59 17.8246 15.59 15.1846 13.17 13.5746C10.43 11.7446 5.91997 11.7446 3.15997 13.5746Z"
-                                stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
+                Dashboard
+              </a>
+            </li>
 
-                    </span>
-                    <a href="">User Management</a>
-                </li>
-                <li>
-                    <span class="me-4">
-                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M6.00005 6.01465H6.00905M12 13.0146H18C18.932 13.0146 19.398 13.0146 19.765 13.1666C20.0079 13.2672 20.2285 13.4145 20.4143 13.6004C20.6002 13.7862 20.7475 14.0068 20.848 14.2496C21 14.6166 21 15.0826 21 16.0146C21 16.9466 21 17.4126 20.848 17.7796C20.7475 18.0225 20.6002 18.2431 20.4143 18.4289C20.2285 18.6148 20.0079 18.7621 19.765 18.8626C19.398 19.0146 18.932 19.0146 18 19.0146H12M14 4.01465H18C18.932 4.01465 19.398 4.01465 19.765 4.16665C20.0079 4.26716 20.2285 4.41454 20.4143 4.60037C20.6002 4.7862 20.7475 5.00683 20.848 5.24965C21 5.61665 21 6.08265 21 7.01465C21 7.94665 21 8.41265 20.848 8.77965C20.7475 9.02247 20.6002 9.2431 20.4143 9.42892C20.2285 9.61475 20.0079 9.76214 19.765 9.86265C19.398 10.0146 18.932 10.0146 18 10.0146H14M6.00005 1.01465C4.8991 1.01432 3.82882 1.37736 2.95528 2.04746C2.08175 2.71755 1.4538 3.65722 1.16888 4.72067C0.883956 5.78411 0.957991 6.91186 1.3795 7.92893C1.801 8.94599 2.54641 9.79551 3.50005 10.3456V16.8576C3.50005 17.6756 3.50005 18.0836 3.65205 18.4516C3.80405 18.8186 4.09405 19.1076 4.67205 19.6866L6.00005 21.0146L8.10805 18.9066C8.20505 18.8096 8.25405 18.7606 8.29405 18.7076C8.4 18.5692 8.46791 18.4054 8.49105 18.2326C8.50005 18.1666 8.50005 18.0976 8.50005 17.9606C8.50005 17.8496 8.50005 17.7936 8.49405 17.7396C8.47847 17.598 8.43279 17.4612 8.36005 17.3386C8.32073 17.2763 8.278 17.2162 8.23205 17.1586L7.00005 15.5146L7.70005 14.5816C8.09605 14.0526 8.29505 13.7886 8.39705 13.4806C8.50005 13.1726 8.50005 12.8426 8.50005 12.1806V10.3456C9.45369 9.79551 10.1991 8.94599 10.6206 7.92893C11.0421 6.91186 11.1161 5.78411 10.8312 4.72067C10.5463 3.65722 9.91835 2.71755 9.04482 2.04746C8.17128 1.37736 7.101 1.01432 6.00005 1.01465Z"
-                                stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
+            <li class="nav-item">
+              <a href="/user-management" class="nav-link">
+                <span class="me-4">
+                  <img
+                    src="public/images/side-bar/user.svg"
+                    alt="User Management"
+                    class="nav-icon"
+                  />
+                </span>
+                User Management
+              </a>
+            </li>
 
-                    </span> <a href="">Access Control</a>
-                </li>
-                <li>
-                    <span class="me-4">
-                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M15.9699 13.4547C17.3399 13.6847 18.8499 13.4447 19.9099 12.7347C21.3199 11.7947 21.3199 10.2547 19.9099 9.31466C18.8399 8.60466 17.3099 8.36465 15.9399 8.60465M5.99994 13.4547C4.62994 13.6847 3.11994 13.4447 2.05994 12.7347C0.649941 11.7947 0.649941 10.2547 2.05994 9.31466C3.12994 8.60466 4.65994 8.36465 6.02994 8.60465M16.9999 6.17465C16.9399 6.16465 16.8699 6.16465 16.8099 6.17465C15.4299 6.12465 14.3299 4.99465 14.3299 3.59465C14.3299 2.16465 15.4799 1.01465 16.9099 1.01465C18.3399 1.01465 19.4899 2.17465 19.4899 3.59465C19.4799 4.99465 18.3799 6.12465 16.9999 6.17465ZM4.96994 6.17465C5.02994 6.16465 5.09994 6.16465 5.15994 6.17465C6.53994 6.12465 7.63994 4.99465 7.63994 3.59465C7.63994 2.16465 6.48994 1.01465 5.05994 1.01465C3.62994 1.01465 2.47994 2.17465 2.47994 3.59465C2.48994 4.99465 3.58994 6.12465 4.96994 6.17465ZM10.9999 13.6447C10.9399 13.6347 10.8699 13.6347 10.8099 13.6447C9.42994 13.5947 8.32994 12.4647 8.32994 11.0647C8.32994 9.63465 9.47994 8.48465 10.9099 8.48465C12.3399 8.48465 13.4899 9.64465 13.4899 11.0647C13.4799 12.4647 12.3799 13.6047 10.9999 13.6447ZM8.08994 16.7946C6.67994 17.7346 6.67994 19.2746 8.08994 20.2146C9.68994 21.2846 12.3099 21.2846 13.9099 20.2146C15.3199 19.2746 15.3199 17.7346 13.9099 16.7946C12.3199 15.7346 9.68994 15.7346 8.08994 16.7946Z"
-                                stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
+            <li class="nav-item">
+              <a href="/access-control" class="nav-link">
+                <span class="me-4">
+                  <img
+                    src="public/images/side-bar/access.svg"
+                    alt="Access Control"
+                    class="nav-icon"
+                  />
+                </span>
+                Access Control
+              </a>
+            </li>
 
-                    </span> <a href="">Customers</a>
-                </li>
-                <li> <span class="me-4">
-                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M3 24.0146C2.40326 24.0146 1.83097 23.7776 1.40901 23.3556C0.987053 22.9337 0.75 22.3614 0.75 21.7646C0.75 21.1679 0.987053 20.5956 1.40901 20.1737C1.83097 19.7517 2.40326 19.5146 3 19.5146C3.59674 19.5146 4.16903 19.7517 4.59099 20.1737C5.01295 20.5956 5.25 21.1679 5.25 21.7646C5.25 22.3614 5.01295 22.9337 4.59099 23.3556C4.16903 23.7776 3.59674 24.0146 3 24.0146ZM3 21.0146C2.80109 21.0146 2.61032 21.0937 2.46967 21.2343C2.32902 21.375 2.25 21.5657 2.25 21.7646C2.25 21.9636 2.32902 22.1543 2.46967 22.295C2.61032 22.4356 2.80109 22.5146 3 22.5146C3.19891 22.5146 3.38968 22.4356 3.53033 22.295C3.67098 22.1543 3.75 21.9636 3.75 21.7646C3.75 21.5657 3.67098 21.375 3.53033 21.2343C3.38968 21.0937 3.19891 21.0146 3 21.0146ZM12 24.0146C11.4033 24.0146 10.831 23.7776 10.409 23.3556C9.98705 22.9337 9.75 22.3614 9.75 21.7646C9.75 21.1679 9.98705 20.5956 10.409 20.1737C10.831 19.7517 11.4033 19.5146 12 19.5146C12.5967 19.5146 13.169 19.7517 13.591 20.1737C14.0129 20.5956 14.25 21.1679 14.25 21.7646C14.25 22.3614 14.0129 22.9337 13.591 23.3556C13.169 23.7776 12.5967 24.0146 12 24.0146ZM12 21.0146C11.8011 21.0146 11.6103 21.0937 11.4697 21.2343C11.329 21.375 11.25 21.5657 11.25 21.7646C11.25 21.9636 11.329 22.1543 11.4697 22.295C11.6103 22.4356 11.8011 22.5146 12 22.5146C12.1989 22.5146 12.3897 22.4356 12.5303 22.295C12.671 22.1543 12.75 21.9636 12.75 21.7646C12.75 21.5657 12.671 21.375 12.5303 21.2343C12.3897 21.0937 12.1989 21.0146 12 21.0146ZM21 24.0146C20.4033 24.0146 19.831 23.7776 19.409 23.3556C18.9871 22.9337 18.75 22.3614 18.75 21.7646C18.75 21.1679 18.9871 20.5956 19.409 20.1737C19.831 19.7517 20.4033 19.5146 21 19.5146C21.5967 19.5146 22.169 19.7517 22.591 20.1737C23.0129 20.5956 23.25 21.1679 23.25 21.7646C23.25 22.3614 23.0129 22.9337 22.591 23.3556C22.169 23.7776 21.5967 24.0146 21 24.0146ZM21 21.0146C20.8011 21.0146 20.6103 21.0937 20.4697 21.2343C20.329 21.375 20.25 21.5657 20.25 21.7646C20.25 21.9636 20.329 22.1543 20.4697 22.295C20.6103 22.4356 20.8011 22.5146 21 22.5146C21.1989 22.5146 21.3897 22.4356 21.5303 22.295C21.671 22.1543 21.75 21.9636 21.75 21.7646C21.75 21.5657 21.671 21.375 21.5303 21.2343C21.3897 21.0937 21.1989 21.0146 21 21.0146ZM17.25 6.01465V4.51465H15.675C15.5779 4.04623 15.392 3.60072 15.1275 3.20215L16.245 2.08465L15.18 1.01965L14.0625 2.13715C13.6639 1.8726 13.2184 1.68676 12.75 1.58965V0.0146484H11.25V1.58965C10.7816 1.68676 10.3361 1.8726 9.9375 2.13715L8.82 1.01965L7.755 2.08465L8.8725 3.20215C8.60795 3.60072 8.42211 4.04623 8.325 4.51465H6.75V6.01465H8.325C8.42211 6.48307 8.60795 6.92858 8.8725 7.32715L7.755 8.44465L8.8125 9.50215L9.93 8.38465C10.3303 8.65272 10.7784 8.84115 11.25 8.93965V10.5146H12.75V8.93965C13.2184 8.84254 13.6639 8.65669 14.0625 8.39215L15.18 9.50965L16.2375 8.45215L15.1275 7.32715C15.392 6.92858 15.5779 6.48307 15.675 6.01465H17.25ZM12 7.51465C11.7045 7.51465 11.4119 7.45645 11.139 7.34338C10.866 7.2303 10.6179 7.06457 10.409 6.85564C10.2001 6.64671 10.0343 6.39867 9.92127 6.12569C9.8082 5.8527 9.75 5.56012 9.75 5.26465C9.75 4.96917 9.8082 4.67659 9.92127 4.40361C10.0343 4.13063 10.2001 3.88259 10.409 3.67366C10.6179 3.46473 10.866 3.29899 11.139 3.18592C11.4119 3.07285 11.7045 3.01465 12 3.01465C12.5967 3.01465 13.169 3.2517 13.591 3.67366C14.0129 4.09561 14.25 4.66791 14.25 5.26465C14.25 5.86139 14.0129 6.43368 13.591 6.85564C13.169 7.2776 12.5967 7.51465 12 7.51465Z"
-                                fill="black" />
-                        </svg>
+            <li class="nav-item">
+              <a href="/customers" class="nav-link">
+                <span class="me-4">
+                  <img
+                    src="public/images/side-bar/customers.svg"
+                    alt="Customers"
+                    class="nav-icon"
+                  />
+                </span>
+                Customers
+              </a>
+            </li>
 
-                    </span><a href="">Division Management</a></li>
-                <li> <span class="me-4">
-                        <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M3.59375 4.5459C3.40313 4.5459 3.22031 4.47017 3.08552 4.33538C2.95073 4.20059 2.875 4.01777 2.875 3.82715C2.875 3.63652 2.95073 3.45371 3.08552 3.31892C3.22031 3.18412 3.40313 3.1084 3.59375 3.1084H19.4062C19.5969 3.1084 19.7797 3.18412 19.9145 3.31892C20.0493 3.45371 20.125 3.63652 20.125 3.82715C20.125 4.01777 20.0493 4.20059 19.9145 4.33538C19.7797 4.47017 19.5969 4.5459 19.4062 4.5459H3.59375ZM6.46875 1.6709C6.27813 1.6709 6.09531 1.59517 5.96052 1.46038C5.82573 1.32559 5.75 1.14277 5.75 0.952148C5.75 0.761524 5.82573 0.578707 5.96052 0.443915C6.09531 0.309124 6.27813 0.233398 6.46875 0.233398H16.5312C16.7219 0.233398 16.9047 0.309124 17.0395 0.443915C17.1743 0.578707 17.25 0.761524 17.25 0.952148C17.25 1.14277 17.1743 1.32559 17.0395 1.46038C16.9047 1.59517 16.7219 1.6709 16.5312 1.6709H6.46875ZM0 18.2021C0 18.774 0.227176 19.3225 0.631551 19.7268C1.03593 20.1312 1.58438 20.3584 2.15625 20.3584H20.8438C21.4156 20.3584 21.9641 20.1312 22.3685 19.7268C22.7728 19.3225 23 18.774 23 18.2021V8.13965C23 7.56778 22.7728 7.01932 22.3685 6.61495C21.9641 6.21057 21.4156 5.9834 20.8438 5.9834H2.15625C1.58438 5.9834 1.03593 6.21057 0.631551 6.61495C0.227176 7.01932 0 7.56778 0 8.13965L0 18.2021ZM2.15625 18.9209C1.96563 18.9209 1.78281 18.8452 1.64802 18.7104C1.51323 18.5756 1.4375 18.3928 1.4375 18.2021V8.13965C1.4375 7.94902 1.51323 7.76621 1.64802 7.63142C1.78281 7.49662 1.96563 7.4209 2.15625 7.4209H20.8438C21.0344 7.4209 21.2172 7.49662 21.352 7.63142C21.4868 7.76621 21.5625 7.94902 21.5625 8.13965V18.2021C21.5625 18.3928 21.4868 18.5756 21.352 18.7104C21.2172 18.8452 21.0344 18.9209 20.8438 18.9209H2.15625Z"
-                                fill="black" />
-                        </svg>
+            <li class="nav-item">
+              <a href="/division-management" class="nav-link">
+                <span class="me-4">
+                  <img
+                    src="public/images/side-bar/division.svg"
+                    alt="Division Management"
+                    class="nav-icon"
+                  />
+                </span>
+                Division Management
+              </a>
+            </li>
 
-                    </span><a href="">All Collections</a></li>
-                <li> <span class="me-4">
-                        <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M16 3.01465H2.5C2.10218 3.01465 1.72064 3.17268 1.43934 3.45399C1.15804 3.73529 1 4.11682 1 4.51465V18.5146C1 18.9125 1.15804 19.294 1.43934 19.5753C1.72064 19.8566 2.10218 20.0146 2.5 20.0146H17.5C17.8978 20.0146 18.2794 19.8566 18.5607 19.5753C18.842 19.294 19 18.9125 19 18.5146V8.01465"
-                                stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            <path
-                                d="M14.1215 5.25715L16.2425 3.13615L14.1215 1.01465M10 7.51465V16.0146M14 11.0146V16.0146M6 11.0146V16.0146"
-                                stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
+            <li class="nav-item">
+              <a href="/collections" class="nav-link">
+                <span class="me-4">
+                  <img
+                    src="public/images/side-bar/collections.svg"
+                    alt="Collections"
+                    class="nav-icon"
+                  />
+                </span>
+                All Collections
+                <span class="dropdown-arrow">
+                  <svg
+                    width="12"
+                    height="12"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </span>
+              </a>
+            </li>
 
-                    </span> <a href="">Return Cheques</a></li>
-                <li> <span class="me-4">
-                        <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M11.0884 5.17969H9.91412C9.8067 5.17969 9.71881 5.26758 9.71881 5.375V12.0962C9.71881 12.1597 9.7481 12.2183 9.79937 12.2549L13.835 15.2017C13.9229 15.2651 14.045 15.248 14.1085 15.1602L14.8067 14.208C14.8726 14.1177 14.8531 13.9956 14.7652 13.9346L11.2837 11.4175V5.375C11.2837 5.26758 11.1959 5.17969 11.0884 5.17969ZM16.4546 7.01563L20.2828 7.95069C20.4048 7.97998 20.5245 7.88721 20.5245 7.7627L20.544 3.81983C20.544 3.65625 20.356 3.56348 20.2291 3.66602L16.3814 6.67139C16.3523 6.69388 16.3302 6.72413 16.3175 6.75865C16.3049 6.79317 16.3022 6.83056 16.3099 6.86652C16.3175 6.90248 16.3352 6.93555 16.3608 6.96193C16.3864 6.98831 16.4189 7.00692 16.4546 7.01563ZM20.5489 14.3667L19.1646 13.8906C19.1163 13.8741 19.0635 13.8771 19.0174 13.899C18.9714 13.9209 18.9357 13.9599 18.918 14.0078C18.8716 14.1323 18.8228 14.2544 18.7715 14.3765C18.337 15.4043 17.7144 16.3296 16.9185 17.123C16.1315 17.9126 15.1987 18.5419 14.1719 18.9761C13.1083 19.4258 11.9649 19.6566 10.8101 19.6548C9.64312 19.6548 8.51275 19.4277 7.4483 18.9761C6.42154 18.5419 5.48878 17.9126 4.70171 17.123C3.90826 16.3296 3.2857 15.4043 2.84869 14.3765C2.40144 13.3122 2.1723 12.1691 2.17486 11.0147C2.17486 9.84766 2.40191 8.71485 2.85357 7.65039C3.28814 6.62256 3.9107 5.69727 4.7066 4.90381C5.49366 4.11431 6.42642 3.485 7.45318 3.05078C8.51275 2.59912 9.64556 2.37207 10.8126 2.37207C11.9795 2.37207 13.1099 2.59912 14.1744 3.05078C15.2011 3.485 16.1339 4.11431 16.921 4.90381C17.17 5.15528 17.4044 5.41651 17.6192 5.69239L19.0792 4.54981C17.1578 2.09375 14.167 0.514163 10.8077 0.516604C4.95806 0.519046 0.260796 5.27002 0.31939 11.1221C0.377984 16.8716 5.05328 21.5127 10.8126 21.5127C15.3414 21.5127 19.1988 18.6416 20.6685 14.6206C20.7051 14.5181 20.6514 14.4033 20.5489 14.3667Z"
-                                fill="black" />
-                        </svg>
+            <li class="nav-item">
+              <a href="/return-cheques" class="nav-link">
+                <span class="me-4">
+                  <img
+                    src="public/images/side-bar/cheques.svg"
+                    alt="Return Cheques"
+                    class="nav-icon"
+                  />
+                </span>
+                Return Cheques
+              </a>
+            </li>
 
-                    </span><a href="">Reminders</a></li>
+            <li class="nav-item">
+              <a href="/notifications" class="nav-link">
+                <span class="me-4">
+                  <img
+                    src="public/images/side-bar/notifications.svg"
+                    alt="Notifications"
+                    class="nav-icon"
+                  />
+                </span>
+                Notifications
+                <span class="dropdown-arrow">
+                  <svg
+                    width="12"
+                    height="12"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
 
+        <!-- Footer section - Fixed at bottom -->
+        <div class="sidebar-footer">
+          <ul class="sidebar-list">
+            <li class="nav-item">
+              <a href="/settings" class="nav-link">
+                <span class="me-4">
+                  <img
+                    src="public/images/side-bar/settings.svg"
+                    alt="Settings"
+                    class="nav-icon"
+                  />
+                </span>
+                Settings
+              </a>
+            </li>
 
-            </ul>
-
-        </nav>
-
-
+            <li class="nav-item">
+              <a href="/logout" class="nav-link">
+                <span class="me-4">
+                  <img
+                    src="public/images/side-bar/logout.svg"
+                    alt="Logout"
+                    class="nav-icon"
+                  />
+                </span>
+                Logout
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </div>
 
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
 
-</body>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const sidebar = document.getElementById("sidebar");
+        const toggleButton = document.getElementById("sidebarToggle");
+        const sidebarLinks = document.querySelectorAll(".sidebar-list li a");
 
-
-
-</html>
-
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-
-
-
-
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-    const sidebar = document.getElementById("sidebar");
-    const toggleButton = document.getElementById("sidebarCollapse");
-    const sidebarLinks = document.querySelectorAll(".sidebar-list li a");
-
-    // Toggle sidebar visibility
-    toggleButton.addEventListener("click", function () {
-        sidebar.classList.toggle("collapsed");
-    });
-
-    // Set active class on navigation
-    const currentPath = window.location.pathname;
-    sidebarLinks.forEach(link => {
-        if (link.getAttribute("href") === currentPath) {
-            link.parentElement.classList.add("active");
-        } else {
-            link.parentElement.classList.remove("active");
+        // Toggle sidebar visibility
+        if (toggleButton) {
+          toggleButton.addEventListener("click", function () {
+            sidebar.classList.toggle("collapsed");
+          });
         }
-    });
-});
 
-</script>
+        // Set active class on navigation
+        const currentPath = window.location.pathname;
+        sidebarLinks.forEach((link) => {
+          const href = link.getAttribute("href");
+          if (
+            href === currentPath ||
+            (currentPath === "/" && href === "/dashboard")
+          ) {
+            link.parentElement.classList.add("active");
+          } else {
+            link.parentElement.classList.remove("active");
+          }
+        });
 
-
-
-
-
+        // Handle dropdown functionality
+        const dropdownItems = document.querySelectorAll(
+          ".sidebar-list li a .dropdown-arrow"
+        );
+        dropdownItems.forEach((arrow) => {
+          arrow.parentElement.addEventListener("click", function (e) {
+            e.preventDefault();
+            const listItem = this.parentElement;
+            listItem.classList.toggle("expanded");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

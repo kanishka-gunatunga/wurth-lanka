@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="commonNew.css">
     <link rel="stylesheet" href="public/css/dashboard.css">
     <link rel="stylesheet" href="public/css/sidebar.css">
+    <link rel="stylesheet" href="sidebarNew.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link
@@ -36,43 +37,221 @@
 
     <div class="wrapper">
 
-        <!-- Sidebar  -->
-        <nav id="sidebar">
-            <ul>
-                <div class="d-flex justify-content-between">
-                    <p>Admin Dashboard</p>
-                    <button type="button" id="sidebarCollapse" class="btn ">
-                        <i class="fas fa-align-left"></i>
-                        <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-list" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd"
-                                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
-                            </svg></span>
+        <!-- Sidebar -->
+      <nav id="sidebar" class="sidebar ms-3 mt-3">
+        <!-- Header section - Fixed at top -->
+        <div class="sidebar-header">
+          <div class="d-flex justify-content-between align-items-center">
+            <p class="sidebar-title">Admin Dashboard</p>
+            <button
+              class="sidebar-toggle border-0 bg-transparent"
+              type="button"
+              id="sidebarToggle"
+            >
+              <svg
+                width="29"
+                height="23"
+                viewBox="0 0 29 23"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M27.0415 1.01465L10.5732 1.01465"
+                  stroke="#CC0000"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M26.9849 7.85278L1.00014 7.85278"
+                  stroke="#CC0000"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M26.9849 14.6908L6.47061 14.6908"
+                  stroke="#CC0000"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M26.9849 21.5289H14.6763"
+                  stroke="#CC0000"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
 
-                    </button>
-                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fas fa-align-justify"></i>
-                    </button>
-                </div>
+        <!-- Scrollable content section -->
+        <div class="sidebar-content">
+          <ul class="sidebar-list">
+            <li class="nav-item active">
+              <a href="/dashboard" class="nav-link">
+                <span class="me-4">
+                  <img
+                    src="public/images/side-bar/dashboard.svg"
+                    alt="Dashboard"
+                    class="nav-icon"
+                  />
+                </span>
+                Dashboard
+              </a>
+            </li>
 
-               <li class="active"> <a href="{{url('dashboard')}}">Dashboard</a></li>
-                <li class="active"> <a href="user-management.html">User Management</a></li>
-                <li class="active"> <a href="access-control.html">Access Control</a></li>
-                <li class="active"> <a href="customers.html">Customers</a></li>
-                <li class="active"> <a href="admin-division-management.html">Division Management</a></li>
-                <li class="active"> <a href="">All Collections</a></li>
-                <li class="active"> <a href="">Return Cheques</a></li>
-                <li class="active"> <a href="">Reminders</a></li>
-                <li class="active"> <a href="backup.html">backup</a></li>
-                <li class="active"> <a href="activity-log.html">activity log</a></li>
-                <li class="active"> <a href="import.html">import</a></li>
+            <li class="nav-item">
+              <a href="/user-management" class="nav-link">
+                <span class="me-4">
+                  <img
+                    src="public/images/side-bar/user.svg"
+                    alt="User Management"
+                    class="nav-icon"
+                  />
+                </span>
+                User Management
+              </a>
+            </li>
 
+            <li class="nav-item">
+              <a href="/access-control" class="nav-link">
+                <span class="me-4">
+                  <img
+                    src="public/images/side-bar/access.svg"
+                    alt="Access Control"
+                    class="nav-icon"
+                  />
+                </span>
+                Access Control
+              </a>
+            </li>
 
-            </ul>
+            <li class="nav-item">
+              <a href="/customers" class="nav-link">
+                <span class="me-4">
+                  <img
+                    src="public/images/side-bar/customers.svg"
+                    alt="Customers"
+                    class="nav-icon"
+                  />
+                </span>
+                Customers
+              </a>
+            </li>
 
-        </nav>
+            <li class="nav-item">
+              <a href="/division-management" class="nav-link">
+                <span class="me-4">
+                  <img
+                    src="public/images/side-bar/division.svg"
+                    alt="Division Management"
+                    class="nav-icon"
+                  />
+                </span>
+                Division Management
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="/collections" class="nav-link">
+                <span class="me-4">
+                  <img
+                    src="public/images/side-bar/collections.svg"
+                    alt="Collections"
+                    class="nav-icon"
+                  />
+                </span>
+                All Collections
+                <span class="dropdown-arrow">
+                  <svg
+                    width="12"
+                    height="12"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="/return-cheques" class="nav-link">
+                <span class="me-4">
+                  <img
+                    src="public/images/side-bar/cheques.svg"
+                    alt="Return Cheques"
+                    class="nav-icon"
+                  />
+                </span>
+                Return Cheques
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="/notifications" class="nav-link">
+                <span class="me-4">
+                  <img
+                    src="public/images/side-bar/notifications.svg"
+                    alt="Notifications"
+                    class="nav-icon"
+                  />
+                </span>
+                Notifications
+                <span class="dropdown-arrow">
+                  <svg
+                    width="12"
+                    height="12"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Footer section - Fixed at bottom -->
+        <div class="sidebar-footer">
+          <ul class="sidebar-list">
+            <li class="nav-item">
+              <a href="/settings" class="nav-link">
+                <span class="me-4">
+                  <img
+                    src="public/images/side-bar/settings.svg"
+                    alt="Settings"
+                    class="nav-icon"
+                  />
+                </span>
+                Settings
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="/logout" class="nav-link">
+                <span class="me-4">
+                  <img
+                    src="public/images/side-bar/logout.svg"
+                    alt="Logout"
+                    class="nav-icon"
+                  />
+                </span>
+                Logout
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
 
         <div class="container-fluid">
             <div class="main-wrapper">
