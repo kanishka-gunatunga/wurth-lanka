@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../commonNew.css">
+     <link rel="stylesheet" href="../public/css/finance.css" />
+    <link rel="stylesheet" href="../public/css/dashboard.css">
+    <link rel="stylesheet" href="../public/css/sidebar.css">
+    <link rel="stylesheet" href="../sidebarNew.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/"><img src="public/images/wruth-logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="wrapper">
+
+        <!-- Sidebar -->
+        <nav id="sidebar" class="sidebar ms-3 mt-3">
+            <!-- Header section - Fixed at top -->
+            <div class="sidebar-header">
+                <div class="d-flex justify-content-between align-items-center">
+                    <p class="sidebar-title">Finance Dashboard</p>
+                    <button class="sidebar-toggle border-0 bg-transparent" type="button" id="sidebarToggle">
+                        <svg width="29" height="23" viewBox="0 0 29 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M27.0415 1.01465L10.5732 1.01465" stroke="#CC0000" stroke-width="2"
+                                stroke-linecap="round" />
+                            <path d="M26.9849 7.85278L1.00014 7.85278" stroke="#CC0000" stroke-width="2"
+                                stroke-linecap="round" />
+                            <path d="M26.9849 14.6908L6.47061 14.6908" stroke="#CC0000" stroke-width="2"
+                                stroke-linecap="round" />
+                            <path d="M26.9849 21.5289H14.6763" stroke="#CC0000" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Scrollable content section -->
+            <div class="sidebar-content">
+                <ul class="sidebar-list">
+                    <li class="nav-item active">
+                        <a href="/dashboard" class="nav-link">
+                            <span class="me-4">
+                                <img src="public/images/side-bar/dashboard.svg" alt="Dashboard" class="nav-icon" />
+                            </span>
+                            Dashboard
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/user-management" class="nav-link">
+                            <span class="me-4">
+                                <img src="public/images/side-bar/user.svg" alt="User Management" class="nav-icon" />
+                            </span>
+                            User Management
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/access-control" class="nav-link">
+                            <span class="me-4">
+                                <img src="public/images/side-bar/access.svg" alt="Access Control" class="nav-icon" />
+                            </span>
+                            Access Control
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/customers" class="nav-link">
+                            <span class="me-4">
+                                <img src="public/images/side-bar/customers.svg" alt="Customers" class="nav-icon" />
+                            </span>
+                            Customers
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/division-management" class="nav-link">
+                            <span class="me-4">
+                                <img src="public/images/side-bar/division.svg" alt="Division Management"
+                                    class="nav-icon" />
+                            </span>
+                            Division Management
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/collections" class="nav-link">
+                            <span class="me-4">
+                                <img src="public/images/side-bar/collections.svg" alt="Collections" class="nav-icon" />
+                            </span>
+                            All Collections
+                            <span class="dropdown-arrow">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/return-cheques" class="nav-link">
+                            <span class="me-4">
+                                <img src="public/images/side-bar/cheques.svg" alt="Return Cheques" class="nav-icon" />
+                            </span>
+                            Return Cheques
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/notifications" class="nav-link">
+                            <span class="me-4">
+                                <img src="public/images/side-bar/notifications.svg" alt="Notifications"
+                                    class="nav-icon" />
+                            </span>
+                            Notifications
+                            <span class="dropdown-arrow">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Footer section - Fixed at bottom -->
+            <div class="sidebar-footer">
+                <ul class="sidebar-list">
+                    <li class="nav-item">
+                        <a href="/settings" class="nav-link">
+                            <span class="me-4">
+                                <img src="public/images/side-bar/settings.svg" alt="Settings" class="nav-icon" />
+                            </span>
+                            Settings
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/logout" class="nav-link">
+                            <span class="me-4">
+                                <img src="public/images/side-bar/logout.svg" alt="Logout" class="nav-icon" />
+                            </span>
+                            Logout
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container-fluid">
+            <div class="main-wrapper">
+
+                <div class="row d-flex justify-content-between">
+                    <div class="col-lg-6 col-12">
+                        <h1 class="header-title">All Receipt</h1>
+                    </div>
+                    <div class="col-lg-6 col-12 d-flex justify-content-lg-end gap-3 pe-5">
+                        <button class="header-btn"><i class="fa-solid fa-magnifying-glass fa-xl"></i></button>
+                        <button class="header-btn" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#searchByFilter" aria-controls="offcanvasRight"><i
+                                class="fa-solid fa-filter fa-xl"></i></button>
+                    </div>
+                </div>
+
+
+                <div class="styled-tab-main">
+                    <ul class="nav">
+                        <li class="nav-item mb-3">
+                            <a class="nav-link active" aria-current="page" href="#">
+                                <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M8.5 7H16.5M8.5 11H16.5M8.5 15H12.5M20.5 21V5C20.5 4.46957 20.2893 3.96086 19.9142 3.58579C19.5391 3.21071 19.0304 3 18.5 3H6.5C5.96957 3 5.46086 3.21071 5.08579 3.58579C4.71071 3.96086 4.5 4.46957 4.5 5V21L7 19L10 21L12.5 19L15 21L18 19L20.5 21Z"
+                                        stroke="#CC0000" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+                                Final Receipts - Invoices
+                            </a>
+                        </li>
+
+
+
+                        <li class="nav-item mb-3">
+                            <a class="nav-link" aria-current="page" href="#">
+                                <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M20 3.5L18.5 2L17 3.5L15.5 2L14 3.5L12.5 2L11 3.5L9.5 2L8 3.5L6.5 2L5 3.5L3.5 2V22L5 20.5L6.5 22L8 20.5L9.5 22L11.08 20.42C11.22 20.61 11.38 20.78 11.55 20.95C12.8619 22.2423 14.6302 22.9657 16.4717 22.9634C18.3133 22.9611 20.0797 22.2334 21.3885 20.9378C22.6972 19.6423 23.4427 17.8832 23.4636 16.0418C23.4845 14.2004 22.779 12.4249 21.5 11.1V2L20 3.5ZM19.5 9.68C18.57 9.24 17.55 9 16.5 9C12.64 9 9.5 12.13 9.5 16C9.5 17.05 9.74 18.07 10.18 19H5.5V5H19.5V9.68ZM21.35 16C21.35 16.64 21.23 17.27 21 17.86C20.74 18.44 20.38 19 19.93 19.43C19.5 19.88 18.94 20.24 18.36 20.5C17.77 20.73 17.14 20.85 16.5 20.85C13.82 20.85 11.65 18.68 11.65 16C11.65 14.71 12.16 13.5 13.07 12.57C14 11.66 15.21 11.15 16.5 11.15C19.17 11.15 21.35 13.32 21.35 16ZM15.5 16.69V13H17V15.82L19.44 17.23L18.69 18.53L15.5 16.69Z"
+                                        fill="#CC0000" />
+                                </svg>
+
+
+                                Temporary Receipts - Invoices
+                            </a>
+                        </li>
+
+
+                        <li class="nav-item mb-3">
+                            <a class="nav-link" aria-current="page" href="#">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M19.5 3.5L18 2L16.5 3.5L15 2L13.5 3.5L12 2L10.5 3.5L9 2L7.5 3.5L6 2L4.5 3.5L3 2V22L4.5 20.5L6 22L7.5 20.5L9 22L10.58 20.42C10.72 20.61 10.88 20.78 11.05 20.95C12.3619 22.2423 14.1302 22.9657 15.9717 22.9634C17.8133 22.9611 19.5797 22.2334 20.8885 20.9378C22.1972 19.6423 22.9427 17.8832 22.9636 16.0418C22.9845 14.2004 22.279 12.4249 21 11.1V2L19.5 3.5ZM19 9.68C18.07 9.24 17.05 9 16 9C12.14 9 9 12.13 9 16C9 17.05 9.24 18.07 9.68 19H5V5H19V9.68ZM20.85 16C20.85 16.64 20.73 17.27 20.5 17.86C20.24 18.44 19.88 19 19.43 19.43C19 19.88 18.44 20.24 17.86 20.5C17.27 20.73 16.64 20.85 16 20.85C13.32 20.85 11.15 18.68 11.15 16C11.15 14.71 11.66 13.5 12.57 12.57C13.5 11.66 14.71 11.15 16 11.15C18.67 11.15 20.85 13.32 20.85 16ZM15 16.69V13H16.5V15.82L18.94 17.23L18.19 18.53L15 16.69Z"
+                                        fill="#CC0000" />
+                                </svg>
+
+
+
+                                Temporary Receipts - Advance Payment
+                            </a>
+                        </li>
+                    </ul>
+
+
+                    <div class="table-responsive">
+                        <table class="table unlock-column-table ">
+                            <thead>
+                                <tr>
+                                    <th>Customer Name</th>
+                                    <th>Receipt Number</th>
+                                    <th>Status</th>
+                                    <th>Invoice Number</th>
+                                    <th>Issue Date</th>
+                                    <th>Amount</th>
+                                    <th>ADM Name</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>12 Dec 2024</td>
+                                    <td>H.K Perera</td>
+                                    <td>254565214</td>
+                                    <td>Rs. 12,000.00</td>
+
+                                </tr>
+                                <tr>
+                                    <td>12 Dec 2024</td>
+                                    <td>Pasan Randula</td>
+                                    <td>
+                                        <button class="success-status-btn">
+                                            Approved
+                                        </button>
+                                    </td>
+                                    <td>INV-10001</td>
+                                    <td>2024-12-12</td>
+                                    <td>Rs. 21,000.00</td>
+                                    <td>John Doe</td>
+                                    <td>
+                                       
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>12 Dec 2024</td>
+                                    <td>H.K Perera</td>
+                                    <td>
+                                      <button class="grey-status-btn">
+                                            Paid
+                                        </button>
+                                    </td>
+                                    <td>INV-10002</td>
+                                    <td>2024-12-12</td>
+                                    <td>Rs. 14,000.00</td>
+                                    <td>Jane Smith</td>
+                                    <td>
+                                       
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>12 Dec 2024</td>
+                                    <td>Pasan Randula</td>
+                                    <td>
+                                       
+                                    </td>
+                                    <td>INV-10003</td>
+                                    <td>2024-12-12</td>
+                                    <td>Rs. 15,000.00</td>
+                                    <td>John Doe</td>
+                                    <td>
+                                      
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </table>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="col-12 d-flex justify-content-center">
+                <nav aria-label="...">
+                    <ul class="pagination">
+                        <li class="page-item disabled">
+                            <a class="page-link">Prev</a>
+                        </li>
+                        <li class="page-item active">
+                            <a class="page-link" href="#">1</a>
+                        </li>
+                        <li class="page-item " aria-current="page">
+                            <a class="page-link" href="#">2</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">....</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="offcanvas offcanvas-end offcanvas-filter" tabindex="-1" id="searchByFilter"
+        aria-labelledby="offcanvasRightLabel">
+        <div class="row d-flex justify-content-end">
+            <button type="button" class="btn-close rounded-circle" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+
+        <div class="offcanvas-header d-flex justify-content-between">
+            <div class="col-6">
+                <span class="offcanvas-title" id="offcanvasRightLabel">Search </span> <span class="title-rest"> &nbsp;by
+                    Filter
+                </span>
+            </div class="col-6">
+
+            <div>
+                <button class="btn rounded-phill">Clear All</button>
+            </div>
+        </div>
+        <div class="offcanvas-body">
+            <div class="row">
+                <div class="col-4 filter-tag d-flex align-items-center justify-content-between">
+                    <span>ADMs</span>
+                    <button class="btn btn-sm p-0"><i class="fa-solid fa-xmark fa-lg"></i></button>
+                </div>
+
+                <div class="col-4 filter-tag d-flex align-items-center justify-content-between">
+                    <span>Marketing</span>
+                    <button class="btn btn-sm p-0"><i class="fa-solid fa-xmark fa-lg"></i></button>
+                </div>
+
+                <div class="col-4 filter-tag d-flex align-items-center justify-content-between">
+                    <span>Admin</span>
+                    <button class="btn btn-sm p-0"><i class="fa-solid fa-xmark fa-lg"></i></button>
+                </div>
+
+                <div class="col-4 filter-tag d-flex align-items-center justify-content-between">
+                    <span>Finance</span>
+                    <button class="btn btn-sm p-0"><i class="fa-solid fa-xmark fa-lg"></i></button>
+                </div>
+
+                <div class="col-4 filter-tag d-flex align-items-center justify-content-between">
+                    <span>Team Leaders</span>
+                    <button class="btn btn-sm p-0"><i class="fa-solid fa-xmark fa-lg"></i></button>
+                </div>
+
+                <div class="col-4 filter-tag d-flex align-items-center justify-content-between">
+                    <span>Head of Division</span>
+                    <button class="btn btn-sm p-0"><i class="fa-solid fa-xmark fa-lg"></i></button>
+                </div>
+            </div>
+
+
+            <div class="mt-5 filter-categories">
+                <p class="filter-title">AMD Number</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        5643678
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        5643678
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        5643678
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        5643678
+                    </label>
+                </div>
+
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        5643678
+                    </label>
+                </div>
+            </div>
+
+            <!-- Divisions -->
+            <div class="mt-5 radio-selection filter-categories">
+                <p class="filter-title">Divisions</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Division 1
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Division 2
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Division 3
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Division 4
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Division 5
+                    </label>
+                </div>
+            </div>
+
+
+            <div class="mt-5 filter-categories">
+                <p class="filter-title">User Role</p>
+
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        All
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        System Administration
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Head of Division
+                    </label>
+                </div>
+
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Regional Sales Managers
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Area Sales Managers
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Team Leaders
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        ADMs
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Finance Department Managers
+                    </label>
+                </div>
+            </div>
+
+            <div class="mt-5 filter-categories">
+                <p class="filter-title">Date</p>
+
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Today
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Yesterday
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        This Week
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        This Month
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        This Year
+                    </label>
+                </div>
+            </div>
+
+
+            <div class="mt-5 filter-categories">
+                <p class="filter-title">Time</p>
+
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        09:00 AM - 1:00 PM
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        09:00 AM - 1:00 PM
+                    </label>
+                </div>
+
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        09:00 AM - 1:00 PM
+                    </label>
+                </div>
+
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        09:00 AM - 1:00 PM
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        09:00 AM - 1:00 PM
+                    </label>
+                </div>
+            </div>
+</body>
+
+</html>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const toggleButton = document.getElementById('sidebarCollapse');
+        const sidebar = document.getElementById('sidebar');
+
+        toggleButton.addEventListener('click', function () {
+            sidebar.classList.toggle('active');
+        });
+    });
+</script>

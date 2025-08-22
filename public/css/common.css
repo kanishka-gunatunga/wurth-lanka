@@ -1,8 +1,8 @@
-:body{
+:body {
     --primary-red: #CC0000;
 }
 
-.main-wrapper{
+.main-wrapper {
     background-color: #FFF5F6;
     padding-top: 3rem;
     padding-left: 1rem;
@@ -10,7 +10,7 @@
     min-height: 100vh;
 }
 
-.header-title{
+.header-title {
     font-family: Poppins;
     font-size: 28px;
     font-weight: 600;
@@ -19,11 +19,12 @@
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     margin-bottom: 3rem;
-    
+
 }
 
 
-.form-select:focus , .form-control:focus {
+.form-select:focus,
+.form-control:focus {
     border-color: #ff7e8b !important;
     outline: 0 !important;
     box-shadow: 0 0 4px 0rem #ff7e8b !important;
@@ -61,14 +62,19 @@
 
 
 .stat-label {
-    font-size: 14px;
+    font-family: Poppins;
     font-weight: 500;
+    font-size: 14px;
+    color: #484848;
 }
 
 .stat-number {
-    color: #CC0000;
-    font-size: 25px;
+    font-family: Poppins;
     font-weight: 600;
+    font-style: SemiBold;
+    font-size: 25px;
+    color: #CC0000;
+
 }
 
 /* Section Cards */
@@ -105,7 +111,8 @@
 .locked-users-table {
     flex: 1;
     overflow-y: auto;
-    max-height: calc(400px - 80px); /* Account for header and padding */
+    max-height: calc(400px - 80px);
+    /* Account for header and padding */
 }
 
 /* Users Table */
@@ -178,7 +185,8 @@
 .activities-list {
     flex: 1;
     overflow-y: auto;
-    max-height: calc(400px - 80px); /* Account for header and padding */
+    max-height: calc(400px - 80px);
+    /* Account for header and padding */
     padding-right: 0.5rem;
 }
 
@@ -242,7 +250,7 @@
     .stat-card {
         margin-bottom: 1rem;
     }
-    
+
     .section-card {
         margin-bottom: 1.5rem;
     }
@@ -252,17 +260,17 @@
     .stat-number {
         font-size: 24px;
     }
-    
+
     .stat-label {
         font-size: 13px;
     }
-    
+
     .users-table th,
     .users-table td {
         padding: 8px 10px;
         font-size: 13px;
     }
-    
+
     .section-title {
         font-size: 16px;
     }
@@ -280,7 +288,8 @@
     flex: 1;
     position: relative;
     overflow-x: auto;
-    overflow-y: hidden; /* Remove vertical scrolling */
+    overflow-y: hidden;
+    /* Remove vertical scrolling */
     max-height: calc(400px - 80px);
     border: 1px solid #dee2e6;
     border-radius: 6px;
@@ -317,23 +326,27 @@
 }
 
 /* Column widths */
-.users-table th:nth-child(1), .users-table td:nth-child(1) {
+.users-table th:nth-child(1),
+.users-table td:nth-child(1) {
     width: 200px;
     min-width: 200px;
 }
 
-.users-table th:nth-child(2), .users-table td:nth-child(2) {
+.users-table th:nth-child(2),
+.users-table td:nth-child(2) {
     width: 180px;
     min-width: 180px;
 }
 
-.users-table th:nth-child(3), .users-table td:nth-child(3) {
+.users-table th:nth-child(3),
+.users-table td:nth-child(3) {
     width: 120px;
     min-width: 120px;
 }
 
 /* Fixed Actions Column */
-.users-table th:nth-child(4), .users-table td:nth-child(4) {
+.users-table th:nth-child(4),
+.users-table td:nth-child(4) {
     width: 100px;
     min-width: 100px;
     position: sticky;
