@@ -1,8 +1,14 @@
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
 .sidebar {
     background-color: #BFBFBF4D;
     color: #000000;
     padding: 0;
-    width: 288px;
+    width: 361px;
     height: 100vh;
     border-radius: 13px;
     border: 1px solid #E5E5E5;
@@ -47,6 +53,7 @@
 .sidebar-content {
     flex: 1;
     overflow-y: auto;
+    overflow-x: hidden;
     padding: 10px 0;
 }
 
