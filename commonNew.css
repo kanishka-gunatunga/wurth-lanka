@@ -468,7 +468,7 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  border: 1px solid #AAB6C1;
+  border: 1px solid #aab6c1;
   background-color: #fff;
   appearance: none;
   -webkit-appearance: none;
@@ -486,7 +486,7 @@
 }
 
 .custom-circle-checkbox .form-check-input[type="checkbox"]:checked::after {
-  content: '';
+  content: "";
   display: block;
   width: 10px;
   height: 10px;
@@ -499,7 +499,6 @@
 
 .selectable-filter {
   cursor: pointer;
-  
 }
 
 .selectable-filter.selected {
