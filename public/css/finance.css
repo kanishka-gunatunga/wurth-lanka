@@ -1,0 +1,76 @@
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fafafa;
+}
+
+table,
+th,
+td {
+    font-family: "Poppins", sans-serif;
+}
+
+.success-status-btn,
+.danger-status-btn,
+.grey-status-btn,
+.blue-status-btn {
+
+    border-radius: 20px;
+    border: 0;
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 14px;
+    color: #FFFFFF;
+    padding: 2px 12px;
+}
+
+.success-status-btn {
+    background-color: #008448;
+}
+
+.danger-status-btn {
+    background-color: #CC0000;
+}
+
+.grey-status-btn {
+    background-color: #E0E0E0;
+}
+
+.blue-status-btn{
+    background-color: #2196F3;
+
+}
+
+.unlock-column-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    font: "Poppins" sans-serif;
+}
+
+.table-title {
+    color: #000000;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 23px;
+    line-height: 24px;
+    margin-bottom: 20px;
+}
+
+.unlock-column-table th {
+    font-family: Poppins;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 18px;
+    color: #000000;
+}
+
+
+.unlock-column-table td {
+    font-family: Poppins;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 18px;
+    color: black;
+}
