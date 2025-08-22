@@ -1,53 +1,73 @@
-<!-- @extends('layouts.header')
-
-@push('styles')
-<link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
-@endpush
-@section('content') -->
-
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Admin Dashboard</title>
 
-    <link rel="stylesheet" href="../public/css/common.css">
+    
+    <link rel="stylesheet" href="../public/css/common.css" />
     <link rel="stylesheet" href="../sidebarNew.css" />
     <link rel="stylesheet" href="../public/css/navbar-profile.css" />
+    <link rel="stylesheet" href="../commonNew.css">
     <link rel="stylesheet" href="../public/css/finance.css" />
-    <link rel="stylesheet" href="../public/css/dashboard.css" />
+    <link rel="stylesheet" href="../public/css/dashboard.css">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-</head>
 
-<body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/"><img src="public/images/wruth-logo.png" alt="" /></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <!-- Profile section -->
-                <div class="navbar-profile">
-                    <img src="public/images/profile-icon.svg" alt="Sofia Emilia" class="profile-avatar" />
-                    <div class="profile-info">
-                        <p class="profile-name">Sofia Emilia</p>
-                        <p class="profile-designation">Admin</p>
-                    </div>
-                </div>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/"
+          ><img src="public/images/wruth-logo.png" alt=""
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <!-- Profile section -->
+          <div class="navbar-profile">
+            <img
+              src="public/images/profile-icon.svg"
+              alt="Sofia Emilia"
+              class="profile-avatar"
+            />
+            <div class="profile-info">
+              <p class="profile-name">Sofia Emilia</p>
+              <p class="profile-designation">Admin</p>
             </div>
+          </div>
         </div>
+      </div>
     </nav>
 
     <div class="wrapper">
-        <!-- Sidebar -->
-        <nav id="sidebar" class="sidebar ms-3 mt-3">
-            <!-- Header section - Fixed at top -->
+      <!-- Sidebar -->
+      <nav id="sidebar" class="sidebar ms-3 mt-3">
+           
             <div class="sidebar-header">
                 <div class="d-flex justify-content-between align-items-center">
                     <p class="sidebar-title">Finance Dashboard</p>
@@ -66,7 +86,7 @@
                 </div>
             </div>
 
-            <!-- Scrollable content section -->
+            
             <div class="sidebar-content">
                 <ul class="sidebar-list">
                     <li class="nav-item">
@@ -452,7 +472,7 @@
                 </ul>
             </div>
 
-            <!-- Footer section - Fixed at bottom -->
+            
             <div class="sidebar-footer">
                 <ul class="sidebar-list">
                     <li class="nav-item">
@@ -474,264 +494,219 @@
                     </li>
                 </ul>
             </div>
-        </nav>
+      </nav>
 
-        <div class="container-fluid">
+      <div class="container-fluid">
             <div class="main-wrapper">
-                <h1 class="header-title">Dashboard</h1>
 
-                <div class="dashboard-main-container">
-
-
-
-                    <div class="row gx-4 gy-3 dashboard-stats">
-
-                        
-                        <div class="col-md-2">
-                            <div class="stat-card p-3">
-                                <p class="stat-label">Total No of Receipts</p>
-                                <h3 class="stat-number">1245</h3>
-                            </div>
-                        </div>
-
-                        <div class="col-md-2">
-                            <div class="stat-card p-3">
-                                <p class="stat-label">No of Invoices</p>
-                                <h3 class="stat-number">45</h3>
-                            </div>
-                        </div>
-
-                        <div class="col-md-2">
-                            <div class="stat-card p-3">
-                                <p class="stat-label">No of Pending</p>
-                                <h3 class="stat-number">38</h3>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3">
-                            <div class="stat-card p-3">
-                                <p class="stat-label">Invoiced Amount</p>
-                                <h3 class="stat-number">Rs. 1,500,000</h3>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3">
-                            <div class="stat-card p-3">
-                                <p class="stat-label">Collected Amount</p>
-                                <h3 class="stat-number">Rs. 1,200,000</h3>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3">
-                            <div class="stat-card p-3">
-                                <p class="stat-label">Monthly Deposit Amount</p>
-                                <h3 class="stat-number">Rs. 1,100,000</h3>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3">
-                            <div class="stat-card p-3">
-                                <p class="stat-label">Pending Deposit Amount</p>
-                                <h3 class="stat-number">Rs. 100,000</h3>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3">
-                            <div class="stat-card p-3">
-                                <p class="stat-label">Outstanding Amount</p>
-                                <h3 class="stat-number">Rs. 300,000</h3>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3">
-                            <div class="stat-card p-3">
-                                <p class="stat-label">Collection Target</p>
-                                <h3 class="stat-number">Rs. 2,700,000</h3>
-                            </div>
-                        </div>
-
+                <div class="row d-flex justify-content-between">
+                    <div class="col-lg-6 col-12">
+                        <h1 class="header-title">All Receipt</h1>
                     </div>
-
-
-
-
-                    <div class="row mt-4">
-                        <!-- Locked Users Section -->
-                        <div class="col-lg-6 col-md-12 mb-4">
-                            <div class="section-card">
-                                <div class="card-body">
-                                    <h3 class="table-title">Recent Cash Deposits</h3>
-                                    <div class="table-responsive">
-                                        <table class="table unlock-column-table ">
-                                            <thead>
-                                                <tr>
-                                                    <th>Date</th>
-                                                    <th>ADM Name</th>
-                                                    <th>ADM Number</th>
-                                                    <th>Amount</th>
-
-
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>12 Dec 2024</td>
-                                                    <td>H.K Perera</td>
-                                                    <td>254565214</td>
-                                                    <td>Rs. 12,000.00</td>
-
-                                                </tr>
-                                                <tr>
-                                                    <td>12 Dec 2024</td>
-                                                    <td>Pasan Randula</td>
-                                                    <td>254565214</td>
-                                                    <td>Rs. 21,000.00</td>
-
-                                                </tr>
-                                                <tr>
-                                                    <td>12 Dec 2024</td>
-                                                    <td>H.K Perera</td>
-                                                    <td>254565214</td>
-                                                    <td>Rs. 14,000.00</td>
-
-                                                </tr>
-                                                <tr>
-                                                    <td>12 Dec 2024</td>
-                                                    <td>Pasan Randula</td>
-                                                    <td>254565214</td>
-                                                    <td>Rs. 15,000.00</td>
-
-                                                </tr>
-                                                <tr>
-                                                    <td>12 Dec 2024</td>
-                                                    <td>H.K Perera</td>
-                                                    <td>254565214</td>
-                                                    <td>Rs. 112,000.00</td>
-
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        </table>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 col-md-12 mb-4">
-                            <div class="section-card">
-                                <div class="card-body">
-                                    <h3 class="table-title">Recent Cheque Deposits</h3>
-                                    <div class="table-responsive">
-                                        <table class="table unlock-column-table ">
-                                            <thead>
-                                                <tr>
-                                                    <th>Date <i class="sort-icon">▼</i></th>
-                                                    <th>ADM Name</th>
-                                                    <th>ADM Number</th>
-                                                    <th>Amount</th>
-                                                    <th>Payment Slip</th>
-
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>12 Dec 2024</td>
-                                                    <td>H.K Perera</td>
-                                                    <td>254565214</td>
-                                                    <td>Rs. 12,000.00</td>
-                                                    <td>256554558</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>12 Dec 2024</td>
-                                                    <td>Pasan Randula</td>
-                                                    <td>254565214</td>
-                                                    <td>Rs. 21,000.00</td>
-                                                    <td>256554558</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>12 Dec 2024</td>
-                                                    <td>H.K Perera</td>
-                                                    <td>254565214</td>
-                                                    <td>Rs. 14,000.00</td>
-                                                    <td>256554558</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>12 Dec 2024</td>
-                                                    <td>Pasan Randula</td>
-                                                    <td>254565214</td>
-                                                    <td>Rs. 15,000.00</td>
-                                                    <td>256554558</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>12 Dec 2024</td>
-                                                    <td>H.K Perera</td>
-                                                    <td>254565214</td>
-                                                    <td>Rs. 112,000.00</td>
-                                                    <td>256554558</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        </table>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
+                    <div class="col-lg-6 col-12 d-flex justify-content-lg-end gap-3 pe-5">
+                        <button class="header-btn"><i class="fa-solid fa-magnifying-glass fa-xl"></i></button>
+                        <button class="header-btn" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#searchByFilter" aria-controls="offcanvasRight"><i
+                                class="fa-solid fa-filter fa-xl"></i></button>
                     </div>
                 </div>
+
+
+                <div class="styled-tab-main">
+                    <ul class="nav">
+                        <li class="nav-item mb-3">
+                            <a class="nav-link active" aria-current="page" href="#">
+                                <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M8.5 7H16.5M8.5 11H16.5M8.5 15H12.5M20.5 21V5C20.5 4.46957 20.2893 3.96086 19.9142 3.58579C19.5391 3.21071 19.0304 3 18.5 3H6.5C5.96957 3 5.46086 3.21071 5.08579 3.58579C4.71071 3.96086 4.5 4.46957 4.5 5V21L7 19L10 21L12.5 19L15 21L18 19L20.5 21Z"
+                                        stroke="#CC0000" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+                                Final Receipts - Invoices
+                            </a>
+                        </li>
+
+
+
+                        <li class="nav-item mb-3">
+                            <a class="nav-link" aria-current="page" href="#">
+                                <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M20 3.5L18.5 2L17 3.5L15.5 2L14 3.5L12.5 2L11 3.5L9.5 2L8 3.5L6.5 2L5 3.5L3.5 2V22L5 20.5L6.5 22L8 20.5L9.5 22L11.08 20.42C11.22 20.61 11.38 20.78 11.55 20.95C12.8619 22.2423 14.6302 22.9657 16.4717 22.9634C18.3133 22.9611 20.0797 22.2334 21.3885 20.9378C22.6972 19.6423 23.4427 17.8832 23.4636 16.0418C23.4845 14.2004 22.779 12.4249 21.5 11.1V2L20 3.5ZM19.5 9.68C18.57 9.24 17.55 9 16.5 9C12.64 9 9.5 12.13 9.5 16C9.5 17.05 9.74 18.07 10.18 19H5.5V5H19.5V9.68ZM21.35 16C21.35 16.64 21.23 17.27 21 17.86C20.74 18.44 20.38 19 19.93 19.43C19.5 19.88 18.94 20.24 18.36 20.5C17.77 20.73 17.14 20.85 16.5 20.85C13.82 20.85 11.65 18.68 11.65 16C11.65 14.71 12.16 13.5 13.07 12.57C14 11.66 15.21 11.15 16.5 11.15C19.17 11.15 21.35 13.32 21.35 16ZM15.5 16.69V13H17V15.82L19.44 17.23L18.69 18.53L15.5 16.69Z"
+                                        fill="#CC0000" />
+                                </svg>
+
+
+                                Temporary Receipts - Invoices
+                            </a>
+                        </li>
+
+
+                        <li class="nav-item mb-3">
+                            <a class="nav-link" aria-current="page" href="#">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M19.5 3.5L18 2L16.5 3.5L15 2L13.5 3.5L12 2L10.5 3.5L9 2L7.5 3.5L6 2L4.5 3.5L3 2V22L4.5 20.5L6 22L7.5 20.5L9 22L10.58 20.42C10.72 20.61 10.88 20.78 11.05 20.95C12.3619 22.2423 14.1302 22.9657 15.9717 22.9634C17.8133 22.9611 19.5797 22.2334 20.8885 20.9378C22.1972 19.6423 22.9427 17.8832 22.9636 16.0418C22.9845 14.2004 22.279 12.4249 21 11.1V2L19.5 3.5ZM19 9.68C18.07 9.24 17.05 9 16 9C12.14 9 9 12.13 9 16C9 17.05 9.24 18.07 9.68 19H5V5H19V9.68ZM20.85 16C20.85 16.64 20.73 17.27 20.5 17.86C20.24 18.44 19.88 19 19.43 19.43C19 19.88 18.44 20.24 17.86 20.5C17.27 20.73 16.64 20.85 16 20.85C13.32 20.85 11.15 18.68 11.15 16C11.15 14.71 11.66 13.5 12.57 12.57C13.5 11.66 14.71 11.15 16 11.15C18.67 11.15 20.85 13.32 20.85 16ZM15 16.69V13H16.5V15.82L18.94 17.23L18.19 18.53L15 16.69Z"
+                                        fill="#CC0000" />
+                                </svg>
+
+
+
+                                Temporary Receipts - Advance Payment
+                            </a>
+                        </li>
+                    </ul>
+
+
+                    <div class="table-responsive">
+                        <table class="table unlock-column-table ">
+                            <thead>
+                                <tr>
+                                    <th>Customer Name</th>
+                                    <th>Receipt Number</th>
+                                    <th>Status</th>
+                                    <th>Invoice Number</th>
+                                    <th>Issue Date</th>
+                                    <th>Amount</th>
+                                    <th>ADM Name</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>12 Dec 2024</td>
+                                    <td>H.K Perera</td>
+                                    <td>254565214</td>
+                                    <td>Rs. 12,000.00</td>
+
+                                </tr>
+                                <tr>
+                                    <td>12 Dec 2024</td>
+                                    <td>Pasan Randula</td>
+                                    <td>
+                                        <button class="success-status-btn">
+                                            Approved
+                                        </button>
+                                    </td>
+                                    <td>INV-10001</td>
+                                    <td>2024-12-12</td>
+                                    <td>Rs. 21,000.00</td>
+                                    <td>John Doe</td>
+                                    <td>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>12 Dec 2024</td>
+                                    <td>H.K Perera</td>
+                                    <td>
+                                        <button class="grey-status-btn">
+                                            Paid
+                                        </button>
+                                    </td>
+                                    <td>INV-10002</td>
+                                    <td>2024-12-12</td>
+                                    <td>Rs. 14,000.00</td>
+                                    <td>Jane Smith</td>
+                                    <td>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>12 Dec 2024</td>
+                                    <td>Pasan Randula</td>
+                                    <td>
+
+                                    </td>
+                                    <td>INV-10003</td>
+                                    <td>2024-12-12</td>
+                                    <td>Rs. 15,000.00</td>
+                                    <td>John Doe</td>
+                                    <td>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </table>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="col-12 d-flex justify-content-center">
+                <nav aria-label="...">
+                    <ul class="pagination">
+                        <li class="page-item disabled">
+                            <a class="page-link">Prev</a>
+                        </li>
+                        <li class="page-item active">
+                            <a class="page-link" href="#">1</a>
+                        </li>
+                        <li class="page-item " aria-current="page">
+                            <a class="page-link" href="#">2</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">....</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Next</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </div>
-</body>
 
-</html>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
 
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
         const sidebar = document.getElementById("sidebar");
         const toggleButton = document.getElementById("sidebarToggle");
         const sidebarLinks = document.querySelectorAll(".sidebar-list li a");
 
         // Toggle sidebar visibility
         if (toggleButton) {
-            toggleButton.addEventListener("click", function () {
-                sidebar.classList.toggle("collapsed");
-            });
+          toggleButton.addEventListener("click", function () {
+            sidebar.classList.toggle("collapsed");
+          });
         }
 
         // Set active class on navigation
         const currentPath = window.location.pathname;
-
         sidebarLinks.forEach((link) => {
-            const href = link.getAttribute("href");
-
-            if (href && currentPath.endsWith(href.replace("../", ""))) {
-                link.parentElement.classList.add("active");
-            } else {
-                link.parentElement.classList.remove("active");
-            }
+          const href = link.getAttribute("href");
+          if (
+            href === currentPath ||
+            (currentPath === "/" && href === "/dashboard")
+          ) {
+            link.parentElement.classList.add("active");
+          } else {
+            link.parentElement.classList.remove("active");
+          }
         });
 
         // Handle dropdown functionality
         const dropdownItems = document.querySelectorAll(
-            ".sidebar-list li a .dropdown-arrow"
+          ".sidebar-list li a .dropdown-arrow"
         );
         dropdownItems.forEach((arrow) => {
-            arrow.parentElement.addEventListener("click", function (e) {
-                e.preventDefault();
-                const listItem = this.parentElement;
-                listItem.classList.toggle("expanded");
-            });
+          arrow.parentElement.addEventListener("click", function (e) {
+            e.preventDefault();
+            const listItem = this.parentElement;
+            listItem.classList.toggle("expanded");
+          });
         });
-    });
-
-</script>
+      });
+    </script>
+  </body>
+</html>
