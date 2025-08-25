@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../public/css/finance.css" />
     <link rel="stylesheet" href="../public/css/dashboard.css">
 
-    
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link
@@ -492,9 +492,12 @@
 
 
                 <div class="styled-tab-main">
-                    <ul class="nav">
+                    <ul class="nav nav-tabs">
                         <li class="nav-item mb-3">
-                            <a class="nav-link active" aria-current="page" href="#">
+                            <a class="nav-link active" aria-current="page" href="#" id="final-reciepts-invoices"
+                                data-bs-toggle="tab" data-bs-target="#final-reciepts-invoices-pane" type="button"
+                                role="tab" aria-controls="final-reciepts-invoices-pane" aria-selected="true">
+
                                 <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -510,7 +513,9 @@
 
 
                         <li class="nav-item mb-3">
-                            <a class="nav-link" aria-current="page" href="#">
+                            <a class="nav-link" aria-current="page" href="#" id="temporary-receipts-invoices"
+                                data-bs-toggle="tab" data-bs-target="#temporary-receipts-invoices-pane" type="button"
+                                role="tab" aria-controls="temporary-receipts-invoices-pane" aria-selected="false">
                                 <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -525,7 +530,10 @@
 
 
                         <li class="nav-item mb-3">
-                            <a class="nav-link" aria-current="page" href="#">
+                            <a class="nav-link" aria-current="page" href="#" id="temporary-receipts-advance-payment"
+                                data-bs-toggle="tab" data-bs-target="#temporary-receipts-advance-payment-pane"
+                                type="button" role="tab" aria-controls="temporary-receipts-advance-payment-pane"
+                                aria-selected="false">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -540,105 +548,95 @@
                         </li>
                     </ul>
 
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="final-reciepts-invoices-pane" role="tabpanel"
+                            aria-labelledby="final-reciepts-invoices" tabindex="0">
+                            <div class="table-responsive">
+                                <table class="table unlock-column-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Customer Name</th>
+                                            <th>Receipt Number</th>
+                                            <th>Status</th>
+                                            <th>Invoice Number</th>
+                                            <th>Issue Date</th>
+                                            <th>Amount</th>
+                                            <th>ADM Name</th>
+                                            <th>Actions</th>
 
-                    <div class="table-responsive">
-                        <table class="table unlock-column-table ">
-                            <thead>
-                                <tr>
-                                    <th>Customer Name</th>
-                                    <th>Receipt Number</th>
-                                    <th>Status</th>
-                                    <th>Invoice Number</th>
-                                    <th>Issue Date</th>
-                                    <th>Amount</th>
-                                    <th>ADM Name</th>
-                                    <th>Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>12 Dec 2024</td>
-                                    <td>H.K Perera</td>
-                                    <td>254565214</td>
-                                    <td>Rs. 12,000.00</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="finalBody">
+                                    </tbody>
+                                </table>
 
-                                </tr>
-                                <tr>
-                                    <td>12 Dec 2024</td>
-                                    <td>Pasan Randula</td>
-                                    <td>
-                                        <button class="success-status-btn">
-                                            Approved
-                                        </button>
-                                    </td>
-                                    <td>INV-10001</td>
-                                    <td>2024-12-12</td>
-                                    <td>Rs. 21,000.00</td>
-                                    <td>John Doe</td>
-                                    <td>
+                            </div>
+                            <nav>
+                                <ul id="finalPagination" class="pagination"></ul>
+                            </nav>
+                        </div>
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>12 Dec 2024</td>
-                                    <td>H.K Perera</td>
-                                    <td>
-                                        <button class="grey-status-btn">
-                                            Paid
-                                        </button>
-                                    </td>
-                                    <td>INV-10002</td>
-                                    <td>2024-12-12</td>
-                                    <td>Rs. 14,000.00</td>
-                                    <td>Jane Smith</td>
-                                    <td>
+                        <div class="tab-pane fade" id="temporary-receipts-invoices-pane" role="tabpanel"
+                            aria-labelledby="temporary-receipts-invoices" tabindex="0">
+                            <div class="table-responsive">
+                                <table class="table unlock-column-table ">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Customer Name</th>
+                                            <th scope="col">Receipt Number</th>
+                                            <th scope="col">Issue Date</th>
+                                            <th scope="col">Amount</th>
+                                            <th scope="col">ADM Number</th>
+                                            <th scope="col">ADM Name</th>
+                                            <th scope="col">Reason</th>
+                                            <th scope="col">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="receiptsBody">
+                                    </tbody>
+                                </table>
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>12 Dec 2024</td>
-                                    <td>Pasan Randula</td>
-                                    <td>
+                            </div>
+                            <nav>
+                                <ul id="receiptsPagination" class="pagination"></ul>
+                            </nav>
+                        </div>
 
-                                    </td>
-                                    <td>INV-10003</td>
-                                    <td>2024-12-12</td>
-                                    <td>Rs. 15,000.00</td>
-                                    <td>John Doe</td>
-                                    <td>
+                        <div class="tab-pane fade" id="temporary-receipts-advance-payment-pane" role="tabpanel"
+                            aria-labelledby="temporary-receipts-advance-payment" tabindex="0">
+                            <div class="table-responsive">
+                                <table class="table unlock-column-table ">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Customer Name</th>
+                                            <th scope="col">Receipt Number</th>
+                                            <th scope="col">Issue Date</th>
+                                            <th scope="col">Amount</th>
+                                            <th scope="col">ADM Number</th>
+                                            <th scope="col">ADM Name</th>
+                                            <th scope="col">Reason</th>
+                                            <th scope="col">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="trBody"></tbody>
+                                </table>
 
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        </table>
+                            </div>
+                            <nav>
+                                <ul id="trPagination" class="pagination"></ul>
+                            </nav>
+                        </div>
                     </div>
 
                 </div>
 
 
             </div>
-            <div class="col-12 d-flex justify-content-center">
-                <nav aria-label="...">
-                    <ul class="pagination">
-                        <li class="page-item disabled">
-                            <a class="page-link">Prev</a>
-                        </li>
-                        <li class="page-item active">
-                            <a class="page-link" href="#">1</a>
-                        </li>
-                        <li class="page-item " aria-current="page">
-                            <a class="page-link" href="#">2</a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#">....</a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">Next</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+
+
         </div>
+
+    </div>
 
     </div>
 
@@ -973,4 +971,245 @@
         });
     });
 
+</script>
+
+
+
+
+<script>
+    const searchInput = document.getElementById('searchInput');
+    const searchDropdown = document.getElementById('searchDropdown');
+
+    const items = ['Apple', 'Banana', 'Cherry', 'Date', 'Grape', 'Mango', 'Orange', 'Pineapple', 'Strawberry'];
+
+    searchInput.addEventListener('input', function () {
+        const query = this.value.toLowerCase();
+        searchDropdown.innerHTML = '';
+
+        if (query) {
+            const filteredItems = items.filter(item => item.toLowerCase().includes(query));
+            if (filteredItems.length > 0) {
+                filteredItems.forEach(item => {
+                    const div = document.createElement('div');
+                    div.className = 'search-item';
+                    div.textContent = item;
+                    div.addEventListener('click', function () {
+                        searchInput.value = item;
+                        searchDropdown.classList.remove('show');
+                    });
+                    searchDropdown.appendChild(div);
+                });
+                searchDropdown.classList.add('show');
+            } else {
+                searchDropdown.classList.remove('show');
+            }
+        } else {
+            searchDropdown.classList.remove('show');
+        }
+    });
+
+    document.addEventListener('click', function (e) {
+        if (!searchDropdown.contains(e.target) && e.target !== searchInput) {
+            searchDropdown.classList.remove('show');
+        }
+    });
+</script>
+
+<script>
+
+// final receipts invoices
+const FinalRecieptInvoices = [
+  { customer: "John Doe",      receipt: "R1001", status: "Paid",     invoiceNumber: "INV-0001", issueDate: "2024-01-05", amount: 1200, ADMName: "Alice",   action: "View" },
+  { customer: "Jane Smith",    receipt: "R1002", status: "Pending",  invoiceNumber: "INV-0002", issueDate: "2024-01-06", amount: 800,  ADMName: "Bob",     action: "Edit" },
+  { customer: "Michael Lee",   receipt: "R1003", status: "Paid",     invoiceNumber: "INV-0003", issueDate: "2024-01-07", amount: 950,  ADMName: "Charlie", action: "View" },
+  { customer: "Sophia Brown",  receipt: "R1004", status: "Cancelled",invoiceNumber: "INV-0004", issueDate: "2024-01-08", amount: 500,  ADMName: "Alice",   action: "Delete" },
+  { customer: "David Wilson",  receipt: "R1005", status: "Paid",     invoiceNumber: "INV-0005", issueDate: "2024-01-09", amount: 300,  ADMName: "Bob",     action: "View" },
+  { customer: "Emily Davis",   receipt: "R1006", status: "Pending",  invoiceNumber: "INV-0006", issueDate: "2024-01-10", amount: 1400, ADMName: "Charlie", action: "Edit" },
+  { customer: "Daniel Taylor", receipt: "R1007", status: "Paid",     invoiceNumber: "INV-0007", issueDate: "2024-01-11", amount: 1700, ADMName: "Alice",   action: "View" },
+  { customer: "Olivia Martin", receipt: "R1008", status: "Paid",     invoiceNumber: "INV-0008", issueDate: "2024-01-12", amount: 600,  ADMName: "Bob",     action: "View" },
+  { customer: "James Anderson",receipt: "R1009", status: "Pending",  invoiceNumber: "INV-0009", issueDate: "2024-01-13", amount: 1100, ADMName: "Charlie", action: "Edit" },
+  { customer: "Isabella Thomas",receipt:"R1010", status: "Cancelled",invoiceNumber: "INV-0010", issueDate: "2024-01-14", amount: 750,  ADMName: "Alice",   action: "Delete" },
+  { customer: "Liam White",    receipt: "R1011", status: "Paid",     invoiceNumber: "INV-0011", issueDate: "2024-01-15", amount: 900,  ADMName: "Bob",     action: "View" },
+  { customer: "Ava Harris",    receipt: "R1012", status: "Pending",  invoiceNumber: "INV-0012", issueDate: "2024-01-16", amount: 1300, ADMName: "Charlie", action: "Edit" },
+  { customer: "Noah Clark",    receipt: "R1013", status: "Paid",     invoiceNumber: "INV-0013", issueDate: "2024-01-17", amount: 400,  ADMName: "Alice",   action: "View" },
+  { customer: "Mia Lewis",     receipt: "R1014", status: "Cancelled",invoiceNumber: "INV-0014", issueDate: "2024-01-18", amount: 500,  ADMName: "Bob",     action: "Delete" },
+  { customer: "Ethan Robinson",receipt: "R1015", status: "Paid",     invoiceNumber: "INV-0015", issueDate: "2024-01-19", amount: 1600, ADMName: "Charlie", action: "View" },
+  { customer: "Amelia Walker", receipt: "R1016", status: "Pending",  invoiceNumber: "INV-0016", issueDate: "2024-01-20", amount: 700,  ADMName: "Alice",   action: "Edit" },
+  { customer: "Logan Hall",    receipt: "R1017", status: "Paid",     invoiceNumber: "INV-0017", issueDate: "2024-01-21", amount: 1200, ADMName: "Bob",     action: "View" },
+  { customer: "Harper Allen",  receipt: "R1018", status: "Paid",     invoiceNumber: "INV-0018", issueDate: "2024-01-22", amount: 600,  ADMName: "Charlie", action: "View" },
+  { customer: "Lucas Young",   receipt: "R1019", status: "Pending",  invoiceNumber: "INV-0019", issueDate: "2024-01-23", amount: 2000, ADMName: "Alice",   action: "Edit" },
+  { customer: "Charlotte King",receipt: "R1020", status: "Paid",     invoiceNumber: "INV-0020", issueDate: "2024-01-24", amount: 1450, ADMName: "Bob",     action: "View" }
+];
+
+// temporary receipts invoices
+const TRInvoices = [
+  { customer: "John Doe",      receiptNumber: "TR2001", issueDate: "2024-02-01", amount: 450,  admNumber: "ADM01", admName: "Alice",   reason: "Deposit",      actions: "View" },
+  { customer: "Jane Smith",    receiptNumber: "TR2002", issueDate: "2024-02-02", amount: 600,  admNumber: "ADM02", admName: "Bob",     reason: "Advance",      actions: "Edit" },
+  { customer: "Michael Lee",   receiptNumber: "TR2003", issueDate: "2024-02-03", amount: 300,  admNumber: "ADM03", admName: "Charlie", reason: "Refund",       actions: "Delete" },
+  { customer: "Sophia Brown",  receiptNumber: "TR2004", issueDate: "2024-02-04", amount: 800,  admNumber: "ADM01", admName: "Alice",   reason: "Security",     actions: "View" },
+  { customer: "David Wilson",  receiptNumber: "TR2005", issueDate: "2024-02-05", amount: 1000, admNumber: "ADM02", admName: "Bob",     reason: "Prepayment",   actions: "Edit" },
+  { customer: "Emily Davis",   receiptNumber: "TR2006", issueDate: "2024-02-06", amount: 250,  admNumber: "ADM03", admName: "Charlie", reason: "Deposit",      actions: "View" },
+  { customer: "Daniel Taylor", receiptNumber: "TR2007", issueDate: "2024-02-07", amount: 900,  admNumber: "ADM01", admName: "Alice",   reason: "Advance",      actions: "Edit" },
+  { customer: "Olivia Martin", receiptNumber: "TR2008", issueDate: "2024-02-08", amount: 700,  admNumber: "ADM02", admName: "Bob",     reason: "Refund",       actions: "View" },
+  { customer: "James Anderson",receiptNumber: "TR2009", issueDate: "2024-02-09", amount: 350,  admNumber: "ADM03", admName: "Charlie", reason: "Deposit",      actions: "Delete" },
+  { customer: "Isabella Thomas",receiptNumber:"TR2010", issueDate: "2024-02-10", amount: 500,  admNumber: "ADM01", admName: "Alice",   reason: "Prepayment",   actions: "View" },
+  { customer: "Liam White",    receiptNumber: "TR2011", issueDate: "2024-02-11", amount: 400,  admNumber: "ADM02", admName: "Bob",     reason: "Advance",      actions: "Edit" },
+  { customer: "Ava Harris",    receiptNumber: "TR2012", issueDate: "2024-02-12", amount: 800,  admNumber: "ADM03", admName: "Charlie", reason: "Refund",       actions: "View" },
+  { customer: "Noah Clark",    receiptNumber: "TR2013", issueDate: "2024-02-13", amount: 650,  admNumber: "ADM01", admName: "Alice",   reason: "Deposit",      actions: "Delete" },
+  { customer: "Mia Lewis",     receiptNumber: "TR2014", issueDate: "2024-02-14", amount: 1200, admNumber: "ADM02", admName: "Bob",     reason: "Advance",      actions: "View" },
+  { customer: "Ethan Robinson",receiptNumber: "TR2015", issueDate: "2024-02-15", amount: 900,  admNumber: "ADM03", admName: "Charlie", reason: "Security",     actions: "Edit" },
+  { customer: "Amelia Walker", receiptNumber: "TR2016", issueDate: "2024-02-16", amount: 1100, admNumber: "ADM01", admName: "Alice",   reason: "Deposit",      actions: "View" },
+  { customer: "Logan Hall",    receiptNumber: "TR2017", issueDate: "2024-02-17", amount: 500,  admNumber: "ADM02", admName: "Bob",     reason: "Refund",       actions: "Delete" },
+  { customer: "Harper Allen",  receiptNumber: "TR2018", issueDate: "2024-02-18", amount: 750,  admNumber: "ADM03", admName: "Charlie", reason: "Prepayment",   actions: "View" },
+  { customer: "Lucas Young",   receiptNumber: "TR2019", issueDate: "2024-02-19", amount: 600,  admNumber: "ADM01", admName: "Alice",   reason: "Advance",      actions: "Edit" },
+  { customer: "Charlotte King",receiptNumber: "TR2020", issueDate: "2024-02-20", amount: 450,  admNumber: "ADM02", admName: "Bob",     reason: "Deposit",      actions: "View" }
+];
+
+// temporary receipts advance payment
+const temporaryReceiptsAdvancePaymentTableBody = [
+  { customer: "John Doe",      receiptNumber: "AP3001", issueDate: "2024-03-01", amount: 200,  admNumber: "ADM01", admName: "Alice",   reason: "Advance Payment", actions: "View" },
+  { customer: "Jane Smith",    receiptNumber: "AP3002", issueDate: "2024-03-02", amount: 350,  admNumber: "ADM02", admName: "Bob",     reason: "Part Payment",    actions: "Edit" },
+  { customer: "Michael Lee",   receiptNumber: "AP3003", issueDate: "2024-03-03", amount: 400,  admNumber: "ADM03", admName: "Charlie", reason: "Booking",         actions: "View" },
+  { customer: "Sophia Brown",  receiptNumber: "AP3004", issueDate: "2024-03-04", amount: 550,  admNumber: "ADM01", admName: "Alice",   reason: "Deposit",         actions: "Delete" },
+  { customer: "David Wilson",  receiptNumber: "AP3005", issueDate: "2024-03-05", amount: 600,  admNumber: "ADM02", admName: "Bob",     reason: "Advance Payment", actions: "View" },
+  { customer: "Emily Davis",   receiptNumber: "AP3006", issueDate: "2024-03-06", amount: 300,  admNumber: "ADM03", admName: "Charlie", reason: "Part Payment",    actions: "Edit" },
+  { customer: "Daniel Taylor", receiptNumber: "AP3007", issueDate: "2024-03-07", amount: 450,  admNumber: "ADM01", admName: "Alice",   reason: "Booking",         actions: "View" },
+  { customer: "Olivia Martin", receiptNumber: "AP3008", issueDate: "2024-03-08", amount: 700,  admNumber: "ADM02", admName: "Bob",     reason: "Deposit",         actions: "View" },
+  { customer: "James Anderson",receiptNumber: "AP3009", issueDate: "2024-03-09", amount: 900,  admNumber: "ADM03", admName: "Charlie", reason: "Advance Payment", actions: "Edit" },
+  { customer: "Isabella Thomas",receiptNumber:"AP3010", issueDate: "2024-03-10", amount: 250,  admNumber: "ADM01", admName: "Alice",   reason: "Part Payment",    actions: "View" },
+  { customer: "Liam White",    receiptNumber: "AP3011", issueDate: "2024-03-11", amount: 500,  admNumber: "ADM02", admName: "Bob",     reason: "Booking",         actions: "Delete" },
+  { customer: "Ava Harris",    receiptNumber: "AP3012", issueDate: "2024-03-12", amount: 750,  admNumber: "ADM03", admName: "Charlie", reason: "Deposit",         actions: "View" },
+  { customer: "Noah Clark",    receiptNumber: "AP3013", issueDate: "2024-03-13", amount: 800,  admNumber: "ADM01", admName: "Alice",   reason: "Advance Payment", actions: "Edit" },
+  { customer: "Mia Lewis",     receiptNumber: "AP3014", issueDate: "2024-03-14", amount: 350,  admNumber: "ADM02", admName: "Bob",     reason: "Part Payment",    actions: "View" },
+  { customer: "Ethan Robinson",receiptNumber: "AP3015", issueDate: "2024-03-15", amount: 400,  admNumber: "ADM03", admName: "Charlie", reason: "Booking",         actions: "View" },
+  { customer: "Amelia Walker", receiptNumber: "AP3016", issueDate: "2024-03-16", amount: 600,  admNumber: "ADM01", admName: "Alice",   reason: "Deposit",         actions: "Edit" },
+  { customer: "Logan Hall",    receiptNumber: "AP3017", issueDate: "2024-03-17", amount: 700,  admNumber: "ADM02", admName: "Bob",     reason: "Advance Payment", actions: "View" },
+  { customer: "Harper Allen",  receiptNumber: "AP3018", issueDate: "2024-03-18", amount: 800,  admNumber: "ADM03", admName: "Charlie", reason: "Part Payment",    actions: "Delete" },
+  { customer: "Lucas Young",   receiptNumber: "AP3019", issueDate: "2024-03-19", amount: 550,  admNumber: "ADM01", admName: "Alice",   reason: "Booking",         actions: "View" },
+  { customer: "Charlotte King",receiptNumber: "AP3020", issueDate: "2024-03-20", amount: 1000, admNumber: "ADM02", admName: "Bob",     reason: "Deposit",         actions: "View" }
+];
+
+
+
+
+    const rowsPerPage = 10;
+
+    let currentPages = {
+        receipts: 1,
+        final: 1,
+        tr: 1
+    };
+
+    function renderTable(tableId, data, page) {
+        const tableBody = document.getElementById(`${tableId}Body`);
+        tableBody.innerHTML = '';
+
+        const startIndex = (page - 1) * rowsPerPage;
+        const endIndex = Math.min(startIndex + rowsPerPage, data.length);
+
+        for (let i = startIndex; i < endIndex; i++) {
+            let row = '';
+
+            if (tableId === 'final') {
+                row = `
+                <tr>
+                    <td>${data[i].customer}</td>
+                    <td>${data[i].receipt}</td>
+                    <td>${data[i].status}</td>
+                    <td>${data[i].invoiceNumber}</td>
+                    <td>${data[i].issueDate}</td>
+                    <td>${data[i].amount}</td>
+                    <td>${data[i].ADMName}</td>
+                    <td>${data[i].action}</td>
+                </tr>
+            `;
+            } else if (tableId === 'receipts') {
+                row = `
+                <tr>
+                    <td>${data[i].customer}</td>
+                    <td>${data[i].receiptNumber}</td>
+                    <td>${data[i].issueDate}</td>
+                    <td>${data[i].amount}</td>
+                    <td>${data[i].admNumber}</td>
+                    <td>${data[i].admName}</td>
+                    <td>${data[i].reason}</td>
+                    <td>${data[i].actions}</td>
+                </tr>
+            `;
+            } else if (tableId === 'tr') {
+                row = `
+                <tr>
+                   <td>${data[i].customer}</td>
+                    <td>${data[i].receiptNumber}</td>
+                    <td>${data[i].issueDate}</td>
+                    <td>${data[i].amount}</td>
+                    <td>${data[i].admNumber}</td>
+                    <td>${data[i].admName}</td>
+                    <td>${data[i].reason}</td>
+                    <td>${data[i].actions}</td>
+                </tr>
+            `;
+            }
+
+            tableBody.innerHTML += row;
+        }
+    }
+
+    // Pagination rendering
+    function renderPagination(tableId, data) {
+        const pagination = document.getElementById(`${tableId}Pagination`);
+        pagination.innerHTML = '';
+
+        const totalPages = Math.ceil(data.length / rowsPerPage);
+        const currentPage = currentPages[tableId];
+
+        pagination.innerHTML += `
+        <li class="page-item ${currentPage === 1 ? 'disabled' : ''}">
+            <a class="page-link" href="#" onclick="changePage('${tableId}', ${currentPage - 1})">Prev</a>
+        </li>
+    `;
+
+        for (let i = 1; i <= totalPages; i++) {
+            pagination.innerHTML += `
+            <li class="page-item ${i === currentPage ? 'active' : ''}">
+                <a class="page-link" href="#" onclick="changePage('${tableId}', ${i})">${i}</a>
+            </li>
+        `;
+        }
+
+        pagination.innerHTML += `
+        <li class="page-item ${currentPage === totalPages ? 'disabled' : ''}">
+            <a class="page-link" href="#" onclick="changePage('${tableId}', ${currentPage + 1})">Next</a>
+        </li>
+    `;
+    }
+
+    // Page change
+    function changePage(tableId, page) {
+        const data = getTableData(tableId);
+        const totalPages = Math.ceil(data.length / rowsPerPage);
+
+        if (page < 1 || page > totalPages) return;
+        currentPages[tableId] = page;
+
+        renderTable(tableId, data, page);
+        renderPagination(tableId, data);
+    }
+
+    // Map tableId to dataset
+    function getTableData(tableId) {
+        if (tableId === 'receipts') return temporaryReceiptsAdvancePaymentTableBody;
+        if (tableId === 'final') return FinalRecieptInvoices;
+        if (tableId === 'tr') return TRInvoices;
+        return [];
+    }
+
+    // Init all tables
+    function initTables() {
+        changePage('receipts', 1);
+        changePage('final', 1);
+        changePage('tr', 1);
+    }
+
+    initTables();
 </script>

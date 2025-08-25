@@ -15,7 +15,7 @@ td {
 .danger-status-btn,
 .grey-status-btn,
 .blue-status-btn {
-
+    font-family: 'Poppins', sans-serif;
     border-radius: 20px;
     border: 0;
     font-family: Poppins;
@@ -23,6 +23,7 @@ td {
     font-size: 14px;
     color: #FFFFFF;
     padding: 2px 12px;
+
 }
 
 .success-status-btn {
@@ -49,13 +50,18 @@ td {
     font: "Poppins" sans-serif;
 }
 
+.table>:not(caption)>*>* {
+    padding: 0.8rem 1rem !important;
+}
+
 .table-title {
+    font-family: 'Poppins', sans-serif;
     color: #000000;
     font-weight: 600;
     font-style: SemiBold;
     font-size: 23px;
     line-height: 24px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .unlock-column-table th {
@@ -76,9 +82,9 @@ td {
 }
 
 .dashboard-stats .col-md-2{
-    width: 17.666667%;
+    width: 18.5%;
 }
 
-.dashboard-stats .col-md-2{
-    width: 23%;
+.dashboard-stats .col-md-3{
+    width: 22%;
 }
