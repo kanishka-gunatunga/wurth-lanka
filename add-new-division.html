@@ -2,89 +2,189 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-   <link rel="stylesheet" href="commonNew.css">
-    <link rel="stylesheet" href="public/css/dashboard.css">
-    <link rel="stylesheet" href="public/css/sidebar.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="commonNew.css">
+  <link rel="stylesheet" href="public/css/dashboard.css">
+  <link rel="stylesheet" href="public/css/sidebar.css">
+  <link rel="stylesheet" href="sidebarNew.css">
+  <link rel="stylesheet" href="public/css/navbar-profile.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/"><img src="public/images/wruth-logo.png" alt=""></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-
-                    
-                </div>
-            </div>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/"><img src="public/images/wruth-logo.png" alt="" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <!-- Profile section -->
+        <div class="navbar-profile">
+          <img src="public/images/profile-icon.svg" alt="Sofia Emilia" class="profile-avatar" />
+          <div class="profile-info">
+            <p class="profile-name">Sofia Emilia</p>
+            <p class="profile-designation">Admin</p>
+          </div>
         </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="wrapper">
+
+    <!-- Sidebar -->
+    <nav id="sidebar" class="sidebar ms-3 mt-3">
+      <!-- Header section - Fixed at top -->
+      <div class="sidebar-header">
+        <div class="d-flex justify-content-between align-items-center">
+          <p class="sidebar-title">Admin Dashboard</p>
+          <button class="sidebar-toggle border-0 bg-transparent" type="button" id="sidebarToggle">
+            <svg width="29" height="23" viewBox="0 0 29 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M27.0415 1.01465L10.5732 1.01465" stroke="#CC0000" stroke-width="2" stroke-linecap="round" />
+              <path d="M26.9849 7.85278L1.00014 7.85278" stroke="#CC0000" stroke-width="2" stroke-linecap="round" />
+              <path d="M26.9849 14.6908L6.47061 14.6908" stroke="#CC0000" stroke-width="2" stroke-linecap="round" />
+              <path d="M26.9849 21.5289H14.6763" stroke="#CC0000" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Scrollable content section -->
+      <div class="sidebar-content">
+        <ul class="sidebar-list">
+          <li class="nav-item active">
+            <a href="/dashboard.html" class="nav-link">
+              <span class="me-4">
+                <img src="public/images/side-bar/dashboard.svg" alt="Dashboard" class="nav-icon" />
+              </span>
+              Dashboard
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="/user-management.html" class="nav-link">
+              <span class="me-4">
+                <img src="public/images/side-bar/user.svg" alt="User Management" class="nav-icon" />
+              </span>
+              User Management
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="/access-control.html" class="nav-link">
+              <span class="me-4">
+                <img src="public/images/side-bar/access.svg" alt="Access Control" class="nav-icon" />
+              </span>
+              Access Control
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="/customers.html" class="nav-link">
+              <span class="me-4">
+                <img src="public/images/side-bar/customers.svg" alt="Customers" class="nav-icon" />
+              </span>
+              Customers
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="/admin-division-management.html" class="nav-link">
+              <span class="me-4">
+                <img src="public/images/side-bar/division.svg" alt="Division Management" class="nav-icon" />
+              </span>
+              Division Management
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="/collections" class="nav-link">
+              <span class="me-4">
+                <img src="public/images/side-bar/collections.svg" alt="Collections" class="nav-icon" />
+              </span>
+              All Collections
+              <span class="dropdown-arrow">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="/return-cheques" class="nav-link">
+              <span class="me-4">
+                <img src="public/images/side-bar/cheques.svg" alt="Return Cheques" class="nav-icon" />
+              </span>
+              Return Cheques
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="/notifications" class="nav-link">
+              <span class="me-4">
+                <img src="public/images/side-bar/notifications.svg" alt="Notifications" class="nav-icon" />
+              </span>
+              Notifications
+              <span class="dropdown-arrow">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Footer section - Fixed at bottom -->
+      <div class="sidebar-footer">
+        <ul class="sidebar-list">
+          <li class="nav-item">
+            <a href="/settings" class="nav-link">
+              <span class="me-4">
+                <img src="public/images/side-bar/settings.svg" alt="Settings" class="nav-icon" />
+              </span>
+              Settings
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="/logout" class="nav-link">
+              <span class="me-4">
+                <img src="public/images/side-bar/logout.svg" alt="Logout" class="nav-icon" />
+              </span>
+              Logout
+            </a>
+          </li>
+        </ul>
+      </div>
     </nav>
 
-    <div class="wrapper">
+    <div class="container-fluid">
+      <div class="main-wrapper">
+        <div class="p-4 pt-0">
+          <div class="col-lg-6 col-12">
+            <h1 class="header-title">Add New Division</h1>
+          </div>
 
-        <!-- Sidebar  -->
-        <nav id="sidebar">
-            <ul>
-                <div class="d-flex justify-content-between">
-                    <p>Admin Dashboard</p>
-                    <button type="button" id="sidebarCollapse" class="btn ">
-                        <i class="fas fa-align-left"></i>
-                        <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-list" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd"
-                                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
-                            </svg></span>
+          <hr class="red-line">
 
-                    </button>
-                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fas fa-align-justify"></i>
-                    </button>
-                </div>
-
-                <li class="active"> <a href="{{url('dashboard')}}">Dashboard</a></li>
-                <li class="active"> <a href="user-management.html">User Management</a></li>
-                <li class="active"> <a href="access-control.html">Access Control</a></li>
-                <li class="active"> <a href="customers.html">Customers</a></li>
-                <li class="active"> <a href="admin-division-management.html">Division Management</a></li>
-                <li class="active"> <a href="">All Collections</a></li>
-                <li class="active"> <a href="">Return Cheques</a></li>
-                <li class="active"> <a href="">Reminders</a></li>
-                <li class="active"> <a href="backup.html">backup</a></li>
-                <li class="active"> <a href="activity-log.html">activity log</a></li>
-                <li class="active"> <a href="import.html">import</a></li>
-
-
-            </ul>
-
-        </nav>
-
-        <div class="container-fluid">
-            <div class="main-wrapper">
-                <div class="p-4 pt-0">
-                    <div class="col-lg-6 col-12">
-                        <h1 class="header-title">Division Management</h1>
-                    </div>
-
-                    <form>
-                        <div class="pe-5">
-                            <!-- <div class="d-flex flex-row justify-content-between">
+          <form>
+            <div class="pe-5">
+              <!-- <div class="d-flex flex-row justify-content-between">
                                 <div class="mb-3 col-6">
                                     <label for="division-input" class="form-label custom-input-label">Division
                                         Name</label>
@@ -118,47 +218,57 @@
                                     style="height: 152px"></textarea>
 
                             </div> -->
-                            <div class="row d-flex justify-content-between">
-                                <div class="mb-4 col-12 col-lg-6">
-                                    <label for="division-input" class="form-label custom-input-label">
-                                        Division Name</label>
-                                    <input type="text" class="form-control custom-input" id="division-input" placeholder="Division Name">
-                                </div>
-        
-        
-        
-                                <div class="mb-4 col-12 col-lg-6">
-                                    <label for="head-of-division-select" class="form-label custom-input-label">Head of Division
-                                    </label>
-                                    <select class="form-select custom-input" aria-label="Default select example"
-                                        id="head-of-division-select">
-                                        <option class=".custom-input-option" selected>Open this select menu</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
-                                    </select>
-                                </div>
-    
-                                <div class="mb-4 col-12">
-                                    <label for="head-of-division-select" class="form-label custom-input-label">Division Description
-                                    </label>
-                                    <textarea class="form-control division-description" placeholder="Division Description"
-                                        style="height: 152px"></textarea>
-                                </div>
-                            </div>
-                            <div class="col-12 d-flex justify-content-end division-action-btn gap-3">
-                                <button class="btn btn-dark cancel">Cancel</button>
-                                <button class="btn btn-danger submit">Submit</button>
-                            </div>
-
-                        </div>
-
-                    </form>
+              <div class="row d-flex justify-content-between">
+                <div class="mb-4 col-12 col-lg-6">
+                  <label for="division-input" class="form-label custom-input-label">
+                    Division Name</label>
+                  <input type="text" class="form-control custom-input" id="division-input" placeholder="Division Name">
                 </div>
 
+
+
+
+
+                <div class="mb-4 col-12">
+                  <label for="head-of-division-select" class="form-label custom-input-label">Division Description
+                  </label>
+                  <textarea class="form-control division-description" placeholder="Division Description"
+                    style="height: 152px"></textarea>
+                </div>
+              </div>
+              <div class="col-12 d-flex justify-content-end division-action-btn gap-3">
+                <button class="btn btn-dark cancel">Cancel</button>
+                <button class="btn btn-danger submit">Submit</button>
+              </div>
+
             </div>
+
+          </form>
         </div>
+
+      </div>
     </div>
+  </div>
+
+  <!-- Toast message -->
+  <div id="user-toast" class="toast align-items-center text-white bg-success border-0 position-fixed top-0 end-0 m-4"
+    role="alert" aria-live="assertive" aria-atomic="true" style="z-index: 9999; display: none; min-width: 320px;">
+    <div class="d-flex align-items-center">
+      <span class="toast-icon-circle d-flex align-items-center justify-content-center me-3">
+        <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="12" fill="#fff" />
+          <path d="M7 12.5l3 3 7-7" stroke="#28a745" stroke-width="2" fill="none" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </span>
+      <div class="toast-body flex-grow-1">
+        Division added successfully
+      </div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" aria-label="Close"
+        onclick="document.getElementById('user-toast').style.display='none';"></button>
+    </div>
+  </div>
+
 </body>
 
 </html>
@@ -166,16 +276,67 @@
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const toggleButton = document.getElementById('sidebarCollapse');
-        const sidebar = document.getElementById('sidebar');
+  document.addEventListener("DOMContentLoaded", function () {
+    const sidebar = document.getElementById("sidebar");
+    const toggleButton = document.getElementById("sidebarToggle");
+    const sidebarLinks = document.querySelectorAll(".sidebar-list li a");
 
-        toggleButton.addEventListener('click', function () {
-            sidebar.classList.toggle('active');
-        });
+    // Toggle sidebar visibility
+    if (toggleButton) {
+      toggleButton.addEventListener("click", function () {
+        sidebar.classList.toggle("collapsed");
+      });
+    }
+
+    // Set active class on navigation
+    const currentPath = window.location.pathname;
+    sidebarLinks.forEach((link) => {
+      const href = link.getAttribute("href");
+      if (
+        href === currentPath ||
+        (currentPath === "/" && href === "/dashboard")
+      ) {
+        link.parentElement.classList.add("active");
+      } else {
+        link.parentElement.classList.remove("active");
+      }
     });
+
+    // Handle dropdown functionality
+    const dropdownItems = document.querySelectorAll(
+      ".sidebar-list li a .dropdown-arrow"
+    );
+    dropdownItems.forEach((arrow) => {
+      arrow.parentElement.addEventListener("click", function (e) {
+        e.preventDefault();
+        const listItem = this.parentElement;
+        listItem.classList.toggle("expanded");
+      });
+    });
+  });
+</script>
+
+<script>
+  // Cancel button redirect
+  document.querySelector('.cancel').addEventListener('click', function (e) {
+    e.preventDefault();
+    window.location.href = 'admin-division-management.html';
+  });
+</script>
+
+<script>
+  // Show toast on submit
+  document.querySelector('.submit').addEventListener('click', function (e) {
+    e.preventDefault();
+    const toast = document.getElementById('user-toast');
+    toast.style.display = 'block';
+    setTimeout(() => {
+      toast.style.display = 'none';
+    }, 3000);
+  });
 </script>
