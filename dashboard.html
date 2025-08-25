@@ -7,428 +7,325 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="public/css/common.css" />
-    <link rel="stylesheet" href="public/css/dashboard.css" />
-    <link rel="stylesheet" href="public/css/sidebar.css" />
-    <link rel="stylesheet" href="sidebarNew.css" />
-    <link rel="stylesheet" href="public/css/navbar-profile.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-  </head>
 
-  <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/"
-          ><img src="public/images/wruth-logo.png" alt=""
-        /></a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <!-- Profile section -->
-          <div class="navbar-profile">
-            <img
-              src="public/images/profile-icon.svg"
-              alt="Sofia Emilia"
-              class="profile-avatar"
-            />
-            <div class="profile-info">
-              <p class="profile-name">Sofia Emilia</p>
-              <p class="profile-designation">Admin</p>
-            </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="public/css/common.css" />
+  <link rel="stylesheet" href="public/css/dashboard.css" />
+  <link rel="stylesheet" href="public/css/sidebar.css" />
+  <link rel="stylesheet" href="sidebarNew.css" />
+  <link rel="stylesheet" href="public/css/navbar-profile.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/"><img src="public/images/wruth-logo.png" alt="" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <!-- Profile section -->
+        <div class="navbar-profile">
+          <img src="public/images/profile-icon.svg" alt="Sofia Emilia" class="profile-avatar" />
+          <div class="profile-info">
+            <p class="profile-name">Sofia Emilia</p>
+            <p class="profile-designation">Admin</p>
           </div>
         </div>
       </div>
+    </div>
+  </nav>
+
+  <div class="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar" class="sidebar ms-3 mt-3">
+      <!-- Header section - Fixed at top -->
+      <div class="sidebar-header">
+        <div class="d-flex justify-content-between align-items-center">
+          <p class="sidebar-title">Admin Dashboard</p>
+          <button class="sidebar-toggle border-0 bg-transparent" type="button" id="sidebarToggle">
+            <svg width="29" height="23" viewBox="0 0 29 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M27.0415 1.01465L10.5732 1.01465" stroke="#CC0000" stroke-width="2" stroke-linecap="round" />
+              <path d="M26.9849 7.85278L1.00014 7.85278" stroke="#CC0000" stroke-width="2" stroke-linecap="round" />
+              <path d="M26.9849 14.6908L6.47061 14.6908" stroke="#CC0000" stroke-width="2" stroke-linecap="round" />
+              <path d="M26.9849 21.5289H14.6763" stroke="#CC0000" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Scrollable content section -->
+      <div class="sidebar-content">
+        <ul class="sidebar-list">
+          <li class="nav-item active">
+            <a href="/dashboard.html" class="nav-link">
+              <span class="me-4">
+                <img src="public/images/side-bar/dashboard.svg" alt="Dashboard" class="nav-icon" />
+              </span>
+              Dashboard
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="/user-management.html" class="nav-link">
+              <span class="me-4">
+                <img src="public/images/side-bar/user.svg" alt="User Management" class="nav-icon" />
+              </span>
+              User Management
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="/access-control.html" class="nav-link">
+              <span class="me-4">
+                <img src="public/images/side-bar/access.svg" alt="Access Control" class="nav-icon" />
+              </span>
+              Access Control
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="/customers.html" class="nav-link">
+              <span class="me-4">
+                <img src="public/images/side-bar/customers.svg" alt="Customers" class="nav-icon" />
+              </span>
+              Customers
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="/admin-division-management.html" class="nav-link">
+              <span class="me-4">
+                <img src="public/images/side-bar/division.svg" alt="Division Management" class="nav-icon" />
+              </span>
+              Division Management
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="/collections" class="nav-link">
+              <span class="me-4">
+                <img src="public/images/side-bar/collections.svg" alt="Collections" class="nav-icon" />
+              </span>
+              All Collections
+              <span class="dropdown-arrow">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="/return-cheques" class="nav-link">
+              <span class="me-4">
+                <img src="public/images/side-bar/cheques.svg" alt="Return Cheques" class="nav-icon" />
+              </span>
+              Return Cheques
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="/notifications" class="nav-link">
+              <span class="me-4">
+                <img src="public/images/side-bar/notifications.svg" alt="Notifications" class="nav-icon" />
+              </span>
+              Notifications
+              <span class="dropdown-arrow">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Footer section - Fixed at bottom -->
+      <div class="sidebar-footer">
+        <ul class="sidebar-list">
+          <li class="nav-item">
+            <a href="/settings" class="nav-link">
+              <span class="me-4">
+                <img src="public/images/side-bar/settings.svg" alt="Settings" class="nav-icon" />
+              </span>
+              Settings
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="/logout" class="nav-link">
+              <span class="me-4">
+                <img src="public/images/side-bar/logout.svg" alt="Logout" class="nav-icon" />
+              </span>
+              Logout
+            </a>
+          </li>
+        </ul>
+      </div>
     </nav>
 
-    <div class="wrapper">
-      <!-- Sidebar -->
-      <nav id="sidebar" class="sidebar ms-3 mt-3">
-        <!-- Header section - Fixed at top -->
-        <div class="sidebar-header">
-          <div class="d-flex justify-content-between align-items-center">
-            <p class="sidebar-title">Admin Dashboard</p>
-            <button
-              class="sidebar-toggle border-0 bg-transparent"
-              type="button"
-              id="sidebarToggle"
-            >
-              <svg
-                width="29"
-                height="23"
-                viewBox="0 0 29 23"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M27.0415 1.01465L10.5732 1.01465"
-                  stroke="#CC0000"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                />
-                <path
-                  d="M26.9849 7.85278L1.00014 7.85278"
-                  stroke="#CC0000"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                />
-                <path
-                  d="M26.9849 14.6908L6.47061 14.6908"
-                  stroke="#CC0000"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                />
-                <path
-                  d="M26.9849 21.5289H14.6763"
-                  stroke="#CC0000"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                />
-              </svg>
-            </button>
+    <div class="container-fluid">
+      <div class="main-wrapper">
+        <h1 class="header-title">Dashboard</h1>
+
+        <div class="dashboard-main-container">
+          <!-- Stats Cards - First Row -->
+          <div class="row mb-4">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-3">
+              <div class="stat-card">
+                <div class="stat-label">Total Users</div>
+                <div class="stat-number">231</div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-3">
+              <div class="stat-card">
+                <div class="stat-label">Sales Representatives</div>
+                <div class="stat-number">180</div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-3">
+              <div class="stat-card">
+                <div class="stat-label">Team Leaders</div>
+                <div class="stat-number">12</div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-3">
+              <div class="stat-card">
+                <div class="stat-label">Area Sales Managers</div>
+                <div class="stat-number">10</div>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <!-- Scrollable content section -->
-        <div class="sidebar-content">
-          <ul class="sidebar-list">
-            <li class="nav-item active">
-              <a href="/dashboard.html" class="nav-link">
-                <span class="me-4">
-                  <img
-                    src="public/images/side-bar/dashboard.svg"
-                    alt="Dashboard"
-                    class="nav-icon"
-                  />
-                </span>
-                Dashboard
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="/user-management.html" class="nav-link">
-                <span class="me-4">
-                  <img
-                    src="public/images/side-bar/user.svg"
-                    alt="User Management"
-                    class="nav-icon"
-                  />
-                </span>
-                User Management
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="/access-control.html" class="nav-link">
-                <span class="me-4">
-                  <img
-                    src="public/images/side-bar/access.svg"
-                    alt="Access Control"
-                    class="nav-icon"
-                  />
-                </span>
-                Access Control
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="/customers.html" class="nav-link">
-                <span class="me-4">
-                  <img
-                    src="public/images/side-bar/customers.svg"
-                    alt="Customers"
-                    class="nav-icon"
-                  />
-                </span>
-                Customers
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="/admin-division-management.html" class="nav-link">
-                <span class="me-4">
-                  <img
-                    src="public/images/side-bar/division.svg"
-                    alt="Division Management"
-                    class="nav-icon"
-                  />
-                </span>
-                Division Management
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="/collections" class="nav-link">
-                <span class="me-4">
-                  <img
-                    src="public/images/side-bar/collections.svg"
-                    alt="Collections"
-                    class="nav-icon"
-                  />
-                </span>
-                All Collections
-                <span class="dropdown-arrow">
-                  <svg
-                    width="12"
-                    height="12"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg>
-                </span>
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="/return-cheques" class="nav-link">
-                <span class="me-4">
-                  <img
-                    src="public/images/side-bar/cheques.svg"
-                    alt="Return Cheques"
-                    class="nav-icon"
-                  />
-                </span>
-                Return Cheques
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="/notifications" class="nav-link">
-                <span class="me-4">
-                  <img
-                    src="public/images/side-bar/notifications.svg"
-                    alt="Notifications"
-                    class="nav-icon"
-                  />
-                </span>
-                Notifications
-                <span class="dropdown-arrow">
-                  <svg
-                    width="12"
-                    height="12"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg>
-                </span>
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Footer section - Fixed at bottom -->
-        <div class="sidebar-footer">
-          <ul class="sidebar-list">
-            <li class="nav-item">
-              <a href="/settings" class="nav-link">
-                <span class="me-4">
-                  <img
-                    src="public/images/side-bar/settings.svg"
-                    alt="Settings"
-                    class="nav-icon"
-                  />
-                </span>
-                Settings
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="/logout" class="nav-link">
-                <span class="me-4">
-                  <img
-                    src="public/images/side-bar/logout.svg"
-                    alt="Logout"
-                    class="nav-icon"
-                  />
-                </span>
-                Logout
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-
-      <div class="container-fluid">
-        <div class="main-wrapper">
-          <h1 class="header-title">Dashboard</h1>
-
-          <div class="dashboard-main-container">
-            <!-- Stats Cards - First Row -->
-            <div class="row mb-4">
-              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-3">
-                <div class="stat-card">
-                  <div class="stat-label">Total Users</div>
-                  <div class="stat-number">231</div>
-                </div>
-              </div>
-              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-3">
-                <div class="stat-card">
-                  <div class="stat-label">Sales Representatives</div>
-                  <div class="stat-number">180</div>
-                </div>
-              </div>
-              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-3">
-                <div class="stat-card">
-                  <div class="stat-label">Team Leaders</div>
-                  <div class="stat-number">12</div>
-                </div>
-              </div>
-              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-3">
-                <div class="stat-card">
-                  <div class="stat-label">Area Sales Managers</div>
-                  <div class="stat-number">10</div>
-                </div>
+          <!-- Stats Cards - Second Row -->
+          <div class="row mb-4">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-3">
+              <div class="stat-card">
+                <div class="stat-label">Regional Sales Managers</div>
+                <div class="stat-number">15</div>
               </div>
             </div>
-
-            <!-- Stats Cards - Second Row -->
-            <div class="row mb-4">
-              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-3">
-                <div class="stat-card">
-                  <div class="stat-label">Regional Sales Managers</div>
-                  <div class="stat-number">15</div>
-                </div>
-              </div>
-              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-3">
-                <div class="stat-card">
-                  <div class="stat-label">Warehouse Managers</div>
-                  <div class="stat-number">2</div>
-                </div>
-              </div>
-              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-3">
-                <div class="stat-card">
-                  <div class="stat-label">Finance Department Managers</div>
-                  <div class="stat-number">8</div>
-                </div>
-              </div>
-              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-3">
-                <div class="stat-card">
-                  <div class="stat-label">Head of Division</div>
-                  <div class="stat-number">4</div>
-                </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-3">
+              <div class="stat-card">
+                <div class="stat-label">Warehouse Managers</div>
+                <div class="stat-number">2</div>
               </div>
             </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-3">
+              <div class="stat-card">
+                <div class="stat-label">Finance Department Managers</div>
+                <div class="stat-number">8</div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-3">
+              <div class="stat-card">
+                <div class="stat-label">Head of Division</div>
+                <div class="stat-number">4</div>
+              </div>
+            </div>
+          </div>
 
-            <div class="row mt-4">
-              <!-- Locked Users Section -->
-              <div class="col-lg-8 col-md-12 mb-4">
-                <div class="section-card locked-users-card">
-                  <h3 class="page-title">Locked Users</h3>
-                  <div class="locked-users-table" id="tableContainer">
-                    <div class="table-wrapper">
-                      <table class="table users-table">
-                        <thead>
-                          <tr>
-                            <th>Date & Time <i class="sort-icon">▼</i></th>
-                            <th>Full Name</th>
-                            <th>User ID</th>
-                            <th>Actions</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>12 Dec 2024, 08:45 AM</td>
-                            <td>H.K Perera</td>
-                            <td>254565214</td>
-                            <td>
-                              <button class="btn unlock-btn">Unlock</button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>12 Dec 2024, 08:45 AM</td>
-                            <td>Pasan Randula</td>
-                            <td>254565214</td>
-                            <td>
-                              <button class="btn unlock-btn">Unlock</button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>12 Dec 2024, 08:45 AM</td>
-                            <td>H.K Perera</td>
-                            <td>254565214</td>
-                            <td>
-                              <button class="btn unlock-btn">Unlock</button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>12 Dec 2024, 08:45 AM</td>
-                            <td>Pasan Randula</td>
-                            <td>254565214</td>
-                            <td>
-                              <button class="btn unlock-btn">Unlock</button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>12 Dec 2024, 08:45 AM</td>
-                            <td>H.K Perera</td>
-                            <td>254565214</td>
-                            <td>
-                              <button class="btn unlock-btn">Unlock</button>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
+          <div class="row mt-4">
+            <!-- Locked Users Section -->
+            <div class="col-lg-8 col-md-12 mb-4">
+              <div class="section-card locked-users-card">
+                <h3 class="page-title">Locked Users</h3>
+                <div class="locked-users-table" id="tableContainer">
+                  <div class="table-wrapper">
+                    <table class="table users-table">
+                      <thead>
+                        <tr>
+                          <th>Date & Time <i class="sort-icon">▼</i></th>
+                          <th>Full Name</th>
+                          <th>User ID</th>
+                          <th>Actions</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>12 Dec 2024, 08:45 AM</td>
+                          <td>H.K Perera</td>
+                          <td>254565214</td>
+                          <td>
+                            <button class="btn unlock-btn">Unlock</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>12 Dec 2024, 08:45 AM</td>
+                          <td>Pasan Randula</td>
+                          <td>254565214</td>
+                          <td>
+                            <button class="btn unlock-btn">Unlock</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>12 Dec 2024, 08:45 AM</td>
+                          <td>H.K Perera</td>
+                          <td>254565214</td>
+                          <td>
+                            <button class="btn unlock-btn">Unlock</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>12 Dec 2024, 08:45 AM</td>
+                          <td>Pasan Randula</td>
+                          <td>254565214</td>
+                          <td>
+                            <button class="btn unlock-btn">Unlock</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>12 Dec 2024, 08:45 AM</td>
+                          <td>H.K Perera</td>
+                          <td>254565214</td>
+                          <td>
+                            <button class="btn unlock-btn">Unlock</button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
               </div>
+            </div>
 
-              <!-- Recent Activities Section -->
-              <div class="col-lg-4 col-md-12 mb-4">
-                <div class="section-card activities-card">
-                  <h3 class="page-title">Recent Activities</h3>
-                  <div class="activities-list">
-                    <div class="activity-item">
-                      <div class="activity-text">
-                        User level
-                        <span class="highlight-red">Finance Manager</span>
-                        change access controls
-                      </div>
-                      <div class="activity-time">30 min ago</div>
+            <!-- Recent Activities Section -->
+            <div class="col-lg-4 col-md-12 mb-4">
+              <div class="section-card activities-card">
+                <h3 class="page-title">Recent Activities</h3>
+                <div class="activities-list">
+                  <div class="activity-item">
+                    <div class="activity-text">
+                      User level
+                      <span class="highlight-red">Finance Manager</span>
+                      change access controls
                     </div>
-                    <div class="activity-item">
-                      <div class="activity-text">
-                        Update
-                        <span class="highlight-red">1256543</span> user's email
-                        address & phone number
-                      </div>
-                      <div class="activity-time">35 min ago</div>
+                    <div class="activity-time">30 min ago</div>
+                  </div>
+                  <div class="activity-item">
+                    <div class="activity-text">
+                      Update
+                      <span class="highlight-red">1256543</span> user's email
+                      address & phone number
                     </div>
-                    <div class="activity-item">
-                      <div class="activity-text">
-                        Update
-                        <span class="highlight-red">1256543</span> user's email
-                        address & phone number
-                      </div>
-                      <div class="activity-time">35 min ago</div>
+                    <div class="activity-time">35 min ago</div>
+                  </div>
+                  <div class="activity-item">
+                    <div class="activity-text">
+                      Update
+                      <span class="highlight-red">1256543</span> user's email
+                      address & phone number
                     </div>
+                    <div class="activity-time">35 min ago</div>
                   </div>
                 </div>
               </div>
@@ -437,47 +334,52 @@
         </div>
       </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
 
-<script
-  src="https://code.jquery.com/jquery-3.6.0.min.js"
-  integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5/LIpOcx5/siEoL8C09dDjyP8vMK+OX7ov9xkv4M"
-  crossorigin="anonymous"
-></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5/LIpOcx5/siEoL8C09dDjyP8vMK+OX7ov9xkv4M" crossorigin="anonymous"></script>
 
 <!-- Sidebar Toggle -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const toggleButton = document.getElementById("sidebarCollapse");
     const sidebar = document.getElementById("sidebar");
-
-    toggleButton.addEventListener("click", function () {
-      sidebar.classList.toggle("active");
-    });
-  });
-</script>
-
-<!-- Enhanced Sidebar Functionality -->
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const sidebar = document.getElementById("sidebar");
-    const toggleButton = document.getElementById("sidebarCollapse");
+    const toggleButton = document.getElementById("sidebarToggle");
     const sidebarLinks = document.querySelectorAll(".sidebar-list li a");
 
     // Toggle sidebar visibility
-    toggleButton.addEventListener("click", function () {
-      sidebar.classList.toggle("collapsed");
-    });
+    if (toggleButton) {
+      toggleButton.addEventListener("click", function () {
+        sidebar.classList.toggle("collapsed");
+      });
+    }
 
     // Set active class on navigation
     const currentPath = window.location.pathname;
+
     sidebarLinks.forEach((link) => {
-      if (link.getAttribute("href") === currentPath) {
+      const href = link.getAttribute("href");
+
+      if (href && currentPath.endsWith(href.replace("../", ""))) {
         link.parentElement.classList.add("active");
       } else {
         link.parentElement.classList.remove("active");
       }
     });
+
+    // Handle dropdown functionality
+    const dropdownItems = document.querySelectorAll(
+      ".sidebar-list li a .dropdown-arrow"
+    );
+    dropdownItems.forEach((arrow) => {
+      arrow.parentElement.addEventListener("click", function (e) {
+        e.preventDefault();
+        const listItem = this.parentElement;
+        listItem.classList.toggle("expanded");
+      });
+    });
   });
+
 </script>

@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="commonNew.css">
+    <link rel="stylesheet" href="public/css/dashboard.css">
+    <link rel="stylesheet" href="public/css/sidebar.css">
+    <link rel="stylesheet" href="sidebarNew.css" />
+    <link rel="stylesheet" href="public/css/navbar-profile.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/"><img src="public/images/wruth-logo.png" alt="" /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <!-- Profile section -->
+                <div class="navbar-profile">
+                    <img src="public/images/profile-icon.svg" alt="Sofia Emilia" class="profile-avatar" />
+                    <div class="profile-info">
+                        <p class="profile-name">Sofia Emilia</p>
+                        <p class="profile-designation">Admin</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="wrapper">
+
+        <!-- Sidebar  -->
+        <nav id="sidebar" class="sidebar ms-3 mt-3">
+            <!-- Header section - Fixed at top -->
+            <div class="sidebar-header">
+                <div class="d-flex justify-content-between align-items-center">
+                    <p class="sidebar-title">Admin Dashboard</p>
+                    <button class="sidebar-toggle border-0 bg-transparent" type="button" id="sidebarToggle">
+                        <svg width="29" height="23" viewBox="0 0 29 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M27.0415 1.01465L10.5732 1.01465" stroke="#CC0000" stroke-width="2"
+                                stroke-linecap="round" />
+                            <path d="M26.9849 7.85278L1.00014 7.85278" stroke="#CC0000" stroke-width="2"
+                                stroke-linecap="round" />
+                            <path d="M26.9849 14.6908L6.47061 14.6908" stroke="#CC0000" stroke-width="2"
+                                stroke-linecap="round" />
+                            <path d="M26.9849 21.5289H14.6763" stroke="#CC0000" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Scrollable content section -->
+            <div class="sidebar-content">
+                <ul class="sidebar-list">
+                    <li class="nav-item active">
+                        <a href="/dashboard.html" class="nav-link">
+                            <span class="me-4">
+                                <img src="public/images/side-bar/dashboard.svg" alt="Dashboard" class="nav-icon" />
+                            </span>
+                            Dashboard
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/user-management.html" class="nav-link">
+                            <span class="me-4">
+                                <img src="public/images/side-bar/user.svg" alt="User Management" class="nav-icon" />
+                            </span>
+                            User Management
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/access-control.html" class="nav-link">
+                            <span class="me-4">
+                                <img src="public/images/side-bar/access.svg" alt="Access Control" class="nav-icon" />
+                            </span>
+                            Access Control
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/customers.html" class="nav-link">
+                            <span class="me-4">
+                                <img src="public/images/side-bar/customers.svg" alt="Customers" class="nav-icon" />
+                            </span>
+                            Customers
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/admin-division-management.html" class="nav-link">
+                            <span class="me-4">
+                                <img src="public/images/side-bar/division.svg" alt="Division Management"
+                                    class="nav-icon" />
+                            </span>
+                            Division Management
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/collections" class="nav-link">
+                            <span class="me-4">
+                                <img src="public/images/side-bar/collections.svg" alt="Collections" class="nav-icon" />
+                            </span>
+                            All Collections
+                            <span class="dropdown-arrow">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/return-cheques" class="nav-link">
+                            <span class="me-4">
+                                <img src="public/images/side-bar/cheques.svg" alt="Return Cheques" class="nav-icon" />
+                            </span>
+                            Return Cheques
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/notifications" class="nav-link">
+                            <span class="me-4">
+                                <img src="public/images/side-bar/notifications.svg" alt="Notifications"
+                                    class="nav-icon" />
+                            </span>
+                            Notifications
+                            <span class="dropdown-arrow">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Footer section - Fixed at bottom -->
+            <div class="sidebar-footer">
+                <ul class="sidebar-list">
+                    <li class="nav-item">
+                        <a href="/settings" class="nav-link">
+                            <span class="me-4">
+                                <img src="public/images/side-bar/settings.svg" alt="Settings" class="nav-icon" />
+                            </span>
+                            Settings
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/logout" class="nav-link">
+                            <span class="me-4">
+                                <img src="public/images/side-bar/logout.svg" alt="Logout" class="nav-icon" />
+                            </span>
+                            Logout
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container-fluid">
+            <div class="main-wrapper">
+
+                <div class="row d-flex justify-content-between">
+                    <div class="col-lg-6 col-12">
+                        <h1 class="header-title">H.K Perera - 254565214</h1>
+                    </div>
+                    <div class="col-lg-6 col-12 d-flex justify-content-lg-end gap-3 pe-5">
+                        <button class="header-btn"><i class="fa-solid fa-magnifying-glass fa-xl"></i></button>
+                        <button class="header-btn" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#searchByFilter" aria-controls="offcanvasRight"><i
+                                class="fa-solid fa-filter fa-xl"></i></button>
+                    </div>
+                </div>
+
+                <hr class="red-line mt-0">
+
+                <div class="styled-tab-sub p-4">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item mb-3" role="presentation">
+                            <a class="nav-link active" data-bs-toggle="tab" href="#customer-details" role="tab"
+                                aria-controls="customer-list" aria-selected="true">
+
+
+                                Customer Details
+                            </a>
+                        </li>
+
+                        <li class="nav-item mb-3" role="presentation">
+                            <a class="nav-link" data-bs-toggle="tab" href="#payment-details" role="tab"
+                                aria-controls="temporary" aria-selected="false">
+                                Payment details
+                            </a>
+                        </li>
+
+                        <li class="nav-item mb-3" role="presentation">
+                            <a class="nav-link" data-bs-toggle="tab" href="#payment-history" role="tab"
+                                aria-controls="temporary" aria-selected="false">
+                                Payment History
+                            </a>
+                        </li>
+                    </ul>
+
+
+
+                    <div class="tab-content">
+
+                        <!-- Customer details Tab Pane -->
+                        <div id="customer-details" class="tab-pane fade show active" role="tabpanel"
+                            aria-labelledby="customer-list-tab">
+                            <div class="row d-flex justify-content-between mt-5">
+
+                                <div class="mb-4 col-12 col-lg-6">
+                                    <h2 class="section-title mb-4">Customer Details</h2>
+
+                                    <div class="detail-row">
+                                        <span class="detail-label">Division :</span>
+                                        <span class="detail-value">Metal</span>
+                                    </div>
+
+                                    <div class="detail-row">
+                                        <span class="detail-label">Address :</span>
+                                        <span class="detail-value">No.18, Colombo 10</span>
+                                    </div>
+
+                                    <div class="detail-row">
+                                        <span class="detail-label">Secondary Address :</span>
+                                        <span class="detail-value">No.18, Colombo 10</span>
+                                    </div>
+
+                                    <div class="detail-row">
+                                        <span class="detail-label">Mobile Number :</span>
+                                        <span class="detail-value">0112847595</span>
+                                    </div>
+
+                                    <div class="detail-row">
+                                        <span class="detail-label">Secondary Mobile Number :</span>
+                                        <span class="detail-value">0775846245</span>
+                                    </div>
+
+                                    <div class="detail-row">
+                                        <span class="detail-label">Email :</span>
+                                        <span class="detail-value">HKPrerera@info.com</span>
+                                    </div>
+
+                                    <div class="detail-row">
+                                        <span class="detail-label">WhatsApp :</span>
+                                        <span class="detail-value">0775846245</span>
+                                    </div>
+
+                                    <div class="detail-row">
+                                        <span class="detail-label">ADM Name :</span>
+                                        <span class="detail-value">LK Perera</span>
+                                    </div>
+
+                                    <div class="detail-row">
+                                        <span class="detail-label">ADM No. :</span>
+                                        <span class="detail-value">4585689557</span>
+                                    </div>
+
+                                    <div class="detail-row">
+                                        <span class="detail-label">Secondary ADM Name :</span>
+                                        <span class="detail-value">D.P Rajapaksha</span>
+                                    </div>
+
+                                    <div class="detail-row">
+                                        <span class="detail-label">Secondary ADM No. :</span>
+                                        <span class="detail-value">5789532845</span>
+                                    </div>
+
+                                    <div class="detail-row">
+                                        <span class="detail-label">Contact Person Name :</span>
+                                        <span class="detail-value">P.R Perera</span>
+                                    </div>
+                                </div>
+
+                                <div class="mb-4 col-12 col-lg-6">
+                                    <h2 class="section-title mb-4">Payment Details</h2>
+
+                                    <div class="detail-row">
+                                        <span class="detail-label">Outstanding Invoices :</span>
+                                        <span class="detail-value payment-highlight">15</span>
+                                    </div>
+
+                                    <div class="detail-row">
+                                        <span class="detail-label">Return Cheques :</span>
+                                        <span class="detail-value payment-highlight">1</span>
+                                    </div>
+
+                                    <div class="detail-row">
+                                        <span class="detail-label">Extra Payment :</span>
+                                        <span class="detail-value">Rs. 12 000</span>
+                                    </div>
+
+                                    <div class="detail-row">
+                                        <span class="detail-label">Credit Note :</span>
+                                        <span class="detail-value">Rs. 1000</span>
+                                    </div>
+
+                                    <div class="detail-row">
+                                        <span class="detail-label">Last Credit Added Date :</span>
+                                        <span class="detail-value">03.06.2025</span>
+                                    </div>
+
+                                    <div class="detail-row">
+                                        <span class="detail-label">Total Outstanding Balance :</span>
+                                        <span class="detail-value payment-highlight">Rs. 120,000</span>
+                                    </div>
+
+                                    <div class="detail-row">
+                                        <span class="detail-label">Total pending Amount :</span>
+                                        <span class="detail-value payment-highlight">Rs. 2,350,000</span>
+                                    </div>
+
+                                    <div class="detail-row">
+                                        <span class="detail-label">Last Payment Date :</span>
+                                        <span class="detail-value">04.04.2025</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <!-- Payment Details Tab Pane -->
+                        <div id="payment-details" class="tab-pane fade mt-1" role="tabpanel"
+                            aria-labelledby="temporary-tab">
+
+                            <div class="styled-tab-small">
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li class="nav-item mb-3" role="presentation">
+                                        <a class="nav-link active" data-bs-toggle="tab" href="#invoice-details"
+                                            role="tab">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20"
+                                                viewBox="0 0 21 20" fill="none">
+                                                <path
+                                                    d="M11.5 13.9999H5.50001C5.23479 13.9999 4.98044 14.1053 4.7929 14.2928C4.60537 14.4804 4.50001 14.7347 4.50001 14.9999C4.50001 15.2652 4.60537 15.5195 4.7929 15.7071C4.98044 15.8946 5.23479 15.9999 5.50001 15.9999H11.5C11.7652 15.9999 12.0196 15.8946 12.2071 15.7071C12.3947 15.5195 12.5 15.2652 12.5 14.9999C12.5 14.7347 12.3947 14.4804 12.2071 14.2928C12.0196 14.1053 11.7652 13.9999 11.5 13.9999ZM7.50001 7.99995H9.50001C9.76522 7.99995 10.0196 7.89459 10.2071 7.70705C10.3947 7.51952 10.5 7.26516 10.5 6.99995C10.5 6.73473 10.3947 6.48038 10.2071 6.29284C10.0196 6.1053 9.76522 5.99995 9.50001 5.99995H7.50001C7.23479 5.99995 6.98044 6.1053 6.7929 6.29284C6.60537 6.48038 6.50001 6.73473 6.50001 6.99995C6.50001 7.26516 6.60537 7.51952 6.7929 7.70705C6.98044 7.89459 7.23479 7.99995 7.50001 7.99995ZM19.5 9.99995H16.5V0.999946C16.5007 0.823736 16.4548 0.65047 16.367 0.497692C16.2792 0.344914 16.1526 0.218051 16 0.129946C15.848 0.042178 15.6755 -0.00402832 15.5 -0.00402832C15.3245 -0.00402832 15.152 0.042178 15 0.129946L12 1.84995L9.00001 0.129946C8.84799 0.042178 8.67554 -0.00402832 8.50001 -0.00402832C8.32447 -0.00402832 8.15203 0.042178 8.00001 0.129946L5.00001 1.84995L2.00001 0.129946C1.84799 0.042178 1.67554 -0.00402832 1.50001 -0.00402832C1.32447 -0.00402832 1.15203 0.042178 1.00001 0.129946C0.847404 0.218051 0.720789 0.344914 0.632986 0.497692C0.545183 0.65047 0.499308 0.823736 0.500008 0.999946V16.9999C0.500008 17.7956 0.816078 18.5587 1.37869 19.1213C1.9413 19.6839 2.70436 19.9999 3.50001 19.9999H17.5C18.2957 19.9999 19.0587 19.6839 19.6213 19.1213C20.1839 18.5587 20.5 17.7956 20.5 16.9999V10.9999C20.5 10.7347 20.3947 10.4804 20.2071 10.2928C20.0196 10.1053 19.7652 9.99995 19.5 9.99995ZM3.50001 17.9999C3.23479 17.9999 2.98044 17.8946 2.7929 17.7071C2.60536 17.5195 2.50001 17.2652 2.50001 16.9999V2.72995L4.50001 3.86995C4.65435 3.95056 4.82589 3.99266 5.00001 3.99266C5.17413 3.99266 5.34567 3.95056 5.50001 3.86995L8.50001 2.14995L11.5 3.86995C11.6543 3.95056 11.8259 3.99266 12 3.99266C12.1741 3.99266 12.3457 3.95056 12.5 3.86995L14.5 2.72995V16.9999C14.5027 17.3411 14.5636 17.6793 14.68 17.9999H3.50001ZM18.5 16.9999C18.5 17.2652 18.3947 17.5195 18.2071 17.7071C18.0196 17.8946 17.7652 17.9999 17.5 17.9999C17.2348 17.9999 16.9804 17.8946 16.7929 17.7071C16.6054 17.5195 16.5 17.2652 16.5 16.9999V11.9999H18.5V16.9999ZM11.5 9.99995H5.50001C5.23479 9.99995 4.98044 10.1053 4.7929 10.2928C4.60537 10.4804 4.50001 10.7347 4.50001 10.9999C4.50001 11.2652 4.60537 11.5195 4.7929 11.7071C4.98044 11.8946 5.23479 11.9999 5.50001 11.9999H11.5C11.7652 11.9999 12.0196 11.8946 12.2071 11.7071C12.3947 11.5195 12.5 11.2652 12.5 10.9999C12.5 10.7347 12.3947 10.4804 12.2071 10.2928C12.0196 10.1053 11.7652 9.99995 11.5 9.99995Z"
+                                                    fill="currentColor" />
+                                            </svg>
+                                            Invoices
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item mb-3" role="presentation">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#cheque-details" role="tab"
+                                            aria-controls="temporary" aria-selected="false">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21"
+                                                viewBox="0 0 21 21" fill="none">
+                                                <path
+                                                    d="M16.5 3H3C2.60218 3 2.22064 3.15804 1.93934 3.43934C1.65804 3.72064 1.5 4.10218 1.5 4.5V18.5C1.5 18.8978 1.65804 19.2794 1.93934 19.5607C2.22064 19.842 2.60218 20 3 20H18C18.3978 20 18.7794 19.842 19.0607 19.5607C19.342 19.2794 19.5 18.8978 19.5 18.5V8"
+                                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M14.6215 5.2425L16.7425 3.1215L14.6215 1M10.5 7.5V16M14.5 11V16M6.5 11V16"
+                                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                            Return Cheque
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item mb-3" role="presentation">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#extra-payment-details"
+                                            role="tab" aria-controls="temporary" aria-selected="false">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="16"
+                                                viewBox="0 0 21 16" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M17.5 4.66045e-09C18.2652 -4.26217e-05 19.0015 0.292325 19.5583 0.817284C20.115 1.34224 20.4501 2.06011 20.495 2.824L20.5 3V13C20.5 13.7652 20.2077 14.5015 19.6827 15.0583C19.1578 15.615 18.4399 15.9501 17.676 15.995L17.5 16H3.5C2.73479 16 1.99849 15.7077 1.44174 15.1827C0.884993 14.6578 0.549892 13.9399 0.505 13.176L0.5 13V3C0.499957 2.23479 0.792325 1.49849 1.31728 0.941739C1.84224 0.384993 2.56011 0.0498925 3.324 0.00500012L3.5 4.66045e-09H17.5ZM18.5 6H2.5V13C2.50003 13.2449 2.58996 13.4813 2.75272 13.6644C2.91547 13.8474 3.13975 13.9643 3.383 13.993L3.5 14H17.5C17.7449 14 17.9813 13.91 18.1644 13.7473C18.3474 13.5845 18.4643 13.3603 18.493 13.117L18.5 13V6ZM13.207 7.464L15.035 9.293C15.2225 9.48053 15.3278 9.73484 15.3278 10C15.3278 10.2652 15.2225 10.5195 15.035 10.707L13.207 12.535C13.1148 12.6305 13.0044 12.7067 12.8824 12.7591C12.7604 12.8115 12.6292 12.8391 12.4964 12.8403C12.3636 12.8414 12.2319 12.8161 12.109 12.7658C11.9861 12.7155 11.8745 12.6413 11.7806 12.5474C11.6867 12.4535 11.6125 12.3419 11.5622 12.219C11.5119 12.0961 11.4866 11.9644 11.4877 11.8316C11.4889 11.6988 11.5165 11.5676 11.5689 11.4456C11.6213 11.3236 11.6975 11.2132 11.793 11.121L11.913 11H7.5C7.23478 11 6.98043 10.8946 6.79289 10.7071C6.60536 10.5196 6.5 10.2652 6.5 10C6.5 9.73478 6.60536 9.48043 6.79289 9.29289C6.98043 9.10536 7.23478 9 7.5 9H11.914L11.793 8.879C11.6054 8.69149 11.4999 8.43712 11.4998 8.17185C11.4997 7.90658 11.605 7.65214 11.7925 7.4645C11.98 7.27686 12.2344 7.17139 12.4996 7.1713C12.7649 7.1712 13.0194 7.27649 13.207 7.464ZM17.5 2H3.5C3.23478 2 2.98043 2.10536 2.79289 2.29289C2.60536 2.48043 2.5 2.73478 2.5 3V4H18.5V3C18.5 2.73478 18.3946 2.48043 18.2071 2.29289C18.0196 2.10536 17.7652 2 17.5 2Z"
+                                                    fill="currentColor" />
+                                            </svg>
+                                            Extra Payment
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item mb-3" role="presentation">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#credit-note" role="tab"
+                                            aria-controls="temporary" aria-selected="false">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20"
+                                                viewBox="0 0 21 20" fill="none">
+                                                <path
+                                                    d="M1.5 10C1.5 11.1819 1.73279 12.3522 2.18508 13.4442C2.63738 14.5361 3.30031 15.5282 4.13604 16.364C4.97177 17.1997 5.96392 17.8626 7.05585 18.3149C8.14778 18.7672 9.3181 19 10.5 19C11.6819 19 12.8522 18.7672 13.9442 18.3149C15.0361 17.8626 16.0282 17.1997 16.864 16.364C17.6997 15.5282 18.3626 14.5361 18.8149 13.4442C19.2672 12.3522 19.5 11.1819 19.5 10C19.5 8.8181 19.2672 7.64778 18.8149 6.55585C18.3626 5.46392 17.6997 4.47177 16.864 3.63604C16.0282 2.80031 15.0361 2.13738 13.9442 1.68508C12.8522 1.23279 11.6819 1 10.5 1C9.3181 1 8.14778 1.23279 7.05585 1.68508C5.96392 2.13738 4.97177 2.80031 4.13604 3.63604C3.30031 4.47177 2.63738 5.46392 2.18508 6.55585C1.73279 7.64778 1.5 8.8181 1.5 10Z"
+                                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M13.3 7C13.1188 6.68576 12.8557 6.4267 12.5386 6.25055C12.2215 6.0744 11.8625 5.9878 11.5 6H9.5C8.96957 6 8.46086 6.21071 8.08579 6.58579C7.71071 6.96086 7.5 7.46957 7.5 8C7.5 8.53043 7.71071 9.03914 8.08579 9.41421C8.46086 9.78929 8.96957 10 9.5 10H11.5C12.0304 10 12.5391 10.2107 12.9142 10.5858C13.2893 10.9609 13.5 11.4696 13.5 12C13.5 12.5304 13.2893 13.0391 12.9142 13.4142C12.5391 13.7893 12.0304 14 11.5 14H9.5C9.13749 14.0122 8.77849 13.9256 8.46142 13.7494C8.14435 13.5733 7.88115 13.3142 7.7 13M10.5 5V15"
+                                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                            Credit Note
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <div class="tab-content">
+
+                                    <!-- Payment details - Invoices Tab Pane -->
+                                    <div id="invoice-details" class="tab-pane fade show active" role="tabpanel"
+                                        aria-labelledby="customer-list-tab">
+                                        <div class="row d-flex justify-content-between">
+
+                                            <div class="table-responsive">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">Invoice No</th>
+                                                            <th scope="col">Date</th>
+                                                            <th scope="col">Total Amount</th>
+                                                            <th scope="col">Outstanding Balance</th>
+                                                            <th scope="col">Outstanding Days</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>I254565214</th>
+                                                            <td>07.04.2025</td>
+                                                            <td>Rs.400,000</td>
+                                                            <td>Rs.328,000</td>
+                                                            <td>15 days</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>I254565214</th>
+                                                            <td>07.04.2025</td>
+                                                            <td>Rs.400,000</td>
+                                                            <td>Rs.328,000</td>
+                                                            <td>15 days</td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>I254565214</th>
+                                                            <td>07.04.2025</td>
+                                                            <td>Rs.400,000</td>
+                                                            <td>Rs.328,000</td>
+                                                            <td>15 days</td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>I254565214</th>
+                                                            <td>07.04.2025</td>
+                                                            <td>Rs.400,000</td>
+                                                            <td>Rs.328,000</td>
+                                                            <td>15 days</td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>I254565214</th>
+                                                            <td>07.04.2025</td>
+                                                            <td>Rs.400,000</td>
+                                                            <td>Rs.328,000</td>
+                                                            <td>15 days</td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>I254565214</th>
+                                                            <td>07.04.2025</td>
+                                                            <td>Rs.400,000</td>
+                                                            <td>Rs.328,000</td>
+                                                            <td>15 days</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-12 d-flex justify-content-center mt-4">
+                                                <nav aria-label="...">
+                                                    <ul class="pagination">
+                                                        <li class="page-item disabled">
+                                                            <a class="page-link">Prev</a>
+                                                        </li>
+                                                        <li class="page-item active">
+                                                            <a class="page-link" href="#">1</a>
+                                                        </li>
+                                                        <li class="page-item " aria-current="page">
+                                                            <a class="page-link" href="#">2</a>
+                                                        </li>
+                                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                        <li class="page-item"><a class="page-link" href="#">....</a>
+                                                        </li>
+                                                        <li class="page-item"><a class="page-link" href="#">10</a></li>
+                                                        <li class="page-item">
+                                                            <a class="page-link" href="#">Next</a>
+                                                        </li>
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Payment details - return cheque Tab Pane -->
+                                    <div id="cheque-details" class="tab-pane fade" role="tabpanel"
+                                        aria-labelledby="temporary-tab">
+
+                                        <div class="row d-flex justify-content-between">
+
+                                            <div class="table-responsive">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">Return Che. No</th>
+                                                            <th scope="col">Date</th>
+                                                            <th scope="col">Total Amount</th>
+                                                            <th scope="col">Outstanding Balance</th>
+                                                            <th scope="col">Outstanding Days</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>R254565214</th>
+                                                            <td>07.04.2025</td>
+                                                            <td>Rs.400,000</td>
+                                                            <td>Rs.328,000</td>
+                                                            <td>15 days</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>R254565245</th>
+                                                            <td>07.04.2025</td>
+                                                            <td>Rs.400,000</td>
+                                                            <td>Rs.328,000</td>
+                                                            <td>15 days</td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>R254485214</th>
+                                                            <td>07.04.2025</td>
+                                                            <td>Rs.400,000</td>
+                                                            <td>Rs.328,000</td>
+                                                            <td>15 days</td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>R454565214</th>
+                                                            <td>07.04.2025</td>
+                                                            <td>Rs.400,000</td>
+                                                            <td>Rs.328,000</td>
+                                                            <td>15 days</td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>R1586652145</th>
+                                                            <td>07.04.2025</td>
+                                                            <td>Rs.400,000</td>
+                                                            <td>Rs.328,000</td>
+                                                            <td>15 days</td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>R2543552145</th>
+                                                            <td>07.04.2025</td>
+                                                            <td>Rs.400,000</td>
+                                                            <td>Rs.328,000</td>
+                                                            <td>15 days</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-12 d-flex justify-content-center mt-4">
+                                                <nav aria-label="...">
+                                                    <ul class="pagination">
+                                                        <li class="page-item disabled">
+                                                            <a class="page-link">Prev</a>
+                                                        </li>
+                                                        <li class="page-item active">
+                                                            <a class="page-link" href="#">1</a>
+                                                        </li>
+                                                        <li class="page-item " aria-current="page">
+                                                            <a class="page-link" href="#">2</a>
+                                                        </li>
+                                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                        <li class="page-item"><a class="page-link" href="#">....</a>
+                                                        </li>
+                                                        <li class="page-item"><a class="page-link" href="#">10</a></li>
+                                                        <li class="page-item">
+                                                            <a class="page-link" href="#">Next</a>
+                                                        </li>
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Payment details - extra payment Tab Pane -->
+                                    <div id="extra-payment-details" class="tab-pane fade" role="tabpanel"
+                                        aria-labelledby="temporary-tab">
+
+                                        <div class="row d-flex justify-content-between">
+
+                                            <div class="table-responsive">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">Return Che. No</th>
+                                                            <th scope="col">Date</th>
+                                                            <th scope="col">Total Amount</th>
+                                                            <th scope="col">Outstanding Balance</th>
+                                                            <th scope="col">Outstanding Days</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>R254565214</th>
+                                                            <td>07.04.2025</td>
+                                                            <td>Rs.400,000</td>
+                                                            <td>Rs.328,000</td>
+                                                            <td>15 days</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>R254565245</th>
+                                                            <td>07.04.2025</td>
+                                                            <td>Rs.400,000</td>
+                                                            <td>Rs.328,000</td>
+                                                            <td>15 days</td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>R254485214</th>
+                                                            <td>07.04.2025</td>
+                                                            <td>Rs.400,000</td>
+                                                            <td>Rs.328,000</td>
+                                                            <td>15 days</td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>R454565214</th>
+                                                            <td>07.04.2025</td>
+                                                            <td>Rs.400,000</td>
+                                                            <td>Rs.328,000</td>
+                                                            <td>15 days</td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>R1586652145</th>
+                                                            <td>07.04.2025</td>
+                                                            <td>Rs.400,000</td>
+                                                            <td>Rs.328,000</td>
+                                                            <td>15 days</td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>R2543552145</th>
+                                                            <td>07.04.2025</td>
+                                                            <td>Rs.400,000</td>
+                                                            <td>Rs.328,000</td>
+                                                            <td>15 days</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-12 d-flex justify-content-center mt-4">
+                                                <nav aria-label="...">
+                                                    <ul class="pagination">
+                                                        <li class="page-item disabled">
+                                                            <a class="page-link">Prev</a>
+                                                        </li>
+                                                        <li class="page-item active">
+                                                            <a class="page-link" href="#">1</a>
+                                                        </li>
+                                                        <li class="page-item " aria-current="page">
+                                                            <a class="page-link" href="#">2</a>
+                                                        </li>
+                                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                        <li class="page-item"><a class="page-link" href="#">....</a>
+                                                        </li>
+                                                        <li class="page-item"><a class="page-link" href="#">10</a></li>
+                                                        <li class="page-item">
+                                                            <a class="page-link" href="#">Next</a>
+                                                        </li>
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Payment details - credit note Tab Pane -->
+                                    <div id="credit-note" class="tab-pane fade" role="tabpanel"
+                                        aria-labelledby="temporary-tab">
+
+                                        <div class="row d-flex justify-content-between">
+
+                                            <div class="table-responsive">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">Return Che. No</th>
+                                                            <th scope="col">Date</th>
+                                                            <th scope="col">Total Amount</th>
+                                                            <th scope="col">Outstanding Balance</th>
+                                                            <th scope="col">Outstanding Days</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>R254565214</th>
+                                                            <td>07.04.2025</td>
+                                                            <td>Rs.400,000</td>
+                                                            <td>Rs.328,000</td>
+                                                            <td>15 days</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>R254565245</th>
+                                                            <td>07.04.2025</td>
+                                                            <td>Rs.400,000</td>
+                                                            <td>Rs.328,000</td>
+                                                            <td>15 days</td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>R254485214</th>
+                                                            <td>07.04.2025</td>
+                                                            <td>Rs.400,000</td>
+                                                            <td>Rs.328,000</td>
+                                                            <td>15 days</td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>R454565214</th>
+                                                            <td>07.04.2025</td>
+                                                            <td>Rs.400,000</td>
+                                                            <td>Rs.328,000</td>
+                                                            <td>15 days</td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>R1586652145</th>
+                                                            <td>07.04.2025</td>
+                                                            <td>Rs.400,000</td>
+                                                            <td>Rs.328,000</td>
+                                                            <td>15 days</td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>R2543552145</th>
+                                                            <td>07.04.2025</td>
+                                                            <td>Rs.400,000</td>
+                                                            <td>Rs.328,000</td>
+                                                            <td>15 days</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-12 d-flex justify-content-center mt-4">
+                                                <nav aria-label="...">
+                                                    <ul class="pagination">
+                                                        <li class="page-item disabled">
+                                                            <a class="page-link">Prev</a>
+                                                        </li>
+                                                        <li class="page-item active">
+                                                            <a class="page-link" href="#">1</a>
+                                                        </li>
+                                                        <li class="page-item " aria-current="page">
+                                                            <a class="page-link" href="#">2</a>
+                                                        </li>
+                                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                        <li class="page-item"><a class="page-link" href="#">....</a>
+                                                        </li>
+                                                        <li class="page-item"><a class="page-link" href="#">10</a></li>
+                                                        <li class="page-item">
+                                                            <a class="page-link" href="#">Next</a>
+                                                        </li>
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <!-- Payment history Tab Pane -->
+                        <div id="payment-history" class="tab-pane fade mt-5" role="tabpanel"
+                            aria-labelledby="temporary-tab">
+
+                            <div class="row d-flex justify-content-between mt-5">
+
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Receipt No</th>
+                                                <th scope="col">In. No / Return Che.</th>
+                                                <th scope="col">Payment Method</th>
+                                                <th scope="col">Paid Amount</th>
+                                                <th scope="col">Paid Date</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>254565214</th>
+                                                <td>R157452233</td>
+                                                <td>Cash Payment</td>
+                                                <td>Rs.400,000</td>
+                                                <td>07.04.2025</td>
+                                            </tr>
+                                            <tr>
+                                                <td>254565245</th>
+                                                <td>R157452233</td>
+                                                <td>Cheque Payment</td>
+                                                <td>Rs.158,000</td>
+                                                <td>07.04.2025</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>254485214</th>
+                                                <td>I157452233</td>
+                                                <td>Card Payment</td>
+                                                <td>Rs.230,000</td>
+                                                <td>07.04.2025</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>454565214</th>
+                                                <td>I157452233</td>
+                                                <td>Cash Payment</td>
+                                                <td>Rs.510,000</td>
+                                                <td>07.04.2025</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>158665214</th>
+                                                <td>I157452233</td>
+                                                <td>Cheque Payment</td>
+                                                <td>Rs.740,000</td>
+                                                <td>07.04.2025</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>254355214</th>
+                                                <td>R157452233</td>
+                                                <td>Cash Payment</td>
+                                                <td>Rs.320,000</td>
+                                                <td>07.04.2025</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-12 d-flex justify-content-center mt-4">
+                                    <nav aria-label="...">
+                                        <ul class="pagination">
+                                            <li class="page-item disabled">
+                                                <a class="page-link">Prev</a>
+                                            </li>
+                                            <li class="page-item active">
+                                                <a class="page-link" href="#">1</a>
+                                            </li>
+                                            <li class="page-item " aria-current="page">
+                                                <a class="page-link" href="#">2</a>
+                                            </li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">....</a>
+                                            </li>
+                                            <li class="page-item"><a class="page-link" href="#">10</a></li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#">Next</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="offcanvas offcanvas-end offcanvas-filter" tabindex="-1" id="searchByFilter"
+        aria-labelledby="offcanvasRightLabel">
+        <div class="row d-flex justify-content-end">
+            <button type="button" class="btn-close rounded-circle" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+
+        <div class="offcanvas-header d-flex justify-content-between">
+            <div class="col-6">
+                <span class="offcanvas-title" id="offcanvasRightLabel">Search </span> <span class="title-rest"> &nbsp;by
+                    Filter
+                </span>
+            </div class="col-6">
+
+            <div>
+                <button class="btn rounded-phill">Clear All</button>
+            </div>
+        </div>
+        <div class="offcanvas-body">
+            <div class="row">
+                <div class="col-4 filter-tag d-flex align-items-center justify-content-between">
+                    <span>ADMs</span>
+                    <button class="btn btn-sm p-0"><i class="fa-solid fa-xmark fa-lg"></i></button>
+                </div>
+
+                <div class="col-4 filter-tag d-flex align-items-center justify-content-between">
+                    <span>Marketing</span>
+                    <button class="btn btn-sm p-0"><i class="fa-solid fa-xmark fa-lg"></i></button>
+                </div>
+
+                <div class="col-4 filter-tag d-flex align-items-center justify-content-between">
+                    <span>Admin</span>
+                    <button class="btn btn-sm p-0"><i class="fa-solid fa-xmark fa-lg"></i></button>
+                </div>
+
+                <div class="col-4 filter-tag d-flex align-items-center justify-content-between">
+                    <span>Finance</span>
+                    <button class="btn btn-sm p-0"><i class="fa-solid fa-xmark fa-lg"></i></button>
+                </div>
+
+                <div class="col-4 filter-tag d-flex align-items-center justify-content-between">
+                    <span>Team Leaders</span>
+                    <button class="btn btn-sm p-0"><i class="fa-solid fa-xmark fa-lg"></i></button>
+                </div>
+
+                <div class="col-4 filter-tag d-flex align-items-center justify-content-between">
+                    <span>Head of Division</span>
+                    <button class="btn btn-sm p-0"><i class="fa-solid fa-xmark fa-lg"></i></button>
+                </div>
+            </div>
+
+
+            <div class="mt-5 filter-categories">
+                <p class="filter-title">AMD Number</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        5643678
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        5643678
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        5643678
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        5643678
+                    </label>
+                </div>
+
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        5643678
+                    </label>
+                </div>
+            </div>
+
+            <!-- Divisions -->
+            <div class="mt-5 radio-selection filter-categories">
+                <p class="filter-title">Divisions</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Division 1
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Division 2
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Division 3
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Division 4
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Division 5
+                    </label>
+                </div>
+            </div>
+
+
+            <div class="mt-5 filter-categories">
+                <p class="filter-title">User Role</p>
+
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        All
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        System Administration
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Head of Division
+                    </label>
+                </div>
+
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Regional Sales Managers
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Area Sales Managers
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Team Leaders
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        ADMs
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Finance Department Managers
+                    </label>
+                </div>
+            </div>
+
+            <div class="mt-5 filter-categories">
+                <p class="filter-title">Date</p>
+
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Today
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Yesterday
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        This Week
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        This Month
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        This Year
+                    </label>
+                </div>
+            </div>
+
+
+            <div class="mt-5 filter-categories">
+                <p class="filter-title">Time</p>
+
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        09:00 AM - 1:00 PM
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        09:00 AM - 1:00 PM
+                    </label>
+                </div>
+
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        09:00 AM - 1:00 PM
+                    </label>
+                </div>
+
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        09:00 AM - 1:00 PM
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        09:00 AM - 1:00 PM
+                    </label>
+                </div>
+            </div>
+</body>
+
+</html>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const sidebar = document.getElementById("sidebar");
+        const toggleButton = document.getElementById("sidebarToggle");
+        const sidebarLinks = document.querySelectorAll(".sidebar-list li a");
+
+        // Toggle sidebar visibility
+        if (toggleButton) {
+            toggleButton.addEventListener("click", function () {
+                sidebar.classList.toggle("collapsed");
+            });
+        }
+
+        // Set active class on navigation
+        const currentPath = window.location.pathname;
+
+        sidebarLinks.forEach((link) => {
+            const href = link.getAttribute("href");
+
+            if (href && currentPath.endsWith(href.replace("../", ""))) {
+                link.parentElement.classList.add("active");
+            } else {
+                link.parentElement.classList.remove("active");
+            }
+        });
+
+        // Handle dropdown functionality
+        const dropdownItems = document.querySelectorAll(
+            ".sidebar-list li a .dropdown-arrow"
+        );
+        dropdownItems.forEach((arrow) => {
+            arrow.parentElement.addEventListener("click", function (e) {
+                e.preventDefault();
+                const listItem = this.parentElement;
+                listItem.classList.toggle("expanded");
+            });
+        });
+    });
+
+</script>

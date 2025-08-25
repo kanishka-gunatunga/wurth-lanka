@@ -113,37 +113,24 @@
 
 <body>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/"
-          ><img src="public/images/wruth-logo.png" alt=""
-        /></a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <!-- Profile section -->
-          <div class="navbar-profile">
-            <img
-              src="public/images/profile-icon.svg"
-              alt="Sofia Emilia"
-              class="profile-avatar"
-            />
-            <div class="profile-info">
-              <p class="profile-name">Sofia Emilia</p>
-              <p class="profile-designation">Admin</p>
-            </div>
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/"><img src="public/images/wruth-logo.png" alt="" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <!-- Profile section -->
+        <div class="navbar-profile">
+          <img src="public/images/profile-icon.svg" alt="Sofia Emilia" class="profile-avatar" />
+          <div class="profile-info">
+            <p class="profile-name">Sofia Emilia</p>
+            <p class="profile-designation">Admin</p>
           </div>
         </div>
       </div>
-    </nav>
+    </div>
+  </nav>
 
   <div class="wrapper">
 
@@ -286,7 +273,11 @@
             <h1 class="header-title">Access Control</h1>
           </div>
 
+
+
         </div>
+
+        <hr class="red-line mt-0">
         <form action="">
 
 
@@ -525,13 +516,13 @@
 </script>
 
 <script>
-    // Show toast on submit
-    document.querySelector('.submit').addEventListener('click', function (e) {
-        e.preventDefault();
-        const toast = document.getElementById('user-toast');
-        toast.style.display = 'block';
-        setTimeout(() => {
-            toast.style.display = 'none';
-        }, 3000);
-    });
+  // Show toast on submit
+  document.querySelector('.submit').addEventListener('click', function (e) {
+    e.preventDefault();
+    const toast = document.getElementById('user-toast');
+    toast.style.display = 'block';
+    setTimeout(() => {
+      toast.style.display = 'none';
+    }, 3000);
+  });
 </script>
