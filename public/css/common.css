@@ -9,6 +9,11 @@ body{
   font-family: 'Poppins', sans-serif;
 }
 
+.wrapper{
+  overflow: hidden;
+}
+
+
 .main-wrapper {
   background-color: #fff5f6;
   padding-top: 3rem;
@@ -29,7 +34,9 @@ body{
   text-decoration-skip-ink: none;
   margin-bottom: 3rem;
 }
-
+.header-and-content-gap-lg{
+  margin-top: 5rem;
+}
 .form-select:focus,
 .form-control:focus {
   border-color: #ff7e8b !important;
@@ -350,4 +357,12 @@ body{
 
 .users-table th:nth-child(4) {
   z-index: 15;
+}
+
+
+.sticky-column {
+  position: sticky;
+  right: 0;
+  background-color: white;
+  z-index: 5;
 }

@@ -21,27 +21,59 @@ td {
     font-family: Poppins;
     font-weight: 500;
     font-size: 14px;
-    color: #FFFFFF;
-    padding: 2px 12px;
+    
+    padding: 5px 15px;
 
 }
 
 .success-status-btn {
     background-color: #008448;
+    color: #FFFFFF;
 }
 
 .danger-status-btn {
     background-color: #CC0000;
+    color: #FFFFFF;
 }
 
 .grey-status-btn {
     background-color: #E0E0E0;
+    color: #000000;
 }
 
-.blue-status-btn{
+.blue-status-btn {
     background-color: #2196F3;
+    color: #FFFFFF;
 
 }
+
+
+
+.success-action-btn,
+.red-action-btn,
+.black-action-btn {
+    font-family: Poppins;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 12px;
+    border-radius: 8px;
+    padding: 3px 12px;
+    color: #FFFFFF;
+    border: none;
+}
+
+.success-action-btn{
+    background-color: #008448;
+}
+
+.red-action-btn {
+    background-color: #CC0000;
+}
+.black-action-btn {
+    background-color: #000000;
+}
+
+
 
 .unlock-column-table {
     display: block;
@@ -51,7 +83,7 @@ td {
 }
 
 .table>:not(caption)>*>* {
-    padding: 0.8rem 1rem !important;
+    padding: 0.8rem 1.5rem !important;
 }
 
 .table-title {
@@ -64,7 +96,8 @@ td {
     margin-bottom: 30px;
 }
 
-.unlock-column-table th {
+.unlock-column-table th,
+.custom-table-locked th {
     font-family: Poppins;
     font-weight: 500;
     font-style: Medium;
@@ -73,7 +106,8 @@ td {
 }
 
 
-.unlock-column-table td {
+.unlock-column-table td,
+.custom-table-locked td {
     font-family: Poppins;
     font-weight: 400;
     font-style: Regular;
@@ -81,10 +115,21 @@ td {
     color: black;
 }
 
-.dashboard-stats .col-md-2{
+.custom-table-locked {
+    border-collapse: separate;
+    border-spacing: 0;
+    min-width: 1500px;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    max-width: 1300px;
+}
+
+.dashboard-stats .col-md-2 {
     width: 18.5%;
 }
 
-.dashboard-stats .col-md-3{
+.dashboard-stats .col-md-3 {
     width: 22%;
 }
